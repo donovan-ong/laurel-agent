@@ -1,7 +1,7 @@
 """Print balance, IT helpdesk tickets and internship/job search. Three small, unrelated services bundled
 together like handoff_tools.py, none of them stateful: nothing here contends for a real resource or has a
 consequence worth gating on the student's confirmation (unlike enrolment, dropping or booking a room), so
-every tool acts straight away, the same way handoff_tools.draft_enquiry does not ask before drafting.
+every tool acts straight away.
 """
 import hashlib
 from typing import List, Optional

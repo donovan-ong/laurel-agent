@@ -712,15 +712,22 @@ scenarios:
           contains: ["SIM-"]
 
   # Handoff (US-14): drafts only, never sent
-  - id: handoff_visa_question_gets_a_draft_that_is_not_sent
+  - id: handoff_visa_question_names_the_office_and_asks_before_drafting
     login: demo3
     tags: [handoff]
-    prompt: "Am I allowed to study part-time on my student visa?"
-    checks:
-      tools_called: [draft_enquiry]
-      contains_any: [["not been sent", "hasn't been sent", "has not been sent", "haven't sent", "have not sent", "not sent", "cannot send", "can't send"]]
-      contains_any: [["international"]]
-      not_contains: ["i've sent", "i have sent", "i sent", "has been sent to", "email has been sent"]
+    turns:
+      - prompt: "Am I allowed to study part-time on my student visa?"
+        checks:
+          tools_called: [draft_enquiry]
+          contains: ["international student office", "draft"]
+          contains_any: [["would you like", "do you want", "shall i", "should i"]]
+          not_contains: ["hello international student office", "thank you,", "has been sent to"]
+      - prompt: "Yes please."
+        checks:
+          tools_called: [draft_enquiry]
+          contains: ["hello international student office"]
+          contains_any: [["not been sent", "hasn't been sent", "has not been sent", "haven't sent", "have not sent", "not sent", "cannot send", "can't send"]]
+          not_contains: ["i've sent", "i have sent", "i sent", "has been sent to", "email has been sent"]
   - id: handoff_scholarship_offers_a_draft
     login: demo1
     tags: [handoff]

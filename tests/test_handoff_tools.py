@@ -5,9 +5,16 @@ from tools.common import load
 from tools.handoff_tools import NOT_SENT, draft_enquiry, suggest_team
 
 
-def draft(topic, details="Some details.", team=None, number="S0000003"):
+def draft(topic, details="Some details.", team=None, number="S0000003", include_draft=True):
     ctx = AgentRun(request_context={"student_number": number}) if number else AgentRun()
-    return draft_enquiry.fn(context=ctx, topic=topic, details=details, suggested_team=team)
+    return draft_enquiry.fn(context=ctx, topic=topic, details=details, suggested_team=team, include_draft=include_draft)
+
+
+def test_by_default_only_the_team_is_returned_so_the_student_can_be_asked_first():
+    r = draft("Part-time study on my visa", "Can I study part-time on my visa?", include_draft=False)
+    assert r["found"] and r["team"]["team_id"] == "international_student_office" and r["team"]["email"]
+    assert "draft" not in r and r["draft_available"] is True and "ask whether" in r["next_step"]
+    assert r["sent"] is False
 
 
 @pytest.mark.parametrize("topic,details,team", [
