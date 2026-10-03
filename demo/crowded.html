@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crowded corner: a host page with its own chat button</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0 40px 600px; line-height: 1.6; }
+      /* Like RMIT's Library page: another chat launcher already fixed to the bottom-right corner. */
+      #other-chat { position: fixed; right: 24px; bottom: 24px; background: #e4002b; color: #fff; font-weight: 700; border-radius: 999px; padding: 14px 22px; }
+    </style>
+  </head>
+  <body>
+    <h1>A page with its own chat button</h1>
+    <p>The Laurel launcher should sit above the "Ask us" button rather than on top of it.</p>
+    <div id="other-chat">Ask us</div>
+    <script src="/widget/laurel-widget.js" data-laurel data-api-base="" defer></script>
+  </body>
+</html>

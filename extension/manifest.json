@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Laurel for RMIT (prototype)",
+  "version": "0.1.0",
+  "description": "Adds the Laurel study assistant chat button to rmit.edu.au. A student project prototype that talks to a local demo backend; not an official RMIT product.",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "permissions": ["storage"],
+  "host_permissions": ["http://127.0.0.1/*", "http://localhost/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.rmit.edu.au/*"],
+      "js": ["laurel-widget.js", "content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

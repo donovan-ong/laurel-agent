@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Laurel widget: dev harness</title>
+    <style>
+      /* A deliberately hostile host page: loud global styles the widget must be immune to, and enough
+         content to scroll so position: fixed can be seen holding. */
+      body { font-family: Georgia, serif; font-size: 22px; color: #c00; margin: 0; padding: 0 40px 400px; line-height: 2; letter-spacing: 2px; }
+      h1, h2, p, button, input, a, table, li { font: inherit !important; color: inherit; }
+      button { background: yellow; border: 4px dotted green; }
+      * { text-transform: uppercase; }
+      header { background: #000054; color: #fff; padding: 16px 40px; margin: 0 -40px 24px; }
+    </style>
+  </head>
+  <body>
+    <header><strong>Dev harness</strong> · not an RMIT page</header>
+    <h1>Widget dev harness</h1>
+    <p>This page exists to build and test the Laurel widget against a host page it does not control. Its global CSS
+      is aggressive on purpose: if the widget looks right here, page styles are not leaking in.</p>
+    <p>Scroll: the button in the bottom-right corner should stay put.</p>
+    <script>document.write(Array.from({length: 40}, (_, i) => `<p>Filler paragraph ${i + 1}: the quick brown fox jumps over the lazy dog.</p>`).join(""))</script>
+    <script src="/widget/laurel-widget.js" data-laurel data-api-base="" defer></script>
+  </body>
+</html>

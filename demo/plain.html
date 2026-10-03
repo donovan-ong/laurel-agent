@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plain host page (no widget script)</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 0 40px 600px; line-height: 1.6; }
+      header { background: #000054; color: #fff; padding: 16px 40px; margin: 0 -40px 24px; }
+    </style>
+  </head>
+  <body>
+    <header><strong>Plain host page</strong> · not an RMIT page</header>
+    <h1>A page with no widget of its own</h1>
+    <p>Used to test the Chrome extension locally: the extension, not this page, adds the chat button.</p>
+    <script>document.write(Array.from({length: 40}, (_, i) => `<p>Filler paragraph ${i + 1}.</p>`).join(""))</script>
+  </body>
+</html>
