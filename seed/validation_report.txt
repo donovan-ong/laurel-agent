@@ -1,0 +1,19 @@
+Data validation (snapshot 2026-09-21)
+PASS  stage and course credit points
+PASS  course references
+PASS  provenance and snapshot_date
+PASS  public values match requirements 5.1
+PASS  timetable structure
+PASS  students and results
+PASS  accounts
+PASS  term calendar and fees
+PASS  contacts
+PASS  canvas assignments
+PASS  study spaces
+PASS  print accounts
+PASS  careers listings
+PASS  library loans
+PASS  key dates
+PASS  privacy (synthetic identities)
+PASS  demo cases present
+Result: PASS (17 checks, 0 errors)
