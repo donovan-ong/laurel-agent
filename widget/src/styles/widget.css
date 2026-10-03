@@ -123,10 +123,9 @@
 
 .lw-mark {
   display: flex;
-  color: var(--white);
+  flex: none;
   background: var(--red);
   border-radius: 50%;
-  padding: 7px;
 }
 
 .lw-title {

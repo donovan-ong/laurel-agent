@@ -21,24 +21,6 @@ function Svg({ size = 16, children, ...rest }) {
   );
 }
 
-/** The Laurel mark: a ring with a transparent hole. */
-export function RingIcon({ size = 28 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true" focusable="false" style={{ display: "block" }}>
-      <circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" strokeWidth="6" />
-    </svg>
-  );
-}
-
-/** A plain speech bubble, solid. Used for the launcher and the header/login mark. */
-export function ChatIcon({ size = 28 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" style={{ display: "block" }}>
-      <path d="M6 3h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-7.2L5.6 21.2A.6.6 0 0 1 4.6 20.7V17.9A3 3 0 0 1 3 15.2V6a3 3 0 0 1 3-3z" />
-    </svg>
-  );
-}
-
 export const PhoneIcon = (p) => (
   <Svg {...p}>
     <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />

@@ -7,10 +7,11 @@ import { useChat } from "./useChat";
 import ChatInput from "./components/ChatInput";
 import LoadingIndicator from "./components/LoadingIndicator";
 import LoginForm from "./components/LoginForm";
+import LaurelMark from "./components/LaurelMark";
 import Message from "./components/Message";
 import WeekBox from "./components/WeekBox";
 import WeekItems, { weekCount } from "./components/WeekItems";
-import { CalendarIcon, ChatIcon, ChevronDownIcon, CloseIcon, CollapseIcon, ExpandIcon, PhoneIcon, SignOutIcon, TraceIcon } from "./icons";
+import { CalendarIcon, ChevronDownIcon, CloseIcon, CollapseIcon, ExpandIcon, PhoneIcon, SignOutIcon, TraceIcon } from "./icons";
 
 // RMIT's main switchboard, as published on rmit.edu.au/contact. Check it is still current before demoing.
 const ENQUIRIES_PHONE = { display: "+61 3 9925 2000", tel: "+61399252000" };
@@ -169,7 +170,7 @@ export default function Widget({ transport, showDemoHint = true }) {
       >
         <header className="lw-header">
           <span className="lw-mark">
-            <ChatIcon size={18} />
+            <LaurelMark size={32} />
           </span>
           <div className="lw-title">
             <div className="lw-title-row">
@@ -327,7 +328,7 @@ export default function Widget({ transport, showDemoHint = true }) {
         aria-expanded={open}
         onClick={() => setOpenPref(!open)}
       >
-        {open ? <ChevronDownIcon size={28} /> : <ChatIcon size={30} />}
+        {open ? <ChevronDownIcon size={28} /> : <LaurelMark size={60} />}
       </button>
     </div>
   );

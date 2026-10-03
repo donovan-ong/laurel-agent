@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ApiError } from "../api";
-import { ChatIcon } from "../icons";
+import LaurelMark from "./LaurelMark";
 
 // The demo login. In a real deployment this is the seam where the site's single sign-on session would be
 // picked up instead, and the form only shown when nobody is signed in (see docs/widget-integration.md).
@@ -26,7 +26,7 @@ export default function LoginForm({ onLogin, showDemoHint }) {
   return (
     <form className="lw-login" onSubmit={submit}>
       <span className="lw-login-mark">
-        <ChatIcon size={26} />
+        <LaurelMark size={46} />
       </span>
       <h2>Sign in to Laurel</h2>
       <p className="lw-dim">Your study assistant. Sign in to see your own record, enrolments and more.</p>
