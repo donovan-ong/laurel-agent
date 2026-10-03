@@ -359,7 +359,7 @@ Every record carries `provenance` and `snapshot_date`.
 
 `seed/generate.py` uses a fixed seed (same seed, same output). `seed/validate.py` checks the files (NFR-07) and writes `seed/validation_report.txt`. To change a public fact, edit `seed/public_values.json` rather than the generator.
 
-Canvas due dates and room bookings are anchored to the week of **28 September to 4 October 2026**: Assignment 2 is due 28 September and left unsubmitted, and Assignment 3 is due 9 November. *Your week* treats recent overdue work as first-class, so it stays useful for about three weeks after that. If the demo is much later, re-run `python seed/generate.py` close to the day.
+Canvas due dates and room bookings are anchored to the week of **28 September to 4 October 2026**: Assignment 2 is due 28 September and left unsubmitted, and Assignment 3 is due 9 November. These dates are fixed to the start of Semester 2, not to the day the data is generated, so re-running `python seed/generate.py` does not move them. From 29 September Assignment 2 is overdue; *Your week* treats recent overdue work as first-class (for three weeks). `list_assignments` returns `due_status` and `days_until_due` worked out from today, so the agent never does date arithmetic itself.
 
 ## 12. Demo scenarios
 

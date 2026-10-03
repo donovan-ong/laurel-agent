@@ -19,7 +19,7 @@ Log in with `python -m planner login -u demoN -p demoN` first, then `python -m p
 
 ### Canvas: due dates, submissions and marks
 
-Data is only seeded for courses a student has a result or a current enrolment in, so a student admitted but not yet enrolled (`demo1`) correctly has none. The current term's Assignment 2 is due 28 September 2026 and left unsubmitted on purpose, so "what's due this week" has something to find for demos around that date; regenerate the data (`python seed/generate.py`) if it has been a while.
+Data is only seeded for courses a student has a result or a current enrolment in, so a student admitted but not yet enrolled (`demo1`) correctly has none. The current term's Assignment 2 is due 28 September 2026 and left unsubmitted on purpose, so "what's due this week" has something to find in the week of 28 September to 4 October 2026, and after that it shows as overdue. These dates are fixed to the start of Semester 2, so regenerating the data does not move them. Laurel says how overdue or how far away an assignment is from the tool's own `due_status`, worked out from today's date.
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
