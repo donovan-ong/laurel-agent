@@ -11,12 +11,13 @@ from ibm_watsonx_orchestrate.run.context import AgentRun
 
 from tools import calendar_tools, canvas_tools, library_tools, scheduling as sch, student_tools, study_week
 from tools.calendar_tools import label, resolve_date
-from tools.canvas_tools import week_bounds
+from tools.canvas_tools import due_text
 from tools.common import current_student, load, not_found, source, today
 
 URGENCY = ["action", "overdue", "today", "soon", "upcoming", "suggestion"]
 KINDS = ["hold", "assignment", "loan", "key_date", "plan"]
 RECENT_DAYS = 21
+SOON_DAYS = 14  # due within two weeks: the student's priority
 KEY_DATE_DAYS = 28
 KEY_DATE_PROMPTS = {
     "census": "When is the census date, and what happens if I drop a class before it?",
@@ -45,19 +46,20 @@ def open_assignments(context: AgentRun, on: date) -> list[dict]:
 
 
 def assignment_items(assignments: list[dict], on: date) -> list[dict]:
-    _, week_end = week_bounds(on)
+    """Overdue work, work due within two weeks (the priority), and the next due date after that."""
     items, later = [], []
     for a in assignments:
         due = date.fromisoformat(a["due_date"])
         name = f"{a['full_title']} ({a['course_title']})"
         prompt = f"Did I submit {a['full_title']} for {a['course_title']}?"
-        if due < on:
+        days = (due - on).days
+        if days < 0:
             items.append({"kind": "assignment", "urgency": "overdue", "title": name,
-                          "detail": f"Was due {day_text(a['due_date'])} and has not been submitted",
+                          "detail": f"Was due {due_text(a)} and has not been submitted",
                           "when": a["due_date"], "prompt": prompt})
-        elif due <= week_end:
-            items.append({"kind": "assignment", "urgency": "today" if due == on else "soon", "title": name,
-                          "detail": f"Due {day_text(a['due_date'])}, not submitted yet",
+        elif days <= SOON_DAYS:
+            items.append({"kind": "assignment", "urgency": "today" if days == 0 else "soon", "title": name,
+                          "detail": f"Due {due_text(a)} ({in_days(days)}), not submitted yet",
                           "when": a["due_date"], "prompt": prompt})
         else:
             later.append(a)
@@ -65,7 +67,7 @@ def assignment_items(assignments: list[dict], on: date) -> list[dict]:
         first = min(a["due_date"] for a in later)
         for a in (a for a in later if a["due_date"] == first):
             items.append({"kind": "assignment", "urgency": "upcoming", "title": f"{a['full_title']} ({a['course_title']})",
-                          "detail": f"Due {day_text(first)} ({in_days((date.fromisoformat(first) - on).days)})",
+                          "detail": f"Due {due_text(a)} ({in_days((date.fromisoformat(first) - on).days)})",
                           "when": first, "prompt": f"What is {a['full_title']} for {a['course_title']} about?"})
     return items
 
@@ -155,7 +157,7 @@ def get_my_week(context: AgentRun, on_date: Optional[str] = None) -> dict:
         items.append({"kind": "plan", "urgency": "suggestion", "title": "Plan my study week",
                       "detail": "Study sessions around your classes, each with a free study room",
                       "when": None, "prompt": "Plan my study week"})
-    items.sort(key=lambda i: (URGENCY.index(i["urgency"]), KINDS.index(i["kind"]), i["when"] or "9999"))
+    items.sort(key=lambda i: (URGENCY.index(i["urgency"]), i["when"] or "9999", KINDS.index(i["kind"])))
     if loans.get("source"):
         sources.append(loans["source"])
     return {"found": True, "date": on.isoformat(), "date_text": label(on), "name": student["name"],

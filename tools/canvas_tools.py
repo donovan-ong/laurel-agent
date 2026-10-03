@@ -8,6 +8,13 @@ from tools.calendar_tools import label, resolve_date
 from tools.common import current_student, load, not_found, source
 
 
+def due_text(a: dict) -> str:
+    """The due date and time as text to quote, for example Sunday 11 October 2026, 11:59 pm."""
+    hour, minute = map(int, a.get("due_time", "23:59").split(":"))
+    clock = f"{(hour % 12) or 12}:{minute:02d} {'am' if hour < 12 else 'pm'}"
+    return f"{label(date.fromisoformat(a['due_date']))}, {clock}"
+
+
 def due_status(due: date, submitted: bool, on: date) -> str:
     """Where an assignment stands on a date, as text to quote: the model never works this out itself."""
     days = (due - on).days
@@ -72,7 +79,7 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
         "course_id": a["course_id"], "course_title": courses[a["course_id"]]["title"], "term": a["term"],
         "assignment_id": a["assignment_id"], "title": a["title"], "name": a["name"],
         "full_title": f"{a['title']}: {a['name']}", "summary": a["summary"], "sequence": a["sequence"],
-        "due_date": a["due_date"], "due_text": label(date.fromisoformat(a["due_date"])),
+        "due_date": a["due_date"], "due_time": a["due_time"], "due_text": due_text(a),
         "due_status": due_status(date.fromisoformat(a["due_date"]), a["submitted"], on),
         "days_until_due": (date.fromisoformat(a["due_date"]) - on).days,
         "max_mark": a["max_mark"], "submitted": a["submitted"],

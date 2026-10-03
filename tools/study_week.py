@@ -37,9 +37,13 @@ def class_blocks(enrolments: list[dict], term: str | None) -> list[dict]:
     return blocks
 
 
+SOON_DAYS = 14
+
+
 def sessions_wanted(assignment: dict, on: date) -> int:
+    """Two sessions for work that is overdue or due within two weeks, one to make a start on anything later."""
     due = date.fromisoformat(assignment["due_date"])
-    return 2 if due <= on + timedelta(days=DAYS) else 1
+    return 2 if due <= on + timedelta(days=SOON_DAYS) else 1
 
 
 def plan(assignments: list[dict], busy: list[tuple[str, str, str]], rooms: list[dict], bookings: list[dict],

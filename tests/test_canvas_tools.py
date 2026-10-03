@@ -7,7 +7,8 @@ from tools.canvas_tools import list_assignments
 # ones (COSC2110/COSC2673, 2026-S2). S0000001 (Donovan Ong): admitted but not enrolled in anything.
 CASEY = "S0000004"
 NOT_ENROLLED = "S0000001"
-THIS_WEEK = "2026-10-01"  # lands in the week (Mon 28 Sep to Sun 4 Oct 2026) Assignment 2 is due in
+DEMO_DAY = "2026-10-03"  # the demo date: Assignment 2 is due the Sunday after next, 11 October, 11:59 pm
+NEXT_WEEK = "2026-10-07"  # in the week (Mon 5 to Sun 11 October 2026) Assignment 2 is due in
 
 
 def ctx(number):
@@ -55,7 +56,7 @@ def test_a_completed_courses_assignments_are_all_submitted_and_graded():
         assert isinstance(a["mark"], int) and 0 <= a["mark"] <= a["max_mark"]
 
 
-def test_a_current_courses_second_assignment_is_overdue_and_not_yet_submitted():
+def test_a_current_courses_second_assignment_is_not_yet_submitted():
     r = assignments(CASEY, course_id="COSC2110")
     second = next(a for a in r["assignments"] if a["title"] == "Assignment 2")
     assert (second["submitted"], second["submitted_at"], second["mark"]) == (False, None, None)
@@ -63,12 +64,17 @@ def test_a_current_courses_second_assignment_is_overdue_and_not_yet_submitted():
     assert first["submitted"] is True and isinstance(first["mark"], int)
 
 
-def test_due_this_week_only_finds_the_overdue_assignment_around_the_demo_date():
-    r = assignments(CASEY, due_this_week_only=True, on_date=THIS_WEEK)
-    assert r["week"] == {"start": "2026-09-28", "end": "2026-10-04"}
+def test_due_this_week_only_finds_assignment_2_in_its_week():
+    r = assignments(CASEY, due_this_week_only=True, on_date=NEXT_WEEK)
+    assert r["week"] == {"start": "2026-10-05", "end": "2026-10-11"}
     titles = {(a["course_id"], a["title"]) for a in r["assignments"]}
     assert ("COSC2110", "Assignment 2") in titles and ("COSC2673", "Assignment 2") in titles
-    assert all(a["due_date"] == "2026-09-28" for a in r["assignments"])
+    assert all(a["due_date"] == "2026-10-11" for a in r["assignments"])
+
+
+def test_nothing_unsubmitted_is_overdue_on_the_demo_date():
+    r = assignments(CASEY, on_date=DEMO_DAY)
+    assert r["assignments"] and not any(a["due_status"].startswith("overdue") for a in r["assignments"])
 
 
 def test_due_this_week_only_is_empty_for_a_quiet_week():
@@ -107,14 +113,14 @@ def test_due_status_is_worked_out_from_today_not_the_snapshot_date():
     assert r["date_used"] == "2026-10-03"
     by_title = {a["title"]: a for a in r["assignments"]}
     second, third = by_title["Assignment 2"], by_title["Assignment 3"]
-    assert (second["due_status"], second["days_until_due"]) == ("overdue by 5 days", -5)
-    assert second["due_text"] == "Monday 28 September 2026"
+    assert (second["due_status"], second["days_until_due"]) == ("due in 8 days", 8)
+    assert second["due_text"] == "Sunday 11 October 2026, 11:59 pm"
     assert third["due_status"] == "due in 37 days"
     assert by_title["Assignment 1"]["due_status"] == "submitted"
 
 
-@pytest.mark.parametrize("on, expected", [("2026-09-28", "due today"), ("2026-09-27", "due tomorrow"),
-                                          ("2026-09-29", "overdue by 1 day")])
+@pytest.mark.parametrize("on, expected", [("2026-10-11", "due today"), ("2026-10-10", "due tomorrow"),
+                                          ("2026-10-12", "overdue by 1 day")])
 def test_due_status_wording_near_the_due_date(on, expected):
     second = next(a for a in assignments(CASEY, course_id="COSC2110", on_date=on)["assignments"] if a["sequence"] == 2)
     assert second["due_status"] == expected
