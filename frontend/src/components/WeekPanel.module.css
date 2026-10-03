@@ -1,0 +1,145 @@
+/* A white card with the theme's red top rule, as wide as the chat box beneath it. */
+.panel {
+  width: 100%;
+  max-width: 760px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.label {
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px var(--space-1);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.list li:last-child .row {
+  border-bottom: none;
+}
+
+.row:hover:not(:disabled),
+.row:focus-visible {
+  background: var(--bubble-user);
+}
+
+.row:disabled,
+.plan:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.action,
+.overdue {
+  background: var(--accent);
+}
+
+.today,
+.soon {
+  background: #e8a317;
+}
+
+.upcoming {
+  background: var(--navy);
+  opacity: 0.45;
+}
+
+.text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+.detail {
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+}
+
+.ask {
+  flex: none;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 12px var(--space-3);
+  background: var(--accent);
+  color: var(--accent-text);
+  border: none;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.plan:hover:not(:disabled),
+.plan:focus-visible {
+  background: var(--danger);
+}
+
+.planDetail {
+  font-weight: 400;
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}

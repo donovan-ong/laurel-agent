@@ -38,4 +38,5 @@ export const api = {
   chat: (message) => request("POST", "/api/chat", { message }),
   chatHistory: () => request("GET", "/api/chat/history"),
   profile: () => request("GET", "/api/profile"),
+  week: () => request("GET", "/api/week"),
 };

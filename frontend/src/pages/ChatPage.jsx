@@ -3,6 +3,7 @@ import { api, ApiError } from "../api";
 import { useAuth } from "../hooks/useAuth";
 import NavBar from "../components/NavBar";
 import Greeting from "../components/Greeting";
+import WeekPanel from "../components/WeekPanel";
 import MessageList from "../components/MessageList";
 import ChatInput from "../components/ChatInput";
 import LoadingIndicator from "../components/LoadingIndicator";
@@ -24,6 +25,7 @@ export default function ChatPage() {
   const { username, logout } = useAuth();
   const [studentName, setStudentName] = useState(username);
   const [messages, setMessages] = useState([]);
+  const [week, setWeek] = useState(null);
   const [loadingHistory, setLoadingHistory] = useState(true);
   const [sending, setSending] = useState(false);
   const [traceVisible, setTraceVisible] = useState(() => localStorage.getItem(TRACE_KEY) === "true");
@@ -40,6 +42,23 @@ export default function ChatPage() {
       .catch((err) => {
         if (!cancelled && isExpiredSession(err)) logout();
         // otherwise fall back to the username already shown by NavBar
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [logout]);
+
+  // "Your week" for the empty state: called directly, no agent, so it is there as soon as the page is.
+  useEffect(() => {
+    let cancelled = false;
+    api
+      .week()
+      .then((data) => {
+        if (!cancelled) setWeek(data);
+      })
+      .catch((err) => {
+        if (!cancelled && isExpiredSession(err)) logout();
+        // otherwise the panel simply isn't shown
       });
     return () => {
       cancelled = true;
@@ -155,6 +174,7 @@ export default function ChatPage() {
       ) : (
         <div className={styles.emptyContent}>
           <Greeting name={studentName} />
+          <WeekPanel week={week} onAsk={handleSend} disabled={sending} />
           {inputArea}
           {sending && <LoadingIndicator />}
         </div>
