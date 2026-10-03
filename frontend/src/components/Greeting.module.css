@@ -1,0 +1,8 @@
+.greeting {
+  font-family: var(--font-sans);
+  font-size: var(--text-greeting);
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  margin: 0;
+}
