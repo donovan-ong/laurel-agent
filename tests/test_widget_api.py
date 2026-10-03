@@ -149,3 +149,20 @@ def test_adopting_an_unknown_token_redirects_to_login_without_a_cookie():
 def test_adopting_with_no_token_redirects_to_login():
     r = client().get("/api/session/adopt", follow_redirects=False)
     assert r.status_code == 302 and r.headers["location"] == "/login"
+
+
+def test_a_stale_webapp_cookie_does_not_mask_a_valid_widget_token():
+    # The extension's worker sends the host's cookies too; a webapp cookie from before a restart is stale.
+    c = client()
+    headers = widget_login(c, "demo4")
+    c.cookies.set("session", "stale-token-from-before-a-restart")
+    assert c.get("/api/me", headers=headers).json()["logged_in"] is True
+    assert c.get("/api/profile", headers=headers).json()["student"]["student_number"] == "S0000004"
+    assert c.get("/api/week", headers=headers).status_code == 200
+
+
+def test_a_widget_token_wins_over_another_students_webapp_cookie():
+    c = client()
+    c.post("/api/login", json={"username": "demo1", "password": "demo1"})  # webapp cookie for demo1
+    headers = widget_login(c, "demo4")
+    assert c.get("/api/me", headers=headers).json()["student_number"] == "S0000004"

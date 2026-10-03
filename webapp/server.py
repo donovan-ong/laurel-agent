@@ -35,8 +35,10 @@ def bearer_token(request: Request) -> str | None:
 
 def session_for(request: Request) -> dict | None:
     # The cookie is the webapp's; the Authorization header is the embeddable widget's, which runs on another
-    # origin where third-party cookies cannot be relied on. Both name the same in-memory session.
-    token = request.cookies.get(SESSION_COOKIE) or bearer_token(request)
+    # origin where third-party cookies cannot be relied on. Both name the same in-memory session. A request with
+    # a bearer token is the widget's and is judged by that token alone: the extension's worker also sends any
+    # webapp cookie for this host, and a stale one (from before a restart) must not mask a valid token.
+    token = bearer_token(request) or request.cookies.get(SESSION_COOKIE)
     return request.app.state.sessions.get(token) if token else None
 
 
