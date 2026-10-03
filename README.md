@@ -97,7 +97,7 @@ For a scripted run use `python -m planner login -u demo1 -p demo1`. To switch st
 
 ## Run the web app
 
-**Laurel** — a browser front end for the same agent: log in to a home screen that opens on *Your week* (overdue and upcoming work, holds, library books and key dates, straight from the tools with no wait), chat (with a trace toggle and a livelier "thinking" indicator) and a profile page, no CLI needed. The backend (`webapp/`) reuses the same `planner.auth`/`planner.client` code the CLI uses, so both can be logged in at once, even as different students, and neither affects the other. The frontend (`frontend/`) is a React app (Vite, plain JavaScript), styled to match the RMIT theme the chat widget below uses: a navy header bar, RMIT red and white throughout, sans-serif text, and a chat-bubble mark as the logo.
+**Laurel** — a browser front end for the same agent: log in to a home screen that opens on *Your week* (work due soon and coming up, holds, library books and key dates, straight from the tools with no wait), chat (with a trace toggle and a livelier "thinking" indicator) and a profile page, no CLI needed. The backend (`webapp/`) reuses the same `planner.auth`/`planner.client` code the CLI uses, so both can be logged in at once, even as different students, and neither affects the other. The frontend (`frontend/`) is a React app (Vite, plain JavaScript), styled to match the RMIT theme the chat widget below uses: a navy header bar, RMIT red and white throughout, sans-serif text, and a chat-bubble mark as the logo.
 
 Build the frontend once (and again after changing anything under `frontend/src`):
 

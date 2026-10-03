@@ -757,16 +757,16 @@ scenarios:
           tools_called: [build_plan]
           contains_any: [["updated", "rebuilt", "new plan", "revised", "here's", "here is", "plan"], ["3pm", "3 pm", "15:00", "3:00", "wednesday"]]
 
-  # Your week and study planning (demo4 on 3 October 2026: Assignment 2 overdue in Data Mining and
-  # Machine Learning, Assignment 3 due 9 November, an overdue library book)
-  - id: week_at_a_glance_leads_with_overdue_work
+  # Your week and study planning (demo4 on 3 October 2026: Assignment 2 due Sunday 11 October in Data Mining
+  # and Machine Learning, the priority but not overdue; Assignment 3 due 9 November; an overdue library book)
+  - id: week_at_a_glance_leads_with_the_priority_assignments
     login: demo4
     tags: [week]
     prompt: "As of 3 October 2026, what does my week look like? Is there anything I should know?"
     checks:
       tools_called: [get_my_week]
       contains: ["assignment 2"]
-      contains_any: [["overdue", "not submitted", "not been submitted", "late", "past due"], ["data mining", "machine learning"]]
+      contains_any: [["11 october", "sunday"], ["data mining", "machine learning"]]
   - id: studyweek_plans_overdue_work_first_with_rooms
     login: demo4
     tags: [studyweek]
@@ -795,15 +795,15 @@ scenarios:
       tools_called: [list_assignments]
       contains: ["data pre-processing"]
       contains_any: [["missing values", "outliers", "messy", "clean"], ["resources"]]
-  - id: assignment_overdue_status_comes_from_the_tool
+  - id: assignment_due_status_comes_from_the_tool
     login: demo4
     tags: [canvas]
     prompt: "Did I submit Assignment 2: Classification Models for Data Mining?"
     checks:
       tools_called: [list_assignments]
-      contains: ["classification models"]
-      contains_any: [["overdue", "past due", "was due", "late"], ["resources"]]
-      not_contains: ["still have time", "about a week", "due in"]
+      contains: ["classification models", "11 october"]
+      contains_any: [["not been submitted", "not submitted", "haven't submitted", "have not submitted", "not yet submitted"], ["resources"]]
+      not_contains: ["overdue", "past due"]
   - id: assignment_resources_are_general_suggestions
     login: demo4
     tags: [canvas]

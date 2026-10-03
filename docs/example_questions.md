@@ -19,14 +19,14 @@ Log in with `python -m planner login -u demoN -p demoN` first, then `python -m p
 
 ### Canvas: due dates, submissions and marks
 
-Data is only seeded for courses a student has a result or a current enrolment in, so a student admitted but not yet enrolled (`demo1`) correctly has none. The current term's Assignment 2 is due 28 September 2026 and left unsubmitted on purpose, so "what's due this week" has something to find in the week of 28 September to 4 October 2026, and after that it shows as overdue. These dates are fixed to the start of Semester 2, so regenerating the data does not move them. Laurel says how overdue or how far away an assignment is from the tool's own `due_status`, worked out from today's date.
+Data is only seeded for courses a student has a result or a current enrolment in, so a student admitted but not yet enrolled (`demo1`) correctly has none. On the demo date, 3 October 2026, nothing is overdue: Assignment 1 is submitted, Assignment 2 is unsubmitted and due Sunday 11 October at 11:59 pm (the priority), and Assignment 3 is due 9 November. To move the demo, run `python seed/generate.py --demo-date YYYY-MM-DD` and Assignment 2 moves to the Sunday after next. Laurel says how overdue or how far away an assignment is from the tool's own `due_status`, worked out from today's date.
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
-| What's due this week? | demo4 | Assignment 2: Classification Models (Data Mining) and Assignment 2: Classification with Neural Networks (Machine Learning), due 28 September, not yet submitted |
-| Did I submit assignment 2 for Data Mining? | demo4 | No, it was due 28 September and has not been submitted. Gives the one-sentence summary, then asks whether you'd like study resources |
+| What's due in the next two weeks? | demo4 | Assignment 2: Classification Models (Data Mining) and Assignment 2: Classification with Neural Networks (Machine Learning), due Sunday 11 October, 11:59 pm, not yet submitted |
+| Did I submit assignment 2 for Data Mining? | demo4 | Not yet: it's due Sunday 11 October, 11:59 pm (in 8 days on 3 October). Gives the one-sentence summary, then asks whether you'd like study resources |
 | What mark did I get for my first assignment in COSC2148? | demo4 | Assignment 1: Research Question and Literature Review, 74 out of 100, with its summary |
-| What are all my assignments for Machine Learning? | demo4 | Assignment 1: Regression and Model Evaluation (submitted and graded), Assignment 2: Classification with Neural Networks (overdue) and Assignment 3: Machine Learning Project (due 9 November) |
+| What are all my assignments for Machine Learning? | demo4 | Assignment 1: Regression and Model Evaluation (submitted and graded), Assignment 2: Classification with Neural Networks (due Sunday 11 October) and Assignment 3: Machine Learning Project (due 9 November) |
 | Tell me about Assignment 1 for Data Mining | demo4 | Assignment 1: Data Pre-processing, with its summary, then "Would you like some study resources for this assignment?" |
 | (then) Yes please | demo4 | General study suggestions (concepts, an approach, kinds of resources), labelled as not course materials and with no made-up links, then an offer to plan study sessions or book a room |
 | What's due this week? | demo1 | Nothing: not enrolled in anything yet |
@@ -37,9 +37,9 @@ Data is only seeded for courses a student has a result or a current enrolment in
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
-| What does my week look like? Is there anything I should know? | demo4 | Assignment 2 overdue for Data Mining and Machine Learning, an overdue library book that can be renewed, the exam period in 23 days and Assignment 3 due 9 November |
-| What should I focus on? | demo7 | The enrolment hold first, then the overdue work |
-| Plan my study week | demo4 | A table of two-hour sessions, overdue Assignment 2 first, none on Monday or Wednesday evening (workshops), each with a free room. Says nothing has been booked |
+| What does my week look like? Is there anything I should know? | demo4 | Assignment 2 for Data Mining and Machine Learning due Sunday 11 October (in 8 days), an overdue library book that can be renewed, the exam period in 23 days and Assignment 3 due 9 November |
+| What should I focus on? | demo7 | The enrolment hold first, then the assignments due Sunday |
+| Plan my study week | demo4 | A table of two-hour sessions, Assignment 2 (due Sunday) first, none on Monday or Wednesday evening (workshops), each with a free room. Says nothing has been booked |
 | I work 9 to 5, Monday to Friday. Plan my study week | demo4 | The same, but only evening and weekend sessions |
 | Book the room for the first session | demo4 | After a plan: a room check and a summary, then a ROOM reference only after you say yes |
 | Plan my study week | demo1 | Nothing to plan: not enrolled in anything yet |
