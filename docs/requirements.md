@@ -78,7 +78,7 @@ The demo accounts are real-feeling personas, not test fixtures. Each password is
 
 1. **No scraping** of university sites, no calls to real university systems, and no real credentials or student IDs.
 2. **All data is synthetic**, seeded from public program pages. Every record carries `provenance` (`from_public_page` or `synthetic`). Only values listed in section 11 are `from_public_page`.
-3. **Never state** a course, code, session, date, mark or number that is not in the data. If it is missing, say so and offer a handoff (FR-15).
+3. **Never state** a course, code, session, date, mark or number that is not in the data. If it is missing, say so and offer a handoff (FR-15). The one exception is general study suggestions for an assignment, given only on request and always labelled as general suggestions rather than course materials (FR-35).
 4. **No state-changing tool call without explicit student confirmation** in the same conversation: enrolling, dropping or booking a room (FR-10, NFR-04).
 5. Every simulated action carries a **simulation notice** that also says the data is synthetic (FR-16).
 6. **Draft, never send.** Laurel never sends a message on the student's behalf (FR-14).
@@ -144,7 +144,7 @@ When something is not found, a tool returns `{"found": false, "reason": "..."}`.
 | Enrol and drop | `check_enrolment`, `submit_enrolment`, `list_enrolments`, `check_drop`, `drop_enrolment` | FR-09 to FR-13, FR-24, FR-25 |
 | Dates | `get_current_week`, `get_key_dates`, `get_term_dates` | FR-22, FR-23 |
 | Money | `get_fees` | FR-21 |
-| Coursework (Canvas) | `list_assignments` | FR-27 |
+| Coursework (Canvas) | `list_assignments` | FR-27, FR-35 |
 | Study spaces | `check_room_availability`, `book_room` | FR-28 |
 | Campus services | `get_print_balance`, `create_it_ticket`, `check_it_ticket_status`, `search_internships` | FR-29 |
 | Library | `get_current_loans`, `renew_loans` | FR-30 |
@@ -258,14 +258,16 @@ An optional HTTPS service that stands in for the university's enrolment system. 
 | FR-24 | Drop tools show whether the student can drop, the fee outcome and the census and drop dates. They drop only after confirmation and refuse after the deadline | US-25 | Should |
 | FR-25 | An optional mock enrolment service handles check, enrol, list and drop over HTTPS with memory and a live dashboard. When it is unreachable, the tools say so and change nothing | US-26, US-27 | Should |
 | FR-26 | Support several programs. Tools default to the student's own program and can be asked about another. Report what a named major or minor still needs | US-28, US-29, US-30 | Should |
-| FR-27 | A Canvas tool lists the student's assignments with due dates, submission status and marks, including "due this week" | US-31 | Should |
+| FR-27 | A Canvas tool lists the student's assignments with due dates, submission status and marks, including "due this week". Each has a descriptive title ("Assignment 1: Data Pre-processing") and a one-sentence summary, given when the student asks about that assignment | US-31 | …to know what's due and whether I submitted it | Should | "What's due this week" lists this week's items by descriptive title. Submission status and marks match `canvas.json`. An unsubmitted item has no mark. Asking about one assignment gives its summary |
 | FR-28 | Study-room tools show free rooms by date, time and building, and book one only after confirmation | US-32 | Should |
 | FR-29 | Campus-service tools report print credit, raise and check IT tickets, and search internships open to the student's program | US-33 | Could |
 | FR-30 | Library tools list current loans and due dates, and renew one or all loans, explaining any refusal (holds, renewal limit) | US-34 | Could |
 | FR-31 | A web app offers login, chat with a trace toggle, and a profile page. It recovers the conversation after a reload | US-35 | Must |
 | FR-32 | A chat widget runs on the university's web pages through a Chrome extension (or a saved-page fallback). It offers page-aware suggested questions and opens the full web app already signed in | US-36 | Should |
-| FR-33 | A week summary lists, most urgent first, holds and balances, overdue and upcoming assignments, library loans due or overdue, and key dates within four weeks, each with a follow-up question. The web app and widget show it on opening, without a model call | US-37 | Must |
+| FR-33 | A week summary lists, most urgent first, holds and balances, overdue and upcoming assignments, library loans due or overdue, and key dates within four weeks, each with a follow-up question. The web app shows it on opening and the widget as a collapsed bar with a count that expands to every item, without a model call | US-37 | Must |
 | FR-34 | A study-week planner suggests sessions for the next seven days for unsubmitted assignments, overdue first, around the student's workshops and stated busy times, each with a free study room. It books nothing | US-38 | Should |
+| US-39 | …help getting started on an assignment | Should | After the summary I'm asked whether I want study resources. A yes gets concepts to review, an approach and kinds of resources, clearly labelled general and not from the course, with no made-up links, then an offer to plan sessions or book a room |
+| FR-35 | Asked about one specific assignment, the agent gives its summary and offers study resources. On a yes it gives general study suggestions from the model's own knowledge (concepts, approach, kinds of resources), labelled as not course materials, with no invented links, pages or lecture weeks, then offers to plan study sessions or book a room | US-39 | Should |
 
 ## 9. Non-functional requirements
 
@@ -372,13 +374,14 @@ Canvas due dates and room bookings are anchored to the week of **28 September to
 | D7 Where am I in the semester | "What week is it, when is the uni break, when do exams start and when are results out?" (as of 21 September 2026) | Week 9 of Semester 2, then the break that just ended and the next closure, the exam period and the results date, citing the published key dates |
 | D8 Drop through the live service | Run `python -m mockapi --tunnel --deploy`. As `demo8`: "I want to drop COSC2148 in 2027-S1", then "yes" | Census date and fee avoided are stated before confirming, then a `DROP-` reference. The dashboard shows drop-check then drop. As `demo4`, a 2026-S2 drop is refused after the deadline |
 | D9 Majors and minors | As `demo9`: "What does my program involve, and what majors and minors can I choose from?", then "What do I still need for the Data Science minor?" | 288 credit points, the durations, and majors and minors listed. Minor progress matches the student's results |
-| D10 What's due | As `demo4`: "What's due this week?", then "Did I submit assignment 2 for Data Mining?" | Assignment 2 for both current courses, due 28 September, not submitted, with no mark claimed |
+| D10 What's due | As `demo4`: "What's due this week?", then "Did I submit assignment 2 for Data Mining?" | Assignment 2: Classification Models (Data Mining) and Assignment 2: Classification with Neural Networks (Machine Learning), due 28 September, not submitted, with no mark claimed |
 | D11 Book a study room | "I need a study space on Thursday at 10am, just for myself", then pick a room and say yes | No interrogation (one hour assumed and stated), a spread of free rooms, a summary, then a `SIM-` booking after yes |
 | D12 Everyday services | As `demo6`: "Can I renew everything?" As `demo4`: "My wifi keeps dropping in Building 8, can you log a ticket?" | One loan renewed with a new due date, and the held one refused with the reason. An IT ticket number straight away |
 | D13 Help where I am | Open the university home page with the extension loaded and click the chat bubble | The widget opens with page-aware suggestions. After sign-in, the "Laurel" title opens the full web app already signed in |
 | D14 The safety net | As `demo3`: "Am I allowed to study part-time on my student visa?" | Laurel says it can't advise on this, names the International Student Office and its email, and offers a draft. It is never sent |
-| D15 Your week | As `demo4`, open the web app or widget (on 3 October 2026) | Before anything is typed: Assignment 2 overdue for Data Mining and Machine Learning, an overdue library book that can be renewed, the assessment period in 23 days, Assignment 3 due 9 November, and *Plan my study week*. Clicking an item asks about it |
+| D15 Your week | As `demo4`, open the web app or widget (on 3 October 2026) | Before anything is typed (the widget shows a collapsed bar with the count; open it for the list): Assignment 2: Classification Models and Assignment 2: Classification with Neural Networks overdue, an overdue library book that can be renewed, the assessment period in 23 days, Assignment 3 due 9 November, and *Plan my study week*. Clicking an item asks about it |
 | D16 Plan my study week | As `demo4`: "Plan my study week", then "Book the room for the first session" and "yes" | Overdue Assignment 2 sessions come first, none clash with the Monday and Wednesday 18:00 workshops, each has a free room, and it says nothing was booked. Booking goes check, summary, yes, `ROOM-` reference |
+| D17 About an assignment | As `demo4`: "Tell me about Assignment 1 for Data Mining", then "yes" | Names it "Assignment 1: Data Pre-processing", gives the summary and asks about study resources. The yes gets general suggestions labelled as not course materials, then an offer to plan sessions or book a room |
 
 `python -m planner.scenarios` runs the scripted versions of these, with the 10 NFR-01 questions tagged `nfr01`, against the live agent several times each. It checks the tools called, the facts in the reply, and that no other student's data appears. Transcripts and findings are in `tests/scenarios.md`. More prompts are in `docs/example_questions.md`.
 

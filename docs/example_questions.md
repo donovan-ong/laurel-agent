@@ -23,10 +23,12 @@ Data is only seeded for courses a student has a result or a current enrolment in
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
-| What's due this week? | demo4 | Assignment 2 for Data Mining and Machine Learning, due 28 September, not yet submitted |
-| Did I submit assignment 2 for Data Mining? | demo4 | No, it was due 28 September and has not been submitted |
-| What mark did I get for my first assignment in COSC2148? | demo4 | Assignment 1, 74 out of 100 |
-| What are all my assignments for Machine Learning? | demo4 | Three assignments: two submitted and graded, one due 28 September and not yet submitted |
+| What's due this week? | demo4 | Assignment 2: Classification Models (Data Mining) and Assignment 2: Classification with Neural Networks (Machine Learning), due 28 September, not yet submitted |
+| Did I submit assignment 2 for Data Mining? | demo4 | No, it was due 28 September and has not been submitted. Gives the one-sentence summary, then asks whether you'd like study resources |
+| What mark did I get for my first assignment in COSC2148? | demo4 | Assignment 1: Research Question and Literature Review, 74 out of 100, with its summary |
+| What are all my assignments for Machine Learning? | demo4 | Assignment 1: Regression and Model Evaluation (submitted and graded), Assignment 2: Classification with Neural Networks (overdue) and Assignment 3: Machine Learning Project (due 9 November) |
+| Tell me about Assignment 1 for Data Mining | demo4 | Assignment 1: Data Pre-processing, with its summary, then "Would you like some study resources for this assignment?" |
+| (then) Yes please | demo4 | General study suggestions (concepts, an approach, kinds of resources), labelled as not course materials and with no made-up links, then an offer to plan study sessions or book a room |
 | What's due this week? | demo1 | Nothing: not enrolled in anything yet |
 
 ### Your week and study planning
