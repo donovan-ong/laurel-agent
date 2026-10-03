@@ -784,3 +784,27 @@ scenarios:
       tools_called: [plan_study_week]
       tools_not_called: [book_room]
       contains_any: [["evening", "19:00", "7pm", "7 pm", "saturday", "sunday", "17:00", "after work"]]
+
+  # Canvas assignments by name, with a summary and an offer of study resources (demo4: COSC2110 Data Mining,
+  # Assignment 1: Data Pre-processing, submitted and marked)
+  - id: assignment_specific_gives_summary_and_offers_resources
+    login: demo4
+    tags: [canvas]
+    prompt: "Tell me about Assignment 1 for Data Mining."
+    checks:
+      tools_called: [list_assignments]
+      contains: ["data pre-processing"]
+      contains_any: [["missing values", "outliers", "messy", "clean"], ["resources"]]
+  - id: assignment_resources_are_general_suggestions
+    login: demo4
+    tags: [canvas]
+    turns:
+      - prompt: "What is Assignment 3 for Machine Learning about?"
+        checks:
+          tools_called: [list_assignments]
+          contains: ["machine learning project"]
+          contains_any: [["resources"]]
+      - prompt: "Yes please."
+        checks:
+          tools_not_called: [book_room, submit_enrolment]
+          contains_any: [["general"], ["not course materials", "not from the course", "not materials from", "not from canvas", "not course material"]]
