@@ -1,4 +1,4 @@
-// The rows of "Your week": every item, then the plan suggestion. Each row sends its ready-made question.
+// The rows of "Coming up": every item, then the plan suggestion. Each row sends its ready-made question.
 // Shared by the start screen's WeekBox and the header's dropdown.
 export default function WeekItems({ week, onAsk }) {
   const items = week.items.filter((i) => i.kind !== "plan");

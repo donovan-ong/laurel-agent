@@ -4,7 +4,7 @@ import { splitWeek } from "../week";
 import WeekList from "./WeekList";
 import styles from "./WeekMenu.module.css";
 
-// "Your week" in the nav bar once a conversation has started: the full list, one click from anywhere in the
+// "Coming up" in the nav bar once a conversation has started: the full list, one click from anywhere in the
 // chat. Refreshed each time it opens (no model call); closes on a choice, an outside click or Escape.
 export default function WeekMenu({ week, onAsk, disabled }) {
   const [open, setOpen] = useState(false);
@@ -50,7 +50,7 @@ export default function WeekMenu({ week, onAsk, disabled }) {
         className={`${styles.button} ${open ? styles.on : ""}`}
         aria-expanded={open}
         aria-haspopup="true"
-        aria-label={`Your week, ${items.length} items`}
+        aria-label={`Coming up, ${items.length} items`}
         onClick={toggle}
       >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
@@ -60,15 +60,15 @@ export default function WeekMenu({ week, onAsk, disabled }) {
           <line x1="8" y1="3" x2="8" y2="7" />
           <line x1="16" y1="3" x2="16" y2="7" />
         </svg>
-        <span className={styles.text}>Your week</span>
+        <span className={styles.text}>Coming up</span>
         <span className={styles.count} aria-hidden="true">
           {items.length}
         </span>
       </button>
       {open && (
-        <div className={styles.menu} role="region" aria-label="Your week">
+        <div className={styles.menu} role="region" aria-label="Coming up">
           <header className={styles.header}>
-            <strong>Your week</strong>
+            <strong>Coming up</strong>
             {shown.week_label && <span>{shown.week_label}</span>}
           </header>
           <WeekList items={items} plan={plan} onAsk={ask} disabled={disabled} />

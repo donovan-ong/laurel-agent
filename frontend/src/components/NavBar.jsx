@@ -4,7 +4,7 @@ import LaurelLogo from "./LaurelLogo";
 import WeekMenu from "./WeekMenu";
 import styles from "./NavBar.module.css";
 
-// week and onAsk are given only on the chat page once a conversation has started: Your week then lives here.
+// week and onAsk are given only on the chat page once a conversation has started: Coming up then lives here.
 export default function NavBar({ week, onAsk, askDisabled }) {
   const { username, studentNumber, logout } = useAuth();
   return (

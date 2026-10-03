@@ -388,7 +388,7 @@
   transform: translateY(-1px);
 }
 
-/* ---------- your week ---------- */
+/* ---------- coming up ---------- */
 
 /* Navy, unlike the white suggestion chips, so it reads as a status summary rather than a question to ask. */
 .lw-weekbox {
@@ -512,7 +512,7 @@
   opacity: 1;
 }
 
-/* The header's Your week button and its dropdown, once a conversation has started. */
+/* The header's Coming up button and its dropdown, once a conversation has started. */
 .lw-week-btn {
   position: relative;
 }

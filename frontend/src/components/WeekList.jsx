@@ -5,10 +5,10 @@ const URGENCY_LABEL = {
   overdue: "Overdue",
   today: "Due today",
   soon: "Due soon",
-  upcoming: "Coming up",
+  upcoming: "Later",
 };
 
-// The rows of "Your week" and the plan button after them. Each row is a ready-made question, so one click
+// The rows of "Coming up" and the plan button after them. Each row is a ready-made question, so one click
 // asks about it. Shared by the home screen's panel and the nav bar's menu.
 export default function WeekList({ items, plan, onAsk, disabled }) {
   return (

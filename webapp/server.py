@@ -206,7 +206,7 @@ def create_app() -> FastAPI:
 
     @app.get("/api/week")
     def week(on: str | None = None, session: dict = Depends(require_session)):
-        # The home screen's "Your week" panel: called directly like /api/profile, so it shows straight away.
+        # The home screen's "Coming up" panel: called directly like /api/profile, so it shows straight away.
         return get_my_week.fn(context=AgentRun(request_context={"student_number": session["student_number"]}), on_date=on)
 
     # The SPA shell. Registered last: Starlette tries routes in registration order, and this wildcard would

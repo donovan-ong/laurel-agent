@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CalendarIcon, ChevronDownIcon } from "../icons";
 import WeekItems from "./WeekItems";
 
-// "Your week", minimised to a count by default so it doesn't crowd the chips; open, it lists every item.
+// "Coming up", minimised to a count by default so it doesn't crowd the chips; open, it lists every item.
 // Each row (and the plan row) sends its ready-made question.
 export default function WeekBox({ week, onAsk }) {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function WeekBox({ week, onAsk }) {
       >
         <CalendarIcon size={18} />
         <span className="lw-weekbox-label">
-          <strong>Your week</strong>
+          <strong>Coming up</strong>
           {summary && <span>{summary}</span>}
         </span>
         <span className="lw-weekbox-count" aria-label={`${items.length} items`}>

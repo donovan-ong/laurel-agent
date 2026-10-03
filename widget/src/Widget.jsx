@@ -115,7 +115,7 @@ export default function Widget({ transport, showDemoHint = true }) {
     setAuth({ status: "out" });
   }
 
-  // The header's Your week, for once a conversation has started: refreshed on opening (no model call), and
+  // The header's Coming up, for once a conversation has started: refreshed on opening (no model call), and
   // mutually exclusive with the phone popover so only one sheet sits under the header at a time.
   function toggleWeek() {
     const next = !weekOpen;
@@ -149,7 +149,7 @@ export default function Widget({ transport, showDemoHint = true }) {
   const chips = useMemo(() => chipsForPath(window.location.pathname), []);
   const hasConversation = messages.length > 0;
   const weekItemCount = weekCount(week);
-  // On the start screen Your week is in the body; once chatting, it moves to a header button.
+  // On the start screen Coming up is in the body; once chatting, it moves to a header button.
   const showWeekButton = auth.status === "in" && weekItemCount > 0 && (hasConversation || sending);
   const sizeLabel = expanded ? "Make the chat window smaller" : "Make the chat window larger";
   const traceLabel = traceVisible ? "Hide the tool-call trace" : "Show the tool-call trace";
@@ -189,8 +189,8 @@ export default function Widget({ transport, showDemoHint = true }) {
             <button
               type="button"
               className={`lw-header-btn lw-week-btn${weekOpen ? " lw-on" : ""}`}
-              title="Your week"
-              aria-label={`Your week, ${weekItemCount} items`}
+              title="Coming up"
+              aria-label={`Coming up, ${weekItemCount} items`}
               aria-expanded={weekOpen}
               onClick={toggleWeek}
             >
@@ -234,9 +234,9 @@ export default function Widget({ transport, showDemoHint = true }) {
         </header>
 
         {weekOpen && showWeekButton && (
-          <div className="lw-weekdrop" role="region" aria-label="Your week">
+          <div className="lw-weekdrop" role="region" aria-label="Coming up">
             <p className="lw-weekdrop-head">
-              <strong>Your week</strong>
+              <strong>Coming up</strong>
               {week.week_label && <span className="lw-dim"> · {week.week_label}</span>}
             </p>
             <div className="lw-weekdrop-list">

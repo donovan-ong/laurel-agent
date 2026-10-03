@@ -48,7 +48,7 @@ export default function ChatPage() {
     };
   }, [logout]);
 
-  // "Your week" for the empty state: called directly, no agent, so it is there as soon as the page is.
+  // "Coming up" for the empty state: called directly, no agent, so it is there as soon as the page is.
   useEffect(() => {
     let cancelled = false;
     api
