@@ -159,7 +159,7 @@ export default function ChatPage() {
 
   return (
     <div className={styles.page}>
-      <NavBar />
+      <NavBar week={hasConversation ? week : null} onAsk={handleSend} askDisabled={sending} />
       {loadingHistory ? null : hasConversation ? (
         <div className={styles.content}>
           <MessageList

@@ -87,3 +87,17 @@
   border-color: #fff;
   color: #fff;
 }
+
+/* Phone width: the username goes (it is on the profile page) and the bar tightens, so nothing spills past
+   the edge of the screen. */
+@media (max-width: 600px) {
+  .nav {
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .user,
+  .badge {
+    display: none;
+  }
+}
