@@ -51,6 +51,15 @@ export const ChevronDownIcon = (p) => (
   </Svg>
 );
 
+export const CalendarIcon = (p) => (
+  <Svg {...p}>
+    <rect x="3" y="5" width="18" height="16" rx="2" />
+    <line x1="3" y1="10" x2="21" y2="10" />
+    <line x1="8" y1="3" x2="8" y2="7" />
+    <line x1="16" y1="3" x2="16" y2="7" />
+  </Svg>
+);
+
 export const CloseIcon = (p) => (
   <Svg {...p}>
     <line x1="6" y1="6" x2="18" y2="18" />

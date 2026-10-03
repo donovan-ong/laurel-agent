@@ -8,6 +8,7 @@ import ChatInput from "./components/ChatInput";
 import LoadingIndicator from "./components/LoadingIndicator";
 import LoginForm from "./components/LoginForm";
 import Message from "./components/Message";
+import WeekBox from "./components/WeekBox";
 import { ChatIcon, ChevronDownIcon, CloseIcon, CollapseIcon, ExpandIcon, PhoneIcon, SignOutIcon, TraceIcon } from "./icons";
 
 // RMIT's main switchboard, as published on rmit.edu.au/contact. Check it is still current before demoing.
@@ -15,7 +16,6 @@ const ENQUIRIES_PHONE = { display: "+61 3 9925 2000", tel: "+61399252000" };
 const CONTACT_URL = "https://www.rmit.edu.au/contact";
 
 const MODEL_LABEL = "Orchestrate · Frontier";
-const WEEK_ROWS = 3;
 
 export default function Widget({ transport, showDemoHint = true }) {
   const api = useMemo(() => makeApi(transport), [transport]);
@@ -116,7 +116,6 @@ export default function Widget({ transport, showDemoHint = true }) {
   }
 
   const chips = useMemo(() => chipsForPath(window.location.pathname), []);
-  const weekItems = week ? week.items.filter((i) => i.kind !== "plan").slice(0, WEEK_ROWS) : [];
   const hasConversation = messages.length > 0;
   const sizeLabel = expanded ? "Make the chat window smaller" : "Make the chat window larger";
   const traceLabel = traceVisible ? "Hide the tool-call trace" : "Show the tool-call trace";
@@ -204,21 +203,8 @@ export default function Widget({ transport, showDemoHint = true }) {
           {auth.status === "in" && !hasConversation && !sending && (
             <div className="lw-empty">
               <h2>{firstName ? `Hi ${firstName}, how can I help?` : "Hi, how can I help?"}</h2>
-              {weekItems.length > 0 ? (
-                <div className="lw-week" aria-label="Your week">
-                  <p className="lw-week-head">
-                    Your week{week.week_label ? <span className="lw-dim"> · {week.week_label}</span> : null}
-                  </p>
-                  {weekItems.map((item) => (
-                    <button key={`${item.kind}-${item.title}`} type="button" className="lw-week-item" onClick={() => send(item.prompt)}>
-                      <span className={`lw-week-dot lw-week-${item.urgency}`} aria-hidden="true" />
-                      <span>
-                        <strong>{item.title}</strong>
-                        <span className="lw-dim">{item.detail}</span>
-                      </span>
-                    </button>
-                  ))}
-                </div>
+              {week && week.items.length > 0 ? (
+                <WeekBox week={week} onAsk={send} />
               ) : (
                 <p className="lw-dim">Ask about your enrolment, results, timetable, library loans, study rooms and more.</p>
               )}
