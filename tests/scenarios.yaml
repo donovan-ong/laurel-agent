@@ -729,6 +729,16 @@ scenarios:
           contains: ["hello international student office"]
           contains_any: [["not been sent", "hasn't been sent", "has not been sent", "haven't sent", "have not sent", "not sent", "cannot send", "can't send"]]
           not_contains: ["i've sent", "i have sent", "i sent", "has been sent to", "email has been sent"]
+  - id: handoff_a_question_for_a_friend_is_routed_not_refused
+    login: demo4
+    tags: [handoff]
+    prompt: "is my friend allowed to study part time on a visa"
+    checks:
+      tools_called: [find_support_team]
+      tools_not_called: [draft_enquiry]
+      contains: ["international student office", "international@example.invalid"]
+      contains_any: [["would you like", "do you want", "shall i", "should i"]]
+      not_contains: ["hello international student office", "has been sent to"]
   - id: handoff_scholarship_offers_a_draft
     login: demo1
     tags: [handoff]
