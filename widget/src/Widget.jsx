@@ -15,12 +15,14 @@ const ENQUIRIES_PHONE = { display: "+61 3 9925 2000", tel: "+61399252000" };
 const CONTACT_URL = "https://www.rmit.edu.au/contact";
 
 const MODEL_LABEL = "Orchestrate · Frontier";
+const WEEK_ROWS = 3;
 
 export default function Widget({ transport, showDemoHint = true }) {
   const api = useMemo(() => makeApi(transport), [transport]);
   const [open, setOpen] = useState(() => prefs.get("open") === "1");
   const [auth, setAuth] = useState({ status: "checking" }); // checking | out | in
   const [firstName, setFirstName] = useState(null);
+  const [week, setWeek] = useState(null);
   const [traceVisible, setTraceVisible] = useState(() => prefs.get("showTrace") === "true");
   const [phoneOpen, setPhoneOpen] = useState(false);
   const [expanded, setExpanded] = useState(() => prefs.get("expanded") === "1");
@@ -61,6 +63,10 @@ export default function Widget({ transport, showDemoHint = true }) {
       .profile()
       .then((d) => d.found && setFirstName(String(d.student.name).split(" ")[0]))
       .catch(() => {});
+    api
+      .week()
+      .then((d) => d.found && setWeek(d))
+      .catch(() => {});
     loadHistory();
   }, [open, auth.status, api, loadHistory]);
 
@@ -93,6 +99,7 @@ export default function Widget({ transport, showDemoHint = true }) {
     loaded.current = false;
     reset();
     setFirstName(null);
+    setWeek(null);
     setAuth({ status: "out" });
   }
 
@@ -109,6 +116,7 @@ export default function Widget({ transport, showDemoHint = true }) {
   }
 
   const chips = useMemo(() => chipsForPath(window.location.pathname), []);
+  const weekItems = week ? week.items.filter((i) => i.kind !== "plan").slice(0, WEEK_ROWS) : [];
   const hasConversation = messages.length > 0;
   const sizeLabel = expanded ? "Make the chat window smaller" : "Make the chat window larger";
   const traceLabel = traceVisible ? "Hide the tool-call trace" : "Show the tool-call trace";
@@ -196,7 +204,24 @@ export default function Widget({ transport, showDemoHint = true }) {
           {auth.status === "in" && !hasConversation && !sending && (
             <div className="lw-empty">
               <h2>{firstName ? `Hi ${firstName}, how can I help?` : "Hi, how can I help?"}</h2>
-              <p className="lw-dim">Ask about your enrolment, results, timetable, library loans, study rooms and more.</p>
+              {weekItems.length > 0 ? (
+                <div className="lw-week" aria-label="Your week">
+                  <p className="lw-week-head">
+                    Your week{week.week_label ? <span className="lw-dim"> · {week.week_label}</span> : null}
+                  </p>
+                  {weekItems.map((item) => (
+                    <button key={`${item.kind}-${item.title}`} type="button" className="lw-week-item" onClick={() => send(item.prompt)}>
+                      <span className={`lw-week-dot lw-week-${item.urgency}`} aria-hidden="true" />
+                      <span>
+                        <strong>{item.title}</strong>
+                        <span className="lw-dim">{item.detail}</span>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              ) : (
+                <p className="lw-dim">Ask about your enrolment, results, timetable, library loans, study rooms and more.</p>
+              )}
               <div className="lw-chips">
                 {chips.map((chip) => (
                   <button key={chip} type="button" className="lw-chip" onClick={() => send(chip)}>

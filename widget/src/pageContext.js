@@ -2,7 +2,7 @@
 // widget's lightest form of integration with the page around it: it reads only location.pathname.
 
 const DEFAULT_CHIPS = [
-  "What subjects should I enrol in next semester?",
+  "Plan my study week",
   "What's due this week?",
   "Book a study room tomorrow at 10am",
 ];

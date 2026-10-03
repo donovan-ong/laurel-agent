@@ -16,6 +16,7 @@ export function makeApi(transport) {
     chat: (message) => transport.request("POST", "/api/chat", { message }),
     history: () => transport.request("GET", "/api/chat/history"),
     profile: () => transport.request("GET", "/api/profile"),
+    week: () => transport.request("GET", "/api/week"),
     openWebapp: () => transport.openWebapp(),
   };
 }
