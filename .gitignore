@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.DS_Store
+build/
+scenario_reports/
+tools/service_config.json
+frontend/node_modules/
+frontend/dist/
+widget/node_modules/
+widget/dist/
+extension/laurel-widget.js
+demo/rmit/
+widget/.smoke/
