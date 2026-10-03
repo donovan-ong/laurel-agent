@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CalendarIcon, ChevronDownIcon } from "../icons";
+import WeekItems from "./WeekItems";
 
 // "Your week", minimised to a count by default so it doesn't crowd the chips; open, it lists every item.
 // Each row (and the plan row) sends its ready-made question.
@@ -37,23 +38,7 @@ export default function WeekBox({ week, onAsk }) {
       </button>
       {open && (
         <div className="lw-weekbox-list" id="lw-weekbox-list">
-          {items.map((item) => (
-            <button key={`${item.kind}-${item.title}`} type="button" className="lw-week-item" onClick={() => onAsk(item.prompt)}>
-              <span className={`lw-week-dot lw-week-${item.urgency}`} aria-hidden="true" />
-              <span>
-                <strong>{item.title}</strong>
-                <span className="lw-dim">{item.detail}</span>
-              </span>
-            </button>
-          ))}
-          {plan && (
-            <button type="button" className="lw-week-item lw-week-plan" onClick={() => onAsk(plan.prompt)}>
-              <span>
-                <strong>{plan.title}</strong>
-                <span className="lw-dim">{plan.detail}</span>
-              </span>
-            </button>
-          )}
+          <WeekItems week={week} onAsk={onAsk} />
         </div>
       )}
     </div>

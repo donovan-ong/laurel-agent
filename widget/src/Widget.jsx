@@ -9,7 +9,8 @@ import LoadingIndicator from "./components/LoadingIndicator";
 import LoginForm from "./components/LoginForm";
 import Message from "./components/Message";
 import WeekBox from "./components/WeekBox";
-import { ChatIcon, ChevronDownIcon, CloseIcon, CollapseIcon, ExpandIcon, PhoneIcon, SignOutIcon, TraceIcon } from "./icons";
+import WeekItems, { weekCount } from "./components/WeekItems";
+import { CalendarIcon, ChatIcon, ChevronDownIcon, CloseIcon, CollapseIcon, ExpandIcon, PhoneIcon, SignOutIcon, TraceIcon } from "./icons";
 
 // RMIT's main switchboard, as published on rmit.edu.au/contact. Check it is still current before demoing.
 const ENQUIRIES_PHONE = { display: "+61 3 9925 2000", tel: "+61399252000" };
@@ -25,6 +26,7 @@ export default function Widget({ transport, showDemoHint = true }) {
   const [week, setWeek] = useState(null);
   const [traceVisible, setTraceVisible] = useState(() => prefs.get("showTrace") === "true");
   const [phoneOpen, setPhoneOpen] = useState(false);
+  const [weekOpen, setWeekOpen] = useState(false);
   const [expanded, setExpanded] = useState(() => prefs.get("expanded") === "1");
   const [bottom, setBottom] = useState(24);
   const rootRef = useRef(null);
@@ -108,7 +110,27 @@ export default function Widget({ transport, showDemoHint = true }) {
     reset();
     setFirstName(null);
     setWeek(null);
+    setWeekOpen(false);
     setAuth({ status: "out" });
+  }
+
+  // The header's Your week, for once a conversation has started: refreshed on opening (no model call), and
+  // mutually exclusive with the phone popover so only one sheet sits under the header at a time.
+  function toggleWeek() {
+    const next = !weekOpen;
+    setWeekOpen(next);
+    if (next) {
+      setPhoneOpen(false);
+      api
+        .week()
+        .then((d) => d.found && setWeek(d))
+        .catch(() => {});
+    }
+  }
+
+  function askAboutWeekItem(prompt) {
+    setWeekOpen(false);
+    send(prompt);
   }
 
   function toggleExpanded() {
@@ -125,6 +147,9 @@ export default function Widget({ transport, showDemoHint = true }) {
 
   const chips = useMemo(() => chipsForPath(window.location.pathname), []);
   const hasConversation = messages.length > 0;
+  const weekItemCount = weekCount(week);
+  // On the start screen Your week is in the body; once chatting, it moves to a header button.
+  const showWeekButton = auth.status === "in" && weekItemCount > 0 && (hasConversation || sending);
   const sizeLabel = expanded ? "Make the chat window smaller" : "Make the chat window larger";
   const traceLabel = traceVisible ? "Hide the tool-call trace" : "Show the tool-call trace";
 
@@ -137,11 +162,12 @@ export default function Widget({ transport, showDemoHint = true }) {
         aria-hidden={!open}
         onKeyDown={(e) => {
           if (e.key !== "Escape") return;
-          if (phoneOpen) setPhoneOpen(false);
+          if (weekOpen) setWeekOpen(false);
+          else if (phoneOpen) setPhoneOpen(false);
           else setOpenPref(false);
         }}
       >
-        <header className="lw-header">
+        <header className={`lw-header${showWeekButton ? " lw-header-crowded" : ""}`}>
           <span className="lw-mark">
             <ChatIcon size={18} />
           </span>
@@ -159,13 +185,31 @@ export default function Widget({ transport, showDemoHint = true }) {
             </div>
             <span className="lw-model">{MODEL_LABEL}</span>
           </div>
+          {showWeekButton && (
+            <button
+              type="button"
+              className={`lw-header-btn lw-week-btn${weekOpen ? " lw-on" : ""}`}
+              title="Your week"
+              aria-label={`Your week, ${weekItemCount} items`}
+              aria-expanded={weekOpen}
+              onClick={toggleWeek}
+            >
+              <CalendarIcon size={18} />
+              <span className="lw-header-badge" aria-hidden="true">
+                {weekItemCount}
+              </span>
+            </button>
+          )}
           <button
             type="button"
             className={`lw-header-btn${phoneOpen ? " lw-on" : ""}`}
             title="Call RMIT"
             aria-label="Call RMIT"
             aria-expanded={phoneOpen}
-            onClick={() => setPhoneOpen(!phoneOpen)}
+            onClick={() => {
+              setPhoneOpen(!phoneOpen);
+              setWeekOpen(false);
+            }}
           >
             <PhoneIcon size={18} />
           </button>
@@ -188,6 +232,18 @@ export default function Widget({ transport, showDemoHint = true }) {
             <ChevronDownIcon size={20} />
           </button>
         </header>
+
+        {weekOpen && showWeekButton && (
+          <div className="lw-weekdrop" role="region" aria-label="Your week">
+            <p className="lw-weekdrop-head">
+              <strong>Your week</strong>
+              {week.week_label && <span className="lw-dim"> · {week.week_label}</span>}
+            </p>
+            <div className="lw-weekdrop-list">
+              <WeekItems week={week} onAsk={askAboutWeekItem} />
+            </div>
+          </div>
+        )}
 
         {phoneOpen && (
           <div className="lw-phone" role="region" aria-label="RMIT general enquiries">

@@ -169,6 +169,16 @@
   gap: 8px;
 }
 
+/* With the Your week button the header has one more button than it was laid out for: drop the Prototype
+   badge (the footer still says it is a prototype) and tighten the spacing so nothing overlaps. */
+.lw-header-crowded {
+  gap: 6px;
+}
+
+.lw-header-crowded .lw-badge {
+  display: none;
+}
+
 .lw-model {
   font-size: 11px;
   opacity: 0.8;
@@ -516,6 +526,51 @@
 .lw-week-soon {
   background: #e8a317;
   opacity: 1;
+}
+
+/* The header's Your week button and its dropdown, once a conversation has started. */
+.lw-week-btn {
+  position: relative;
+}
+
+.lw-header-badge {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.lw-weekdrop {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  max-height: 55%;
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 10px rgba(0, 0, 40, 0.08);
+}
+
+.lw-weekdrop-head {
+  margin: 0;
+  padding: 10px 16px 6px;
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.lw-weekdrop-list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 /* ---------- messages ---------- */
