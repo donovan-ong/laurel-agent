@@ -38,7 +38,7 @@ This is a **student-project prototype on synthetic data**, not an official RMIT 
   `POST /api/widget/login` and `/api/widget/logout`, `GET /api/session/adopt` (below), a CORS allow-list, and
   `/widget` + `/demo` static mounts. `/api/login`'s response contract is untouched.
 - **The webapp is now restyled to match**: same navy/red/white RMIT palette, sans-serif throughout, the same
-  chat-bubble mark and "Prototype" badge — one shared look across the full app and the widget. Only the visual
+  Laurel mark (white laurel leaves on a red disc, from `assets/brand/`) — one shared look across the full app and the widget. Only the visual
   layer changed; its routes, session handling and tests are otherwise as before.
 
 ### Design choices worth knowing
