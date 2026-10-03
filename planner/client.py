@@ -62,7 +62,7 @@ class ChatClient:
     """One student's conversation. The student number goes in the run context, never in the message."""
 
     def __init__(self, run_client, threads_client, agent_id: str, student_number: str,
-                 poll_interval: int = 2, max_retries: int = 90):
+                 poll_interval: float = 0.5, max_retries: int = 360):
         self.run_client = run_client
         self.threads_client = threads_client
         self.agent_id = agent_id
