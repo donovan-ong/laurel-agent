@@ -1,0 +1,44 @@
+.content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-4);
+}
+
+.name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-greeting);
+  margin: 0 0 var(--space-4);
+  color: var(--navy);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-1) var(--space-3);
+  margin: 0 0 var(--space-4);
+}
+
+.fields dt {
+  color: var(--text-dim);
+  font-size: var(--text-sm);
+}
+
+.fields dd {
+  margin: 0;
+}
+
+.holdWarning {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.enrolments {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-4);
+}
+
+.sourceNote {
+  color: var(--text-dim);
+  font-size: var(--text-sm);
+}
