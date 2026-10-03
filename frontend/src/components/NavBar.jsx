@@ -10,9 +10,8 @@ export default function NavBar({ week, onAsk, askDisabled }) {
   return (
     <nav className={styles.nav}>
       <Link to="/" className={styles.brand}>
-        <LaurelLogo size={22} />
+        <LaurelLogo size={26} />
         <span className={styles.brandName}>Laurel</span>
-        <span className={styles.badge}>Prototype</span>
       </Link>
       <Link to="/" className={styles.link}>
         Chat

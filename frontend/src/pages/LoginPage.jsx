@@ -35,9 +35,8 @@ export default function LoginPage() {
   return (
     <div className={styles.page}>
       <h1 className={styles.welcome}>
-        <LaurelLogo size={32} />
+        <LaurelLogo size={112} faces />
         Laurel
-        <span className={styles.badge}>Prototype</span>
       </h1>
       <div className={styles.card}>
         <h2 className={styles.title}>Welcome back</h2>
