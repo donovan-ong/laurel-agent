@@ -10,7 +10,7 @@ Log in with `python -m planner login -u demoN -p demoN` first, then `python -m p
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
 | Hi | any | Greets you by name after loading your profile, without asking who you are |
-| What am I enrolled in this semester? | demo4 | Data Mining and Machine Learning, with their class times |
+| What am I enrolled in this semester? | demo4 | Four classes: COSC2110 Data Mining, COSC2673 Machine Learning, INTE2402 Cloud Security and COSC3154 Thesis Part A, with their class times |
 | What are my results, GPA and WAM? | demo4 | COSC2148 78 and COSC2462 85, GPA 3.5, WAM 81.5 |
 | Did I fail anything? What does it do to my GPA? | demo5 | COSC2462 at 42 is a fail, GPA 0.5, WAM 48.5. The fail stays on the record |
 | What is my GPA? | demo1 | No results yet, so no GPA |
@@ -19,14 +19,14 @@ Log in with `python -m planner login -u demoN -p demoN` first, then `python -m p
 
 ### Canvas: due dates, submissions and marks
 
-Data is only seeded for courses a student has a result or a current enrolment in, so a student admitted but not yet enrolled (`demo1`) correctly has none. On the demo date, 3 October 2026, nothing is overdue: Assignment 1 is submitted, Assignment 2 is unsubmitted and due Sunday 11 October at 11:59 pm (the priority), and Assignment 3 is due 9 November. To move the demo, run `python seed/generate.py --demo-date YYYY-MM-DD` and Assignment 2 moves to the Sunday after next. Laurel says how overdue or how far away an assignment is from the tool's own `due_status`, worked out from today's date.
+Data is only seeded for courses a student has a result or a current enrolment in, so a student admitted but not yet enrolled (`demo1`) correctly has none. On the demo date, 3 October 2026, nothing is overdue: Assignment 1 is submitted, Assignment 2 is unsubmitted, with each class's due on a different day (for `demo4`: Data Mining Sunday 11 October at 11:59 pm, the priority, then 14, 16 and 18 October), and Assignment 3s fall through November. To move the demo, run `python seed/generate.py --demo-date YYYY-MM-DD` and Assignment 2 moves to the Sunday after next. Laurel says how overdue or how far away an assignment is from the tool's own `due_status`, worked out from today's date.
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
-| What's due in the next two weeks? | demo4 | Assignment 2: Classification Models (Data Mining) and Assignment 2: Classification with Neural Networks (Machine Learning), due Sunday 11 October, 11:59 pm, not yet submitted |
-| Did I submit assignment 2 for Data Mining? | demo4 | Not yet: it's due Sunday 11 October, 11:59 pm (in 8 days on 3 October). Gives the one-sentence summary, then asks whether you'd like study resources |
+| What's due in the next two weeks? | demo4 | COSC2110 Data Mining — Assignment 2: Classification Models (Sun 11 Oct, 11:59 pm), COSC2673 Machine Learning — Assignment 2: Classification with Neural Networks (Wed 14 Oct) and INTE2402 Cloud Security — Assignment 2: Identity and Access Management (Fri 16 Oct), none submitted yet |
+| Did I submit assignment 2 for Data Mining? | demo4 | Not yet: COSC2110 Data Mining — Assignment 2: Classification Models is due Sunday 11 October, 11:59 pm (in 8 days on 3 October). Gives the one-sentence summary, then asks whether you'd like study resources |
 | What mark did I get for my first assignment in COSC2148? | demo4 | Assignment 1: Research Question and Literature Review, 74 out of 100, with its summary |
-| What are all my assignments for Machine Learning? | demo4 | Assignment 1: Regression and Model Evaluation (submitted and graded), Assignment 2: Classification with Neural Networks (due Sunday 11 October) and Assignment 3: Machine Learning Project (due 9 November) |
+| What are all my assignments for Machine Learning? | demo4 | Assignment 1: Regression and Model Evaluation (submitted and graded), Assignment 2: Classification with Neural Networks (due Wednesday 14 October) and Assignment 3: Machine Learning Project (due 9 November) |
 | Tell me about Assignment 1 for Data Mining | demo4 | Assignment 1: Data Pre-processing, with its summary, then "Would you like some study resources for this assignment?" |
 | (then) Yes please | demo4 | General study suggestions (concepts, an approach, kinds of resources), labelled as not course materials and with no made-up links, then an offer to plan study sessions or book a room |
 | What's due this week? | demo1 | Nothing: not enrolled in anything yet |
@@ -37,9 +37,9 @@ Data is only seeded for courses a student has a result or a current enrolment in
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
-| What does my week look like? Is there anything I should know? | demo4 | Assignment 2 for Data Mining and Machine Learning due Sunday 11 October (in 8 days), an overdue library book that can be renewed, the exam period in 23 days and Assignment 3 due 9 November |
+| What does my week look like? Is there anything I should know? | demo4 | Three Assignment 2s due in the next fortnight, each with its course code and name first: Data Mining (Sun 11 Oct, in 8 days), Machine Learning (14 Oct) and Cloud Security (16 Oct), then Thesis Part A's Methodology Chapter (18 Oct), an overdue library book that can be renewed and the exam period in 23 days |
 | What should I focus on? | demo7 | The enrolment hold first, then the assignments due Sunday |
-| Plan my study week | demo4 | A table of two-hour sessions, Assignment 2 (due Sunday) first, none on Monday or Wednesday evening (workshops), each with a free room. Says nothing has been booked |
+| Plan my study week | demo4 | A table of two-hour sessions, Data Mining's Assignment 2 (due Sunday) first, then Machine Learning and Cloud Security, none on Monday, Tuesday or Wednesday evening (workshops), each with a free room. Says nothing has been booked |
 | I work 9 to 5, Monday to Friday. Plan my study week | demo4 | The same, but only evening and weekend sessions |
 | Book the room for the first session | demo4 | After a plan: a room check and a summary, then a ROOM reference only after you say yes |
 | Plan my study week | demo1 | Nothing to plan: not enrolled in anything yet |
@@ -153,7 +153,7 @@ The agent is not tied to one program. `demo9` to `demo14` are on the Bachelor of
 | Put Programming Autonomous Robots in my plan | demo1 | Reports it cannot fit and says why, then picks another |
 | I want Machine Learning in 2027-S2. Does it work for my schedule? | demo1 | Checks that course against your availability and says which workshop fits |
 | My hours changed: I now finish at 3pm on Wednesdays. Rebuild it | demo1 | A new plan using the new hours |
-| What do I have left? I can't attend before 5pm | demo4 | Only Thesis Part A, an option and Thesis Part B, assuming this semester's courses pass |
+| What do I have left? I can't attend before 5pm | demo4 | Only Thesis Part B, one semester in 2027-S1, assuming this semester's four courses pass |
 
 ### Enrolling
 

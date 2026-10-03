@@ -344,7 +344,7 @@ scenarios:
     prompt: "What do I have left to finish my degree? I can't attend anything before 5pm on weekdays."
     checks:
       tools_called: [build_plan]
-      contains_any: [["cosc3154", "thesis part a"], ["cosc3155", "thesis part b"], ["assum", "in progress", "currently enrolled", "this semester", "current"]]
+      contains_any: [["cosc3155", "thesis part b"], ["assum", "in progress", "currently enrolled", "this semester", "current"]]
   - id: plan_for_a_student_in_their_final_semester
     login: demo6
     tags: [plan]
@@ -463,7 +463,7 @@ scenarios:
     prompt: "What am I enrolled in this semester?"
     checks:
       tools_called_any: [[list_enrolments, get_student_profile]]
-      contains: ["data mining", "machine learning"]
+      contains: ["data mining", "machine learning", "cloud security", "thesis"]
 
   # The Bachelor of Computer Science (BP094P23) and Bachelor of Information Technology (BP162P23)
   - id: bcs_program_structure
@@ -765,8 +765,8 @@ scenarios:
     prompt: "As of 3 October 2026, what does my week look like? Is there anything I should know?"
     checks:
       tools_called: [get_my_week]
-      contains: ["assignment 2"]
-      contains_any: [["11 october", "sunday"], ["data mining", "machine learning"]]
+      contains: ["assignment 2", "cosc2110", "data mining"]
+      contains_any: [["11 october", "sunday"], ["machine learning", "cosc2673"], ["cloud security", "inte2402"]]
   - id: studyweek_plans_the_priority_work_first_with_rooms
     login: demo4
     tags: [studyweek]
@@ -801,7 +801,7 @@ scenarios:
     prompt: "Did I submit Assignment 2: Classification Models for Data Mining?"
     checks:
       tools_called: [list_assignments]
-      contains: ["classification models", "11 october"]
+      contains: ["cosc2110", "classification models", "11 october"]
       contains_any: [["not been submitted", "not submitted", "haven't submitted", "have not submitted", "not yet submitted"], ["resources"]]
       not_contains: ["overdue", "past due"]
   - id: assignment_resources_are_general_suggestions

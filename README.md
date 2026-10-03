@@ -140,7 +140,7 @@ Each password is the same as the username.
 | demo1 | S0000001 | New, domestic, HECS, part-time around a 9-to-5 week |
 | demo2 | S0000002 | New, domestic full-fee, full-time |
 | demo3 | S0000003 | New, international, full-time |
-| demo4 | S0000004 | Continuing, two results, enrolled this term |
+| demo4 | S0000004 | Continuing, full-time, four classes this term with staggered deadlines (the hero demo for Your week) |
 | demo5 | S0000005 | Continuing, one failed course |
 | demo6 | S0000006 | Final semester, six results |
 | demo7 | S0000007 | Overdue balance and an enrolment hold |
