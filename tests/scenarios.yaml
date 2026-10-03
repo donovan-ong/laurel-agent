@@ -767,7 +767,7 @@ scenarios:
       tools_called: [get_my_week]
       contains: ["assignment 2"]
       contains_any: [["11 october", "sunday"], ["data mining", "machine learning"]]
-  - id: studyweek_plans_overdue_work_first_with_rooms
+  - id: studyweek_plans_the_priority_work_first_with_rooms
     login: demo4
     tags: [studyweek]
     prompt: "Plan my study week starting 3 October 2026."
