@@ -1,0 +1,1054 @@
+[
+  {
+    "period": "2026-S1",
+    "name": "Semester 1 2026",
+    "kind": "semester",
+    "weeks": [
+      {
+        "label": "Week 1",
+        "start": "2026-03-02",
+        "end": "2026-03-08"
+      },
+      {
+        "label": "Week 2",
+        "start": "2026-03-09",
+        "end": "2026-03-15"
+      },
+      {
+        "label": "Week 3",
+        "start": "2026-03-16",
+        "end": "2026-03-22"
+      },
+      {
+        "label": "Week 4",
+        "start": "2026-03-23",
+        "end": "2026-03-29"
+      },
+      {
+        "label": "Week 5",
+        "start": "2026-03-30",
+        "end": "2026-04-05"
+      },
+      {
+        "label": "Mid-semester break",
+        "start": "2026-04-03",
+        "end": "2026-04-12"
+      },
+      {
+        "label": "Week 6",
+        "start": "2026-04-13",
+        "end": "2026-04-19"
+      },
+      {
+        "label": "Week 7",
+        "start": "2026-04-20",
+        "end": "2026-04-26"
+      },
+      {
+        "label": "Week 8",
+        "start": "2026-04-27",
+        "end": "2026-05-03"
+      },
+      {
+        "label": "Week 9",
+        "start": "2026-05-04",
+        "end": "2026-05-10"
+      },
+      {
+        "label": "Week 10",
+        "start": "2026-05-11",
+        "end": "2026-05-17"
+      },
+      {
+        "label": "Week 11",
+        "start": "2026-05-18",
+        "end": "2026-05-24"
+      },
+      {
+        "label": "Week 12",
+        "start": "2026-05-25",
+        "end": "2026-05-31"
+      },
+      {
+        "label": "Week 13",
+        "start": "2026-06-01",
+        "end": "2026-06-07"
+      },
+      {
+        "label": "Week 14",
+        "start": "2026-06-08",
+        "end": "2026-06-14"
+      },
+      {
+        "label": "Week 15",
+        "start": "2026-06-15",
+        "end": "2026-06-21"
+      },
+      {
+        "label": "Week 16",
+        "start": "2026-06-22",
+        "end": "2026-06-28"
+      }
+    ],
+    "events": [
+      {
+        "id": "2026-S1-01",
+        "date": "2025-12-25",
+        "end_date": "2026-01-01",
+        "event": "RMIT University closed",
+        "category": "university_closure",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-02",
+        "date": "2026-01-01",
+        "end_date": null,
+        "event": "New Year's Day public holiday (Thursday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-03",
+        "date": "2026-01-02",
+        "end_date": null,
+        "event": "RMIT University reopens (Friday)",
+        "category": "university_reopens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-04",
+        "date": "2026-01-26",
+        "end_date": null,
+        "event": "Australia Day public holiday (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-05",
+        "date": "2026-02-23",
+        "end_date": "2026-02-27",
+        "event": "Orientation",
+        "category": "orientation",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-06",
+        "date": "2026-03-02",
+        "end_date": null,
+        "event": "Semester 1 classes begin",
+        "category": "classes_begin",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-07",
+        "date": "2026-03-09",
+        "end_date": null,
+        "event": "Labour Day public holiday (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-08",
+        "date": "2026-03-10",
+        "end_date": null,
+        "event": "Last day to add classes for Semester 1 – School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles only",
+        "category": "add_deadline",
+        "applies_to": "art_architecture_fashion_only",
+        "note": null
+      },
+      {
+        "id": "2026-S1-09",
+        "date": "2026-03-15",
+        "end_date": null,
+        "event": "Last day to add classes for Semester 1 (not including School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles)",
+        "category": "add_deadline",
+        "applies_to": "all_other_schools",
+        "note": null
+      },
+      {
+        "id": "2026-S1-10",
+        "date": "2026-03-31",
+        "end_date": null,
+        "event": "Semester 1 census date",
+        "category": "census",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-11",
+        "date": "2026-04-03",
+        "end_date": null,
+        "event": "Good Friday public holiday",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-12",
+        "date": "2026-04-03",
+        "end_date": "2026-04-12",
+        "event": "Mid-semester break (Friday to Friday, includes Easter)",
+        "category": "break",
+        "applies_to": null,
+        "note": "The published events list gives this break as Friday 3 to Friday 10 April. The week table gives 3 to 12 April, and the Semester 2 break includes its weekend, so this data uses 3 to 12 April."
+      },
+      {
+        "id": "2026-S1-13",
+        "date": "2026-04-06",
+        "end_date": null,
+        "event": "Easter Monday public holiday",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-14",
+        "date": "2026-04-07",
+        "end_date": null,
+        "event": "Easter Tuesday RMIT holiday",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-15",
+        "date": "2026-04-13",
+        "end_date": null,
+        "event": "Classes resume (Monday)",
+        "category": "classes_resume",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-16",
+        "date": "2026-04-25",
+        "end_date": null,
+        "event": "Anzac Day public holiday (Saturday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-17",
+        "date": "2026-05-01",
+        "end_date": null,
+        "event": "Last day to drop classes without academic penalty for Semester 1",
+        "category": "drop_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-18",
+        "date": "2026-05-01",
+        "end_date": null,
+        "event": "Last day to withdraw from program by cancelling enrolment or taking leave of absence without academic penalty for Semester 1",
+        "category": "withdraw_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-19",
+        "date": "2026-05-22",
+        "end_date": null,
+        "event": "Equitable assessment arrangement registrations close for Semester 1",
+        "category": "equitable_assessment_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-20",
+        "date": "2026-06-08",
+        "end_date": null,
+        "event": "King's Birthday public holiday (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-21",
+        "date": "2026-06-09",
+        "end_date": "2026-06-26",
+        "event": "Semester 1 assessment period",
+        "category": "assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-22",
+        "date": "2026-06-29",
+        "end_date": "2026-07-19",
+        "event": "Semester break",
+        "category": "break",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-23",
+        "date": "2026-07-13",
+        "end_date": null,
+        "event": "Semester 1 official results release date",
+        "category": "results_release",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S1-24",
+        "date": "2026-07-20",
+        "end_date": "2026-07-24",
+        "event": "Semester 1 deferred assessment period",
+        "category": "deferred_assessment_period",
+        "applies_to": null,
+        "note": null
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "weeks": "from_public_page",
+      "events": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "period": "2026-S2",
+    "name": "Semester 2 2026",
+    "kind": "semester",
+    "weeks": [
+      {
+        "label": "Week 1",
+        "start": "2026-07-20",
+        "end": "2026-07-26"
+      },
+      {
+        "label": "Week 2",
+        "start": "2026-07-27",
+        "end": "2026-08-02"
+      },
+      {
+        "label": "Week 3",
+        "start": "2026-08-03",
+        "end": "2026-08-09"
+      },
+      {
+        "label": "Week 4",
+        "start": "2026-08-10",
+        "end": "2026-08-16"
+      },
+      {
+        "label": "Week 5",
+        "start": "2026-08-17",
+        "end": "2026-08-23"
+      },
+      {
+        "label": "Week 6",
+        "start": "2026-08-24",
+        "end": "2026-08-30"
+      },
+      {
+        "label": "Mid-semester break",
+        "start": "2026-08-31",
+        "end": "2026-09-06"
+      },
+      {
+        "label": "Week 7",
+        "start": "2026-09-07",
+        "end": "2026-09-13"
+      },
+      {
+        "label": "Week 8",
+        "start": "2026-09-14",
+        "end": "2026-09-20"
+      },
+      {
+        "label": "Week 9",
+        "start": "2026-09-21",
+        "end": "2026-09-27"
+      },
+      {
+        "label": "Week 10",
+        "start": "2026-09-28",
+        "end": "2026-10-04"
+      },
+      {
+        "label": "Week 11",
+        "start": "2026-10-05",
+        "end": "2026-10-11"
+      },
+      {
+        "label": "Week 12",
+        "start": "2026-10-12",
+        "end": "2026-10-18"
+      },
+      {
+        "label": "Week 13",
+        "start": "2026-10-19",
+        "end": "2026-10-25"
+      },
+      {
+        "label": "Week 14",
+        "start": "2026-10-26",
+        "end": "2026-11-01"
+      },
+      {
+        "label": "Week 15",
+        "start": "2026-11-02",
+        "end": "2026-11-08"
+      },
+      {
+        "label": "Week 16",
+        "start": "2026-11-09",
+        "end": "2026-11-15"
+      }
+    ],
+    "events": [
+      {
+        "id": "2026-S2-01",
+        "date": "2026-07-13",
+        "end_date": "2026-07-17",
+        "event": "Mid-year orientation",
+        "category": "orientation",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-02",
+        "date": "2026-07-20",
+        "end_date": null,
+        "event": "Semester 2 classes begin",
+        "category": "classes_begin",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-03",
+        "date": "2026-07-20",
+        "end_date": "2026-07-24",
+        "event": "Semester 1 deferred assessment period",
+        "category": "deferred_assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-04",
+        "date": "2026-07-27",
+        "end_date": null,
+        "event": "Last day to add classes for Semester 2 – School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles only",
+        "category": "add_deadline",
+        "applies_to": "art_architecture_fashion_only",
+        "note": null
+      },
+      {
+        "id": "2026-S2-05",
+        "date": "2026-08-02",
+        "end_date": null,
+        "event": "Last day to add classes for Semester 2 (not including School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles)",
+        "category": "add_deadline",
+        "applies_to": "all_other_schools",
+        "note": null
+      },
+      {
+        "id": "2026-S2-06",
+        "date": "2026-08-31",
+        "end_date": null,
+        "event": "Semester 2 census date",
+        "category": "census",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-07",
+        "date": "2026-08-31",
+        "end_date": "2026-09-06",
+        "event": "Mid-semester break",
+        "category": "break",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-08",
+        "date": "2026-09-07",
+        "end_date": null,
+        "event": "Classes resume",
+        "category": "classes_resume",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-09",
+        "date": "2026-09-18",
+        "end_date": null,
+        "event": "Last day to drop classes without academic penalty for Semester 2",
+        "category": "drop_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-10",
+        "date": "2026-09-18",
+        "end_date": null,
+        "event": "Last day to withdraw from program by cancelling enrolment or taking leave of absence without academic penalty for Semester 2",
+        "category": "withdraw_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-11",
+        "date": "2026-09-25",
+        "end_date": null,
+        "event": "AFL Grand Final public holiday (Friday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-12",
+        "date": "2026-10-01",
+        "end_date": null,
+        "event": "Enrolment Online opens for 2027 enrolments",
+        "category": "enrolment_opens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-13",
+        "date": "2026-10-09",
+        "end_date": null,
+        "event": "Equitable assessment arrangement registrations close for Semester 2",
+        "category": "equitable_assessment_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-14",
+        "date": "2026-10-23",
+        "end_date": null,
+        "event": "Last day to apply to graduate and confirm attendance at the 2026 Melbourne Graduation Ceremony",
+        "category": "graduation",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-15",
+        "date": "2026-10-26",
+        "end_date": "2026-11-13",
+        "event": "Semester 2 assessment period",
+        "category": "assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-16",
+        "date": "2026-11-03",
+        "end_date": null,
+        "event": "Melbourne Cup Day public holiday (Tuesday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-17",
+        "date": "2026-11-30",
+        "end_date": null,
+        "event": "Semester 2 official results release date",
+        "category": "results_release",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-18",
+        "date": "2026-11-30",
+        "end_date": "2026-12-04",
+        "event": "Semester 2 deferred assessment period",
+        "category": "deferred_assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-19",
+        "date": "2026-12-16",
+        "end_date": null,
+        "event": "Melbourne Graduation Pre-Party and Ceremony (Wednesday)",
+        "category": "graduation",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-20",
+        "date": "2026-12-21",
+        "end_date": null,
+        "event": "Deadline for timely re-enrolment: last day for continuing students to re-enrol for 2027 – by 5pm",
+        "category": "re_enrolment_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-21",
+        "date": "2026-12-25",
+        "end_date": "2027-01-01",
+        "event": "RMIT University closed",
+        "category": "university_closure",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-22",
+        "date": "2026-12-25",
+        "end_date": null,
+        "event": "Christmas Day public holiday (Friday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-23",
+        "date": "2026-12-26",
+        "end_date": null,
+        "event": "Boxing Day public holiday (Saturday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-24",
+        "date": "2026-12-28",
+        "end_date": null,
+        "event": "Boxing Day public holiday – Additional (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-25",
+        "date": "2027-01-01",
+        "end_date": null,
+        "event": "New Year's Day (Friday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-S2-26",
+        "date": "2027-01-04",
+        "end_date": null,
+        "event": "RMIT University re-opens (Monday)",
+        "category": "university_reopens",
+        "applies_to": null,
+        "note": null
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "weeks": "from_public_page",
+      "events": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "period": "2025-SPR",
+    "name": "Spring Semester 2025-2026",
+    "kind": "spring",
+    "weeks": [],
+    "events": [
+      {
+        "id": "2025-SPR-01",
+        "date": "2025-09-01",
+        "end_date": null,
+        "event": "Spring Semester enrolment opens",
+        "category": "enrolment_opens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-02",
+        "date": "2025-11-17",
+        "end_date": null,
+        "event": "Spring Semester (2025-2026) begins",
+        "category": "classes_begin",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-03",
+        "date": "2025-11-24",
+        "end_date": null,
+        "event": "Last date to add classes for Spring Semester (2025)",
+        "category": "add_deadline",
+        "applies_to": "all_other_schools",
+        "note": null
+      },
+      {
+        "id": "2025-SPR-04",
+        "date": "2025-12-06",
+        "end_date": null,
+        "event": "Spring Semester (2025) census date (Saturday)",
+        "category": "census",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-05",
+        "date": "2025-12-25",
+        "end_date": "2026-01-01",
+        "event": "RMIT University closed",
+        "category": "university_closure",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-06",
+        "date": "2025-12-25",
+        "end_date": null,
+        "event": "Christmas Day public holiday (Thursday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-07",
+        "date": "2025-12-26",
+        "end_date": null,
+        "event": "Boxing Day public holiday (Friday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-08",
+        "date": "2026-01-01",
+        "end_date": null,
+        "event": "New Year's Day public holiday (Thursday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-09",
+        "date": "2026-01-02",
+        "end_date": null,
+        "event": "RMIT University reopens (Friday)",
+        "category": "university_reopens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-10",
+        "date": "2026-01-23",
+        "end_date": null,
+        "event": "Spring Semester (2025) – last day to drop classes without academic penalty",
+        "category": "drop_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-11",
+        "date": "2026-01-26",
+        "end_date": null,
+        "event": "Australia Day public holiday (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-12",
+        "date": "2026-02-13",
+        "end_date": null,
+        "event": "Spring Semester (2025) classes end",
+        "category": "classes_end",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-13",
+        "date": "2026-02-16",
+        "end_date": "2026-02-20",
+        "event": "Spring Semester (2025) assessment period",
+        "category": "assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2025-SPR-14",
+        "date": "2026-02-27",
+        "end_date": null,
+        "event": "Spring Semester (2025) results released",
+        "category": "results_release",
+        "applies_to": null,
+        "note": null
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "weeks": "from_public_page",
+      "events": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "period": "2026-SUM",
+    "name": "Summer Semester 2026",
+    "kind": "summer",
+    "weeks": [],
+    "events": [
+      {
+        "id": "2026-SUM-01",
+        "date": "2025-12-25",
+        "end_date": "2026-01-01",
+        "event": "RMIT University closed",
+        "category": "university_closure",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-02",
+        "date": "2026-01-01",
+        "end_date": null,
+        "event": "New Year's Day public holiday (Thursday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-03",
+        "date": "2026-01-02",
+        "end_date": null,
+        "event": "RMIT University reopens (Friday)",
+        "category": "university_reopens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-04",
+        "date": "2026-01-02",
+        "end_date": null,
+        "event": "Summer Semester begins (Friday)",
+        "category": "classes_begin",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-05",
+        "date": "2026-01-12",
+        "end_date": null,
+        "event": "Summer Semester - last day to add classes",
+        "category": "add_deadline",
+        "applies_to": "all_other_schools",
+        "note": null
+      },
+      {
+        "id": "2026-SUM-06",
+        "date": "2026-01-13",
+        "end_date": null,
+        "event": "Summer Semester - census date (Tuesday)",
+        "category": "census",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-07",
+        "date": "2026-01-26",
+        "end_date": null,
+        "event": "Australia Day public holiday (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-08",
+        "date": "2026-02-06",
+        "end_date": null,
+        "event": "Summer Semester - last date to drop classes without academic penalty",
+        "category": "drop_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-09",
+        "date": "2026-02-13",
+        "end_date": null,
+        "event": "Summer Semester classes end",
+        "category": "classes_end",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-10",
+        "date": "2026-02-16",
+        "end_date": "2026-02-20",
+        "event": "Summer Semester assessment period",
+        "category": "assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SUM-11",
+        "date": "2026-02-27",
+        "end_date": null,
+        "event": "Summer Semester results released",
+        "category": "results_release",
+        "applies_to": null,
+        "note": null
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "weeks": "from_public_page",
+      "events": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "period": "2026-SPR",
+    "name": "Spring Semester 2026-2027",
+    "kind": "spring",
+    "weeks": [],
+    "events": [
+      {
+        "id": "2026-SPR-01",
+        "date": "2026-09-01",
+        "end_date": null,
+        "event": "Spring Semester enrolment opens",
+        "category": "enrolment_opens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-02",
+        "date": "2026-11-16",
+        "end_date": null,
+        "event": "Spring Semester (2026) begins",
+        "category": "classes_begin",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-03",
+        "date": "2026-11-23",
+        "end_date": null,
+        "event": "Last date to add classes for Spring Semester (2026)",
+        "category": "add_deadline",
+        "applies_to": "all_other_schools",
+        "note": null
+      },
+      {
+        "id": "2026-SPR-04",
+        "date": "2026-12-07",
+        "end_date": null,
+        "event": "Spring Semester census date (Monday)",
+        "category": "census",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-05",
+        "date": "2026-12-25",
+        "end_date": "2027-01-01",
+        "event": "RMIT closed",
+        "category": "university_closure",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-06",
+        "date": "2026-12-25",
+        "end_date": null,
+        "event": "Christmas Day public holiday (Friday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-07",
+        "date": "2026-12-26",
+        "end_date": null,
+        "event": "Boxing Day public holiday (Saturday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-08",
+        "date": "2026-12-28",
+        "end_date": null,
+        "event": "Boxing Day public holiday - Additional (Monday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-09",
+        "date": "2027-01-01",
+        "end_date": null,
+        "event": "New Year's Day (Friday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-10",
+        "date": "2027-01-04",
+        "end_date": null,
+        "event": "RMIT University re-opens (Monday)",
+        "category": "university_reopens",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-11",
+        "date": "2027-01-22",
+        "end_date": null,
+        "event": "Spring Semester (2026) – last day to drop classes without academic penalty",
+        "category": "drop_deadline",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-12",
+        "date": "2027-01-26",
+        "end_date": null,
+        "event": "Australia Day public holiday (Tuesday)",
+        "category": "holiday",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-13",
+        "date": "2027-02-12",
+        "end_date": null,
+        "event": "Spring Semester (2026) classes end",
+        "category": "classes_end",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-14",
+        "date": "2027-02-15",
+        "end_date": "2027-02-19",
+        "event": "Spring Semester assessment period",
+        "category": "assessment_period",
+        "applies_to": null,
+        "note": null
+      },
+      {
+        "id": "2026-SPR-15",
+        "date": "2027-02-26",
+        "end_date": null,
+        "event": "Spring Semester (2026) results release",
+        "category": "results_release",
+        "applies_to": null,
+        "note": null
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "weeks": "from_public_page",
+      "events": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  }
+]

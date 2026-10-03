@@ -1,0 +1,238 @@
+{
+  "_comment": "Transcribed from the public BH013P26 program page, the COSC2148 Handbook page and RMIT's published key dates. The only values allowed to be from_public_page (requirements 5.1).",
+  "programs": {
+    "BH013P26": {
+      "program_code": "BH013P26",
+      "title": "Bachelor of Computer Science (Honours)",
+      "duration": {"full_time_years": 1, "part_time_years": 2},
+      "intakes": ["February", "July"],
+      "campus": "Melbourne City",
+      "stages": [
+        {"stage": "A", "credit_points": 48,
+         "note": "Students must complete a series of compulsory onboarding modules during their first semester or study period.",
+         "items": [{"type": "course", "course_id": "COSC2148"}, {"type": "course", "course_id": "COSC2462"},
+                   {"type": "options", "credit_points": 24}]},
+        {"stage": "B", "credit_points": 48,
+         "items": [{"type": "course", "course_id": "COSC3154"}, {"type": "options", "credit_points": 12},
+                   {"type": "course", "course_id": "COSC3155"}]}
+      ],
+      "option_list": {
+        "title": "Computer Science Honours Option List",
+        "course_ids": [
+          "COSC2632", "COSC2633", "COSC2301", "COSC2110", "INTE1071", "INTE2402", "COSC2274",
+          "COSC2527", "COSC1183", "ISYS3459", "COSC2972", "COSC2673", "COSC3047", "ISYS1079",
+          "INTE2547", "INTE2626", "COSC2674", "COSC2814", "COSC2973", "INTE2695", "INTE2696"
+        ]
+      }
+    }
+  },
+  "courses": {
+    "COSC2148": {
+      "handbook_code": "031749",
+      "title": "Computing Research and Project Preparation",
+      "credit_points": 12,
+      "campus": "City Campus",
+      "description": "This course focuses on research techniques and project management methods designed specifically for computing. You will explore fundamental research principles and both qualitative and quantitative research methods, as well as intellectual property, research integrity, and ethics. Additionally, you'll expand your understanding of key agile project methodologies and critically analyse their usability compared to traditional project management approaches.\n\nThroughout the course, you will learn critical analysis of literature, crafting research questions, and writing comprehensive reviews. You'll also develop skills in articulating research objectives, methodologies, and outcomes within proposals. Ethical considerations, comparative analysis of agile versus traditional methods, and practical experience in project planning and success criteria assessment are integral components of the course.",
+      "delivery_modes": ["hybrid_blended", "online", "distance"],
+      "assumed_knowledge": []
+    },
+    "COSC2462": {"title": "Preliminary Computer Science Honours Thesis", "credit_points": 12, "campus": "City Campus"},
+    "COSC3154": {"title": "Computer Science Honours Thesis Part A", "credit_points": 12, "campus": "City Campus"},
+    "COSC3155": {"title": "Computer Science Honours Thesis Part B", "credit_points": 24, "campus": "City Campus"},
+    "COSC2632": {"title": "Big Data Management", "credit_points": 12, "campus": "City Campus"},
+    "COSC2633": {"title": "Big Data Processing", "credit_points": 12, "campus": "City Campus"},
+    "COSC2301": {"title": "Computer and Internet Forensics", "credit_points": 12, "campus": "City Campus"},
+    "COSC2110": {"title": "Data Mining", "credit_points": 12, "campus": "City Campus"},
+    "INTE1071": {"title": "Secure Electronic Commerce", "credit_points": 12, "campus": "City Campus"},
+    "INTE2402": {"title": "Cloud Security", "credit_points": 12, "campus": "City Campus"},
+    "COSC2274": {"title": "Software Requirements Engineering", "credit_points": 12, "campus": "City Campus"},
+    "COSC2527": {"title": "Games and Artificial Intelligence Techniques", "credit_points": 12, "campus": "City Campus"},
+    "COSC1183": {"title": "Usability Engineering", "credit_points": 12, "campus": "City Campus"},
+    "ISYS3459": {"title": "Systems Architecture and Design", "credit_points": 12, "campus": "City Campus"},
+    "COSC2972": {"title": "Deep Learning", "credit_points": 12, "campus": "City Campus"},
+    "COSC2673": {"title": "Machine Learning", "credit_points": 12, "campus": "City Campus"},
+    "COSC3047": {"title": "Social Media and Networks Analytics", "credit_points": 12, "campus": "City Campus"},
+    "ISYS1079": {"title": "Managing Semi-structured and Unstructured Data", "credit_points": 12, "campus": "City Campus"},
+    "INTE2547": {"title": "Security Testing", "credit_points": 12, "campus": "City Campus"},
+    "INTE2626": {"title": "Cyber Security Attack Analysis and Incidence Response", "credit_points": 12, "campus": "City Campus"},
+    "COSC2674": {"title": "Programming Internet of Things", "credit_points": 12, "campus": "City Campus"},
+    "COSC2814": {"title": "Programming Autonomous Robots", "credit_points": 12, "campus": "City Campus"},
+    "COSC2973": {"title": "Intelligent Decision Making", "credit_points": 12, "campus": "City Campus"},
+    "INTE2695": {"title": "Secure Software Systems", "credit_points": 12, "campus": "City Campus"},
+    "INTE2696": {"title": "Human-Centered Security", "credit_points": 12, "campus": "City Campus"}
+  },
+  "class_numbers": {"1015": "COSC2148"},
+  "corrections": [
+    {
+      "period": "2026-S1",
+      "event": "Mid-semester break (Friday to Friday, includes Easter)",
+      "field": "end_date",
+      "published": "2026-04-10",
+      "used": "2026-04-12",
+      "note": "The published events list gives this break as Friday 3 to Friday 10 April. The week table gives 3 to 12 April, and the Semester 2 break includes its weekend, so this data uses 3 to 12 April."
+    }
+  ],
+  "terms": {
+    "2026-S2": {"start_date": "2026-07-20", "enrolment_closes": "2026-08-02", "census_date": "2026-08-31", "end_date": "2026-11-13"},
+    "2027-S1": {"enrolment_opens": "2026-10-01"},
+    "2027-S2": {"enrolment_opens": "2026-10-01"}
+  },
+  "key_dates": {
+    "2026-S1": {
+      "name": "Semester 1 2026",
+      "weeks": [
+        {"label": "Week 1", "start": "2026-03-02", "end": "2026-03-08"},
+        {"label": "Week 2", "start": "2026-03-09", "end": "2026-03-15"},
+        {"label": "Week 3", "start": "2026-03-16", "end": "2026-03-22"},
+        {"label": "Week 4", "start": "2026-03-23", "end": "2026-03-29"},
+        {"label": "Week 5", "start": "2026-03-30", "end": "2026-04-05"},
+        {"label": "Mid-semester break", "start": "2026-04-03", "end": "2026-04-12"},
+        {"label": "Week 6", "start": "2026-04-13", "end": "2026-04-19"},
+        {"label": "Week 7", "start": "2026-04-20", "end": "2026-04-26"},
+        {"label": "Week 8", "start": "2026-04-27", "end": "2026-05-03"},
+        {"label": "Week 9", "start": "2026-05-04", "end": "2026-05-10"},
+        {"label": "Week 10", "start": "2026-05-11", "end": "2026-05-17"},
+        {"label": "Week 11", "start": "2026-05-18", "end": "2026-05-24"},
+        {"label": "Week 12", "start": "2026-05-25", "end": "2026-05-31"},
+        {"label": "Week 13", "start": "2026-06-01", "end": "2026-06-07"},
+        {"label": "Week 14", "start": "2026-06-08", "end": "2026-06-14"},
+        {"label": "Week 15", "start": "2026-06-15", "end": "2026-06-21"},
+        {"label": "Week 16", "start": "2026-06-22", "end": "2026-06-28"}
+      ],
+      "events": [
+        {"date": "2025-12-25", "end_date": "2026-01-01", "event": "RMIT University closed"},
+        {"date": "2026-01-01", "end_date": null, "event": "New Year's Day public holiday (Thursday)"},
+        {"date": "2026-01-02", "end_date": null, "event": "RMIT University reopens (Friday)"},
+        {"date": "2026-01-26", "end_date": null, "event": "Australia Day public holiday (Monday)"},
+        {"date": "2026-02-23", "end_date": "2026-02-27", "event": "Orientation"},
+        {"date": "2026-03-02", "end_date": null, "event": "Semester 1 classes begin"},
+        {"date": "2026-03-09", "end_date": null, "event": "Labour Day public holiday (Monday)"},
+        {"date": "2026-03-10", "end_date": null, "event": "Last day to add classes for Semester 1 – School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles only"},
+        {"date": "2026-03-15", "end_date": null, "event": "Last day to add classes for Semester 1 (not including School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles)"},
+        {"date": "2026-03-31", "end_date": null, "event": "Semester 1 census date"},
+        {"date": "2026-04-03", "end_date": null, "event": "Good Friday public holiday"},
+        {"date": "2026-04-03", "end_date": "2026-04-10", "event": "Mid-semester break (Friday to Friday, includes Easter)"},
+        {"date": "2026-04-06", "end_date": null, "event": "Easter Monday public holiday"},
+        {"date": "2026-04-07", "end_date": null, "event": "Easter Tuesday RMIT holiday"},
+        {"date": "2026-04-13", "end_date": null, "event": "Classes resume (Monday)"},
+        {"date": "2026-04-25", "end_date": null, "event": "Anzac Day public holiday (Saturday)"},
+        {"date": "2026-05-01", "end_date": null, "event": "Last day to drop classes without academic penalty for Semester 1"},
+        {"date": "2026-05-01", "end_date": null, "event": "Last day to withdraw from program by cancelling enrolment or taking leave of absence without academic penalty for Semester 1"},
+        {"date": "2026-05-22", "end_date": null, "event": "Equitable assessment arrangement registrations close for Semester 1"},
+        {"date": "2026-06-08", "end_date": null, "event": "King's Birthday public holiday (Monday)"},
+        {"date": "2026-06-09", "end_date": "2026-06-26", "event": "Semester 1 assessment period"},
+        {"date": "2026-06-29", "end_date": "2026-07-19", "event": "Semester break"},
+        {"date": "2026-07-13", "end_date": null, "event": "Semester 1 official results release date"},
+        {"date": "2026-07-20", "end_date": "2026-07-24", "event": "Semester 1 deferred assessment period"}
+      ]
+    },
+    "2026-S2": {
+      "name": "Semester 2 2026",
+      "weeks": [
+        {"label": "Week 1", "start": "2026-07-20", "end": "2026-07-26"},
+        {"label": "Week 2", "start": "2026-07-27", "end": "2026-08-02"},
+        {"label": "Week 3", "start": "2026-08-03", "end": "2026-08-09"},
+        {"label": "Week 4", "start": "2026-08-10", "end": "2026-08-16"},
+        {"label": "Week 5", "start": "2026-08-17", "end": "2026-08-23"},
+        {"label": "Week 6", "start": "2026-08-24", "end": "2026-08-30"},
+        {"label": "Mid-semester break", "start": "2026-08-31", "end": "2026-09-06"},
+        {"label": "Week 7", "start": "2026-09-07", "end": "2026-09-13"},
+        {"label": "Week 8", "start": "2026-09-14", "end": "2026-09-20"},
+        {"label": "Week 9", "start": "2026-09-21", "end": "2026-09-27"},
+        {"label": "Week 10", "start": "2026-09-28", "end": "2026-10-04"},
+        {"label": "Week 11", "start": "2026-10-05", "end": "2026-10-11"},
+        {"label": "Week 12", "start": "2026-10-12", "end": "2026-10-18"},
+        {"label": "Week 13", "start": "2026-10-19", "end": "2026-10-25"},
+        {"label": "Week 14", "start": "2026-10-26", "end": "2026-11-01"},
+        {"label": "Week 15", "start": "2026-11-02", "end": "2026-11-08"},
+        {"label": "Week 16", "start": "2026-11-09", "end": "2026-11-15"}
+      ],
+      "events": [
+        {"date": "2026-07-13", "end_date": "2026-07-17", "event": "Mid-year orientation"},
+        {"date": "2026-07-20", "end_date": null, "event": "Semester 2 classes begin"},
+        {"date": "2026-07-20", "end_date": "2026-07-24", "event": "Semester 1 deferred assessment period"},
+        {"date": "2026-07-27", "end_date": null, "event": "Last day to add classes for Semester 2 – School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles only"},
+        {"date": "2026-08-02", "end_date": null, "event": "Last day to add classes for Semester 2 (not including School of Art, School of Architecture and Urban Design, and School of Fashion and Textiles)"},
+        {"date": "2026-08-31", "end_date": null, "event": "Semester 2 census date"},
+        {"date": "2026-08-31", "end_date": "2026-09-06", "event": "Mid-semester break"},
+        {"date": "2026-09-07", "end_date": null, "event": "Classes resume"},
+        {"date": "2026-09-18", "end_date": null, "event": "Last day to drop classes without academic penalty for Semester 2"},
+        {"date": "2026-09-18", "end_date": null, "event": "Last day to withdraw from program by cancelling enrolment or taking leave of absence without academic penalty for Semester 2"},
+        {"date": "2026-09-25", "end_date": null, "event": "AFL Grand Final public holiday (Friday)"},
+        {"date": "2026-10-01", "end_date": null, "event": "Enrolment Online opens for 2027 enrolments"},
+        {"date": "2026-10-09", "end_date": null, "event": "Equitable assessment arrangement registrations close for Semester 2"},
+        {"date": "2026-10-23", "end_date": null, "event": "Last day to apply to graduate and confirm attendance at the 2026 Melbourne Graduation Ceremony"},
+        {"date": "2026-10-26", "end_date": "2026-11-13", "event": "Semester 2 assessment period"},
+        {"date": "2026-11-03", "end_date": null, "event": "Melbourne Cup Day public holiday (Tuesday)"},
+        {"date": "2026-11-30", "end_date": null, "event": "Semester 2 official results release date"},
+        {"date": "2026-11-30", "end_date": "2026-12-04", "event": "Semester 2 deferred assessment period"},
+        {"date": "2026-12-16", "end_date": null, "event": "Melbourne Graduation Pre-Party and Ceremony (Wednesday)"},
+        {"date": "2026-12-21", "end_date": null, "event": "Deadline for timely re-enrolment: last day for continuing students to re-enrol for 2027 – by 5pm"},
+        {"date": "2026-12-25", "end_date": "2027-01-01", "event": "RMIT University closed"},
+        {"date": "2026-12-25", "end_date": null, "event": "Christmas Day public holiday (Friday)"},
+        {"date": "2026-12-26", "end_date": null, "event": "Boxing Day public holiday (Saturday)"},
+        {"date": "2026-12-28", "end_date": null, "event": "Boxing Day public holiday – Additional (Monday)"},
+        {"date": "2027-01-01", "end_date": null, "event": "New Year's Day (Friday)"},
+        {"date": "2027-01-04", "end_date": null, "event": "RMIT University re-opens (Monday)"}
+      ]
+    },
+    "2025-SPR": {
+      "name": "Spring Semester 2025-2026",
+      "weeks": [],
+      "events": [
+        {"date": "2025-09-01", "end_date": null, "event": "Spring Semester enrolment opens"},
+        {"date": "2025-11-17", "end_date": null, "event": "Spring Semester (2025-2026) begins"},
+        {"date": "2025-11-24", "end_date": null, "event": "Last date to add classes for Spring Semester (2025)"},
+        {"date": "2025-12-06", "end_date": null, "event": "Spring Semester (2025) census date (Saturday)"},
+        {"date": "2025-12-25", "end_date": "2026-01-01", "event": "RMIT University closed"},
+        {"date": "2025-12-25", "end_date": null, "event": "Christmas Day public holiday (Thursday)"},
+        {"date": "2025-12-26", "end_date": null, "event": "Boxing Day public holiday (Friday)"},
+        {"date": "2026-01-01", "end_date": null, "event": "New Year's Day public holiday (Thursday)"},
+        {"date": "2026-01-02", "end_date": null, "event": "RMIT University reopens (Friday)"},
+        {"date": "2026-01-23", "end_date": null, "event": "Spring Semester (2025) – last day to drop classes without academic penalty"},
+        {"date": "2026-01-26", "end_date": null, "event": "Australia Day public holiday (Monday)"},
+        {"date": "2026-02-13", "end_date": null, "event": "Spring Semester (2025) classes end"},
+        {"date": "2026-02-16", "end_date": "2026-02-20", "event": "Spring Semester (2025) assessment period"},
+        {"date": "2026-02-27", "end_date": null, "event": "Spring Semester (2025) results released"}
+      ]
+    },
+    "2026-SUM": {
+      "name": "Summer Semester 2026",
+      "weeks": [],
+      "events": [
+        {"date": "2025-12-25", "end_date": "2026-01-01", "event": "RMIT University closed"},
+        {"date": "2026-01-01", "end_date": null, "event": "New Year's Day public holiday (Thursday)"},
+        {"date": "2026-01-02", "end_date": null, "event": "RMIT University reopens (Friday)"},
+        {"date": "2026-01-02", "end_date": null, "event": "Summer Semester begins (Friday)"},
+        {"date": "2026-01-12", "end_date": null, "event": "Summer Semester - last day to add classes"},
+        {"date": "2026-01-13", "end_date": null, "event": "Summer Semester - census date (Tuesday)"},
+        {"date": "2026-01-26", "end_date": null, "event": "Australia Day public holiday (Monday)"},
+        {"date": "2026-02-06", "end_date": null, "event": "Summer Semester - last date to drop classes without academic penalty"},
+        {"date": "2026-02-13", "end_date": null, "event": "Summer Semester classes end"},
+        {"date": "2026-02-16", "end_date": "2026-02-20", "event": "Summer Semester assessment period"},
+        {"date": "2026-02-27", "end_date": null, "event": "Summer Semester results released"}
+      ]
+    },
+    "2026-SPR": {
+      "name": "Spring Semester 2026-2027",
+      "weeks": [],
+      "events": [
+        {"date": "2026-09-01", "end_date": null, "event": "Spring Semester enrolment opens"},
+        {"date": "2026-11-16", "end_date": null, "event": "Spring Semester (2026) begins"},
+        {"date": "2026-11-23", "end_date": null, "event": "Last date to add classes for Spring Semester (2026)"},
+        {"date": "2026-12-07", "end_date": null, "event": "Spring Semester census date (Monday)"},
+        {"date": "2026-12-25", "end_date": "2027-01-01", "event": "RMIT closed"},
+        {"date": "2026-12-25", "end_date": null, "event": "Christmas Day public holiday (Friday)"},
+        {"date": "2026-12-26", "end_date": null, "event": "Boxing Day public holiday (Saturday)"},
+        {"date": "2026-12-28", "end_date": null, "event": "Boxing Day public holiday - Additional (Monday)"},
+        {"date": "2027-01-01", "end_date": null, "event": "New Year's Day (Friday)"},
+        {"date": "2027-01-04", "end_date": null, "event": "RMIT University re-opens (Monday)"},
+        {"date": "2027-01-22", "end_date": null, "event": "Spring Semester (2026) – last day to drop classes without academic penalty"},
+        {"date": "2027-01-26", "end_date": null, "event": "Australia Day public holiday (Tuesday)"},
+        {"date": "2027-02-12", "end_date": null, "event": "Spring Semester (2026) classes end"},
+        {"date": "2027-02-15", "end_date": "2027-02-19", "event": "Spring Semester assessment period"},
+        {"date": "2027-02-26", "end_date": null, "event": "Spring Semester (2026) results release"}
+      ]
+    }
+  }
+}

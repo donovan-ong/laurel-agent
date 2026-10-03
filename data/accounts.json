@@ -1,0 +1,128 @@
+[
+  {
+    "username": "demo1",
+    "student_number": "S0000001",
+    "salt": "15561d628951100a9d931dd49f0c2706",
+    "password_hash": "68cb88762cc7439966d268d560bc74b68b28a4c93a6db14788f563f9fa4eac17",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo2",
+    "student_number": "S0000002",
+    "salt": "2390766c8f78488b36459d145910aeb5",
+    "password_hash": "e6cfc95e02363619a9ba2720ce32b66093dec199e672e3d9218939677fc6b069",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo3",
+    "student_number": "S0000003",
+    "salt": "41b059fcc3c9199e77def9e37d06d2a9",
+    "password_hash": "7d37f8e03747d6910e165bf4474decc9c0cd35df9b58159a99bf045c064d288e",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo4",
+    "student_number": "S0000004",
+    "salt": "ff4efa8261d492be002c6838ed1389cb",
+    "password_hash": "e60db803e50ceb0ed2081cc774e7e4117d8cd640fe25be7bd68ed8f95c61fee9",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo5",
+    "student_number": "S0000005",
+    "salt": "268d5afd68e3a39edc6f5d29704d7fa9",
+    "password_hash": "777acc5bf7359b152b5932c385538e19777310fc909f2770614ba2d12cc60318",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo6",
+    "student_number": "S0000006",
+    "salt": "c73ce8bee65238822e6240ca3baaa754",
+    "password_hash": "d63a36c3a2358d94e4c42e781716574ebcce7a5f7fda9e83267a44c9c8515e85",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo7",
+    "student_number": "S0000007",
+    "salt": "92f57978f9e79a9efe7c9a6a1499b3ca",
+    "password_hash": "37e40dfae8b59b5a73174d9ded6a879300958bd8b10968803829e2401fc62966",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo8",
+    "student_number": "S0000008",
+    "salt": "6033eafc7e443bd26c3a505251743986",
+    "password_hash": "57e145c444ad0f186da3cdc62752a0a52a60315e91546200538c17d0099075c3",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo9",
+    "student_number": "S0000009",
+    "salt": "b0171c7aa7c29182e4075ae599087fb9",
+    "password_hash": "ee133ab3cfe3cc8d7da19d8ca054b63cd641d079705111a4362399c8354d32c6",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo10",
+    "student_number": "S0000010",
+    "salt": "469597033c1f7d99a3625328ed68e192",
+    "password_hash": "dfc66d4f7292a7f662f148253f4ffee9609d50a96bf4fdec513793524fabb0f7",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo11",
+    "student_number": "S0000011",
+    "salt": "732eb952cd13b231955205e139c7ee66",
+    "password_hash": "51d5fe284b68622424cf4ac934ef82027b304b4e8b0d761dc1729b6c932d0dbe",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo12",
+    "student_number": "S0000012",
+    "salt": "9ef9d380a97588f9a16ad2dbc7f02967",
+    "password_hash": "3194a69df973cfdf5812f2987384bbfd5ae2e28b280a4f26d109c9b36c0ae432",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo13",
+    "student_number": "S0000013",
+    "salt": "578b5c415dcafc742476ebe0b317892e",
+    "password_hash": "7e579210ddd3ac4704fe73c8817de8d73f51ce68f2061e485c414fae45e4c7df",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "username": "demo14",
+    "student_number": "S0000014",
+    "salt": "81ab68857e817094e9613e88083ce5a9",
+    "password_hash": "b595fa82b5623d9e34433b4eb190d87d488a102b1b08eb29fdfb88f0da732d0d",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  }
+]

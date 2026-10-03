@@ -1,0 +1,114 @@
+[
+  {
+    "student_number": "S0000001",
+    "balance": 17.59,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000002",
+    "balance": 18.47,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000003",
+    "balance": 8.22,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000004",
+    "balance": 23.7,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000005",
+    "balance": 11.5,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000006",
+    "balance": 19.36,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000007",
+    "balance": 2.96,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000008",
+    "balance": 5.53,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000009",
+    "balance": 20.41,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000010",
+    "balance": 22.78,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000011",
+    "balance": 19.77,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000012",
+    "balance": 6.44,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000013",
+    "balance": 14.44,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000014",
+    "balance": 8.22,
+    "currency": "AUD",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  }
+]

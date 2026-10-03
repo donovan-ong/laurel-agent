@@ -1,0 +1,4086 @@
+[
+  {
+    "course_id": "COSC2148",
+    "handbook_code": "031749",
+    "title": "Computing Research and Project Preparation",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "This course focuses on research techniques and project management methods designed specifically for computing. You will explore fundamental research principles and both qualitative and quantitative research methods, as well as intellectual property, research integrity, and ethics. Additionally, you'll expand your understanding of key agile project methodologies and critically analyse their usability compared to traditional project management approaches.\n\nThroughout the course, you will learn critical analysis of literature, crafting research questions, and writing comprehensive reviews. You'll also develop skills in articulating research objectives, methodologies, and outcomes within proposals. Ethical considerations, comparative analysis of agile versus traditional methods, and practical experience in project planning and success criteria assessment are integral components of the course.",
+    "delivery_modes": [
+      "hybrid_blended",
+      "online",
+      "distance"
+    ],
+    "assumed_knowledge": [],
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "handbook_code": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "description": "from_public_page",
+      "delivery_modes": "from_public_page",
+      "assumed_knowledge": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2462",
+    "handbook_code": "S00001",
+    "title": "Preliminary Computer Science Honours Thesis",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Preliminary Computer Science Honours Thesis. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3154",
+    "handbook_code": "S00002",
+    "title": "Computer Science Honours Thesis Part A",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Computer Science Honours Thesis Part A. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2148",
+      "COSC2462"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3155",
+    "handbook_code": "S00003",
+    "title": "Computer Science Honours Thesis Part B",
+    "credit_points": 24,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Computer Science Honours Thesis Part B. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2148",
+      "COSC2462"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2632",
+    "handbook_code": "S00004",
+    "title": "Big Data Management",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Big Data Management. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2633",
+    "handbook_code": "S00005",
+    "title": "Big Data Processing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Big Data Processing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2301",
+    "handbook_code": "S00006",
+    "title": "Computer and Internet Forensics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Computer and Internet Forensics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2110",
+    "handbook_code": "S00007",
+    "title": "Data Mining",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Data Mining. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE1071",
+    "handbook_code": "S00008",
+    "title": "Secure Electronic Commerce",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Secure Electronic Commerce. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2402",
+    "handbook_code": "S00009",
+    "title": "Cloud Security",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cloud Security. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2274",
+    "handbook_code": "S00010",
+    "title": "Software Requirements Engineering",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Software Requirements Engineering. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2527",
+    "handbook_code": "S00011",
+    "title": "Games and Artificial Intelligence Techniques",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Games and Artificial Intelligence Techniques. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC1183",
+    "handbook_code": "S00012",
+    "title": "Usability Engineering",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Usability Engineering. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS3459",
+    "handbook_code": "S00013",
+    "title": "Systems Architecture and Design",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Systems Architecture and Design. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2972",
+    "handbook_code": "S00014",
+    "title": "Deep Learning",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Deep Learning. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2673",
+    "handbook_code": "S00015",
+    "title": "Machine Learning",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Machine Learning. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3047",
+    "handbook_code": "S00016",
+    "title": "Social Media and Networks Analytics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Social Media and Networks Analytics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": null,
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS1079",
+    "handbook_code": "S00017",
+    "title": "Managing Semi-structured and Unstructured Data",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Managing Semi-structured and Unstructured Data. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2547",
+    "handbook_code": "S00018",
+    "title": "Security Testing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Security Testing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2626",
+    "handbook_code": "S00019",
+    "title": "Cyber Security Attack Analysis and Incidence Response",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cyber Security Attack Analysis and Incidence Response. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2674",
+    "handbook_code": "S00020",
+    "title": "Programming Internet of Things",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Programming Internet of Things. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2814",
+    "handbook_code": "S00021",
+    "title": "Programming Autonomous Robots",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Programming Autonomous Robots. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2973",
+    "handbook_code": "S00022",
+    "title": "Intelligent Decision Making",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Intelligent Decision Making. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2695",
+    "handbook_code": "S00023",
+    "title": "Secure Software Systems",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Secure Software Systems. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2696",
+    "handbook_code": "S00024",
+    "title": "Human-Centered Security",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Human-Centered Security. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2801",
+    "handbook_code": "S00025",
+    "title": "Java Programming Bootcamp",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Java Programming Bootcamp. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2803",
+    "handbook_code": "S00026",
+    "title": "Java Programming Studio",
+    "credit_points": 24,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Java Programming Studio. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2801"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2466",
+    "handbook_code": "S00027",
+    "title": "Introduction to Mathematics for Computing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Introduction to Mathematics for Computing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2802",
+    "handbook_code": "S00028",
+    "title": "C++ Programming Bootcamp",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for C++ Programming Bootcamp. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2804",
+    "handbook_code": "S00029",
+    "title": "C++ Programming Studio",
+    "credit_points": 24,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for C++ Programming Studio. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2802"
+    ],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2411",
+    "handbook_code": "S00030",
+    "title": "Mathematics for Computing 1",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Mathematics for Computing 1. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "MATH2466"
+    ],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2625",
+    "handbook_code": "S00031",
+    "title": "Introduction to Cyber Security",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Introduction to Cyber Security. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3045",
+    "handbook_code": "S00032",
+    "title": "Essentials of Computing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Essentials of Computing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS1118",
+    "handbook_code": "S00033",
+    "title": "Software Engineering Fundamentals",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Software Engineering Fundamentals. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2803"
+    ],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2960",
+    "handbook_code": "S00034",
+    "title": "Foundations of Artificial Intelligence",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Foundations of Artificial Intelligence. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "COSC3094",
+        "campus": "Bundoora Campus"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2123",
+    "handbook_code": "S00035",
+    "title": "Algorithms and Analysis",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Algorithms and Analysis. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2408",
+    "handbook_code": "S00036",
+    "title": "Programming Project 1",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Programming Project 1. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "OENG1235",
+    "handbook_code": "S00037",
+    "title": "Innovation Ecosystem and the Future of Work",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Innovation Ecosystem and the Future of Work. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "OENG1279",
+        "campus": "Bundoora Campus"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2299",
+    "handbook_code": "S00038",
+    "title": "Software Engineering: Process and Tools",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Software Engineering: Process and Tools. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC1127",
+    "handbook_code": "S00039",
+    "title": "Artificial Intelligence",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Artificial Intelligence. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC1107",
+    "handbook_code": "S00040",
+    "title": "Computing Theory",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Computing Theory. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC1114",
+    "handbook_code": "S00041",
+    "title": "Operating Systems Principles",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Operating Systems Principles. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2626",
+    "handbook_code": "S00042",
+    "title": "Cloud Computing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cloud Computing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "COSC2819",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC1111",
+    "handbook_code": "S00043",
+    "title": "Data Communication and Net-Centric Computing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Data Communication and Net-Centric Computing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2536",
+    "handbook_code": "S00044",
+    "title": "Security in Computing and Information Technology",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Security in Computing and Information Technology. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC1111"
+    ],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2584",
+    "handbook_code": "S00045",
+    "title": "Introduction to Cybersecurity Governance",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Introduction to Cybersecurity Governance. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2628",
+    "handbook_code": "S00046",
+    "title": "Developing Blockchain Applications",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Developing Blockchain Applications. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "INTE2627"
+    ],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2627",
+    "handbook_code": "S00047",
+    "title": "Blockchain Technology Fundamentals",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Blockchain Technology Fundamentals. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2391",
+    "handbook_code": "S00048",
+    "title": "Further Programming",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Further Programming. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2758",
+    "handbook_code": "S00049",
+    "title": "Full Stack Development",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Full Stack Development. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2391"
+    ],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS1087",
+    "handbook_code": "S00050",
+    "title": "Software Testing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Software Testing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS1102",
+    "handbook_code": "S00051",
+    "title": "Database Applications",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Database Applications. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2276",
+    "handbook_code": "S00052",
+    "title": "Web Development Technologies",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Web Development Technologies. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2471",
+    "handbook_code": "S00053",
+    "title": "iPhone Software Engineering",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for iPhone Software Engineering. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2391"
+    ],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3091",
+    "handbook_code": "S00054",
+    "title": "Enterprise Application Development 1",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Enterprise Application Development 1. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2758"
+    ],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2309",
+    "handbook_code": "S00055",
+    "title": "Mobile Application Development",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Mobile Application Development. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2391"
+    ],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ECON1349",
+    "handbook_code": "S00056",
+    "title": "Frontiers of the Digital Economy",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Frontiers of the Digital Economy. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2554",
+    "handbook_code": "S00057",
+    "title": "Digital Economy and Blockchain Applications",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Digital Economy and Blockchain Applications. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2629",
+    "handbook_code": "S00058",
+    "title": "Blockchain Innovations and Case Studies",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Blockchain Innovations and Case Studies. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "INTE2628"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2757",
+    "handbook_code": "S00059",
+    "title": "Cloud Foundations",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cloud Foundations. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2821",
+    "handbook_code": "S00060",
+    "title": "Cloud Developing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cloud Developing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2757"
+    ],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2824",
+    "handbook_code": "S00061",
+    "title": "Cloud Operations",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cloud Operations. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2757"
+    ],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2829",
+    "handbook_code": "S00062",
+    "title": "Cloud Architecting",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cloud Architecting. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2821"
+    ],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2348",
+    "handbook_code": "S00063",
+    "title": "Games Studio 1",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Games Studio 1. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2349",
+    "handbook_code": "S00064",
+    "title": "Games Studio 2",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Games Studio 2. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2348"
+    ],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2476",
+    "handbook_code": "S00065",
+    "title": "Mixed Reality",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Mixed Reality. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2738",
+    "handbook_code": "S00066",
+    "title": "Practical Data Science",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Practical Data Science. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2815",
+    "handbook_code": "S00067",
+    "title": "Advanced Programming for Data Science",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Advanced Programming for Data Science. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2738"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2237",
+    "handbook_code": "S00068",
+    "title": "Data Visualisation with R",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Data Visualisation with R. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2412",
+    "handbook_code": "S00069",
+    "title": "Practical Statistics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Practical Statistics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2816",
+    "handbook_code": "S00070",
+    "title": "Case Studies in Data Science",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Case Studies in Data Science. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2738"
+    ],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2818",
+    "handbook_code": "S00071",
+    "title": "The Data Science Professional",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for The Data Science Professional. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2816"
+    ],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3099",
+    "handbook_code": "S00072",
+    "title": "UI and UX for Apple Platform",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for UI and UX for Apple Platform. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3100",
+    "handbook_code": "S00073",
+    "title": "Getting Started with iOS App Development",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Getting Started with iOS App Development. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC3099"
+    ],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3101",
+    "handbook_code": "S00074",
+    "title": "Human-Centred Development with Apple Platform Technologies",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Human-Centred Development with Apple Platform Technologies. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC3100"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3102",
+    "handbook_code": "S00075",
+    "title": "Apple Platform Project",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Apple Platform Project. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC3101"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BIOL2146",
+    "handbook_code": "S00076",
+    "title": "Cell Biology and Biochemistry",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cell Biology and Biochemistry. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BIOL1159",
+        "campus": "Bundoora Campus"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BIOL2262",
+    "handbook_code": "S00077",
+    "title": "Genetics and Molecular Biology",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Genetics and Molecular Biology. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BIOL2263",
+        "campus": "Bundoora Campus"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BIOL2526",
+    "handbook_code": "S00078",
+    "title": "Computational Biology",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Computational Biology. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BIOL2512",
+    "handbook_code": "S00079",
+    "title": "Systems Biology",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Systems Biology. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2203",
+    "handbook_code": "S00080",
+    "title": "Linear Models and Experimental Design",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Linear Models and Experimental Design. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2142",
+    "handbook_code": "S00081",
+    "title": "Multivariate Analysis",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Multivariate Analysis. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2055",
+    "handbook_code": "S00082",
+    "title": "Optimisation for Decision Making",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Optimisation for Decision Making. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2305",
+    "handbook_code": "S00083",
+    "title": "Applied Bayesian Statistics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Applied Bayesian Statistics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2300",
+    "handbook_code": "S00084",
+    "title": "Analysis of Categorical Data",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Analysis of Categorical Data. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "MATH2204",
+    "handbook_code": "S00085",
+    "title": "Time Series and Forecasting",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Time Series and Forecasting. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2686",
+    "handbook_code": "S00086",
+    "title": "Mixed Reality Technologies",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Mixed Reality Technologies. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2687",
+    "handbook_code": "S00087",
+    "title": "Digital Fluency",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Digital Fluency. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2688",
+    "handbook_code": "S00088",
+    "title": "Digital Innovation Project",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Digital Innovation Project. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "INTE2687"
+    ],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3156",
+    "handbook_code": "S00089",
+    "title": "Generative AI (GenAI) in Practice: Tools and Methods",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Generative AI (GenAI) in Practice: Tools and Methods. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3157",
+    "handbook_code": "S00090",
+    "title": "Artificial Intelligence (AI) in Action: Industry Project",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Artificial Intelligence (AI) in Action: Industry Project. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC3156"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BIOL2525",
+    "handbook_code": "S00091",
+    "title": "Foundations in Digital Health",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Foundations in Digital Health. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BIOL2566",
+        "campus": "Bundoora Campus"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BIOL2585",
+    "handbook_code": "S00092",
+    "title": "Wearable Technologies in Health",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Wearable Technologies in Health. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "REHA2284",
+    "handbook_code": "S00093",
+    "title": "Business and Entrepreneurship in Health",
+    "credit_points": 12,
+    "campus": "Bundoora Campus",
+    "description": "Synthetic placeholder description for Business and Entrepreneurship in Health. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "EEET1416",
+    "handbook_code": "S00094",
+    "title": "Digital Signal Processing for Communication Engineering",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Digital Signal Processing for Communication Engineering. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "EEET2169",
+    "handbook_code": "S00095",
+    "title": "Image Processing",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Image Processing. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "EEET2171",
+    "handbook_code": "S00096",
+    "title": "Intelligent Systems",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Intelligent Systems. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "LAW2604",
+    "handbook_code": "S00097",
+    "title": "Legal Considerations of Artificial Intelligence, Big Data and Blockchain",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Legal Considerations of Artificial Intelligence, Big Data and Blockchain. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "OART1118",
+    "handbook_code": "S00098",
+    "title": "AI for Creative Practice",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for AI for Creative Practice. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2785",
+    "handbook_code": "S00099",
+    "title": "Fashion AI",
+    "credit_points": 12,
+    "campus": "Brunswick Campus",
+    "description": "Synthetic placeholder description for Fashion AI. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3109",
+    "handbook_code": "S00100",
+    "title": "Java Programming",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Java Programming. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3103",
+    "handbook_code": "S00101",
+    "title": "Python Programming Bootcamp",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Python Programming Bootcamp. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3106",
+    "handbook_code": "S00102",
+    "title": "Python Programming Studio",
+    "credit_points": 24,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Python Programming Studio. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC3103"
+    ],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3046",
+    "handbook_code": "S00103",
+    "title": "Web Programming Studio",
+    "credit_points": 24,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Web Programming Studio. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC3103"
+    ],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3088",
+    "handbook_code": "S00104",
+    "title": "Essentials of IT & Ethics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Essentials of IT & Ethics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS3413",
+    "handbook_code": "S00105",
+    "title": "Software Engineering Fundamentals for IT",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Software Engineering Fundamentals for IT. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2759",
+    "handbook_code": "S00106",
+    "title": "Systems Deployment and Operations",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Systems Deployment and Operations. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2757"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS1108",
+    "handbook_code": "S00107",
+    "title": "Software Engineering Project Management",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Software Engineering Project Management. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "ISYS3413"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BESC1123",
+    "handbook_code": "S00108",
+    "title": "Principles of Psychology",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Principles of Psychology. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BESC1122",
+        "campus": "Bundoora Campus"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM1202",
+    "handbook_code": "S00109",
+    "title": "Managing Change",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Managing Change. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM4052",
+    "handbook_code": "S00110",
+    "title": "Applied Entrepreneurship",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Applied Entrepreneurship. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BUSM4455",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ECON1623",
+    "handbook_code": "S00111",
+    "title": "Economic Foundations of the Digital World",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Economic Foundations of the Digital World. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BAFI3236",
+    "handbook_code": "S00112",
+    "title": "Cryptofinance & Cryptocurrency",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Cryptofinance & Cryptocurrency. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BAFI3292",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS3446",
+    "handbook_code": "S00113",
+    "title": "Introduction to Business Analytics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Introduction to Business Analytics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS2421",
+    "handbook_code": "S00114",
+    "title": "Business Data Management",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Business Data Management. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS3449",
+    "handbook_code": "S00115",
+    "title": "Advanced Business Analytics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Advanced Business Analytics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "ISYS3446"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "OMGT2146",
+    "handbook_code": "S00116",
+    "title": "Supply Chain Analytics",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Supply Chain Analytics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "OMGT2340",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS2056",
+    "handbook_code": "S00117",
+    "title": "Business Information Systems",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Business Information Systems. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "ISYS3332",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "INTE2043",
+    "handbook_code": "S00118",
+    "title": "Business IT Infrastructure",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Business IT Infrastructure. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ISYS1051",
+    "handbook_code": "S00119",
+    "title": "Digital Business Design and Innovation",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Digital Business Design and Innovation. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "ISYS3330",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2385",
+    "handbook_code": "S00120",
+    "title": "Networking 1",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Networking 1. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2384",
+    "handbook_code": "S00121",
+    "title": "Networking 2",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Networking 2. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2385"
+    ],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2382",
+    "handbook_code": "S00122",
+    "title": "Advanced Networking 1",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Advanced Networking 1. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2384"
+    ],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC2383",
+    "handbook_code": "S00123",
+    "title": "Advanced Networking 2",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Advanced Networking 2. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "COSC2382"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM1311",
+    "handbook_code": "S00124",
+    "title": "The Foundations of Entrepreneurship",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for The Foundations of Entrepreneurship. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BUSM4382",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM1321",
+    "handbook_code": "S00125",
+    "title": "Driving Innovation in Organisations",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Driving Innovation in Organisations. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BUSM4469",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM4054",
+    "handbook_code": "S00126",
+    "title": "Entrepreneurship and Global Challenges",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Entrepreneurship and Global Challenges. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BUSM4540",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM2709",
+    "handbook_code": "S00127",
+    "title": "Fundamentals of Business Strategy and Innovation",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Fundamentals of Business Strategy and Innovation. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM2541",
+    "handbook_code": "S00128",
+    "title": "Critical, Ethical and Innovative Thinking",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Critical, Ethical and Innovative Thinking. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM3125",
+    "handbook_code": "S00129",
+    "title": "Strategy",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Strategy. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "alternate_codes": [
+      {
+        "course_id": "BUSM4386",
+        "campus": "Melbourne transfer to Vietnam"
+      }
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page",
+      "alternate_codes": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1241",
+    "handbook_code": "S00130",
+    "title": "Regenerative Fundamentals",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Fundamentals. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1242",
+    "handbook_code": "S00131",
+    "title": "Regenerative Challenge",
+    "credit_points": 12,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Challenge. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [
+      "ENVI1241"
+    ],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1243",
+    "handbook_code": "S00132",
+    "title": "Systems Thinking for Sustainable Futures",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Systems Thinking for Sustainable Futures. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1244",
+    "handbook_code": "S00133",
+    "title": "Eco-Literacy",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Eco-Literacy. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1245",
+    "handbook_code": "S00134",
+    "title": "Regenerative Design",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Design. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ECON1629",
+    "handbook_code": "S00135",
+    "title": "Regenerative Value Systems",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Value Systems. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "HWSS2262",
+    "handbook_code": "S00136",
+    "title": "Social Equity and Regeneration",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Social Equity and Regeneration. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM2779",
+    "handbook_code": "S00137",
+    "title": "Regenerative Business Models",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Business Models. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ECON1630",
+    "handbook_code": "S00138",
+    "title": "Design for the Circular Economy",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Design for the Circular Economy. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COSC3158",
+    "handbook_code": "S00139",
+    "title": "AI Ethics for Sustainable Futures",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for AI Ethics for Sustainable Futures. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1246",
+    "handbook_code": "S00140",
+    "title": "Regenerative Design for Built Environment",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Design for Built Environment. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "PERF2076",
+    "handbook_code": "S00141",
+    "title": "Storytelling for Speculative Futures",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Storytelling for Speculative Futures. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "PROC2131",
+    "handbook_code": "S00142",
+    "title": "Biomaterials and Biofabrication",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Biomaterials and Biofabrication. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Yuki Brandt",
+      "email": "y.brandt@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "COMM3024",
+    "handbook_code": "S00143",
+    "title": "Reimagining Futures in Media and Culture",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Reimagining Futures in Media and Culture. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Alinta Corrigan",
+      "email": "a.corrigan@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1247",
+    "handbook_code": "S00144",
+    "title": "Regenerative Supply Chain Management",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Supply Chain Management. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Imogen Falkner",
+      "email": "i.falkner@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "EMPL1008",
+    "handbook_code": "S00145",
+    "title": "Linking Life and Learning",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Linking Life and Learning. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Lena Ostrowe",
+      "email": "l.ostrowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "BUSM2777",
+    "handbook_code": "S00146",
+    "title": "Leading Regenerative Action",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Leading Regenerative Action. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Rohan Wexley",
+      "email": "r.wexley@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1248",
+    "handbook_code": "S00147",
+    "title": "Regenerative Futures Incubator",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Regenerative Futures Incubator. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Tobias Marlowe",
+      "email": "t.marlowe@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "ENVI1249",
+    "handbook_code": "S00148",
+    "title": "Reworlding for Creative Place Keeping",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Reworlding for Creative Place Keeping. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Dr Priya Devlin",
+      "email": "p.devlin@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "course_id": "HUSO2459",
+    "handbook_code": "S00149",
+    "title": "Planetary Pedagogies and Civics",
+    "credit_points": 6,
+    "campus": "City Campus",
+    "description": "Synthetic placeholder description for Planetary Pedagogies and Civics. Not taken from the RMIT Handbook.",
+    "delivery_modes": [
+      "on_campus",
+      "online"
+    ],
+    "assumed_knowledge": null,
+    "prerequisites": [],
+    "coordinator": {
+      "name": "Prof Marcus Halloran",
+      "email": "m.halloran@example.invalid"
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "course_id": "from_public_page",
+      "title": "from_public_page",
+      "credit_points": "from_public_page",
+      "campus": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  }
+]

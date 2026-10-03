@@ -1,0 +1,1561 @@
+[
+  {
+    "program_code": "BH013P26",
+    "title": "Bachelor of Computer Science (Honours)",
+    "duration": {
+      "full_time_years": 1,
+      "part_time_years": 2
+    },
+    "intakes": [
+      "February",
+      "July"
+    ],
+    "campus": "Melbourne City",
+    "stages": [
+      {
+        "stage": "A",
+        "credit_points": 48,
+        "note": "Students must complete a series of compulsory onboarding modules during their first semester or study period.",
+        "items": [
+          {
+            "type": "course",
+            "course_id": "COSC2148"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2462"
+          },
+          {
+            "type": "options",
+            "credit_points": 24
+          }
+        ],
+        "ordered": true
+      },
+      {
+        "stage": "B",
+        "credit_points": 48,
+        "items": [
+          {
+            "type": "course",
+            "course_id": "COSC3154"
+          },
+          {
+            "type": "options",
+            "credit_points": 12
+          },
+          {
+            "type": "course",
+            "course_id": "COSC3155"
+          }
+        ],
+        "ordered": true
+      }
+    ],
+    "option_list": {
+      "title": "Computer Science Honours Option List",
+      "course_ids": [
+        "COSC2632",
+        "COSC2633",
+        "COSC2301",
+        "COSC2110",
+        "INTE1071",
+        "INTE2402",
+        "COSC2274",
+        "COSC2527",
+        "COSC1183",
+        "ISYS3459",
+        "COSC2972",
+        "COSC2673",
+        "COSC3047",
+        "ISYS1079",
+        "INTE2547",
+        "INTE2626",
+        "COSC2674",
+        "COSC2814",
+        "COSC2973",
+        "INTE2695",
+        "INTE2696"
+      ]
+    },
+    "study_load": {
+      "full_time_cp_per_semester": 48,
+      "part_time_cp_per_semester": 24
+    },
+    "total_credit_points": 96,
+    "provenance": "synthetic",
+    "field_provenance": {
+      "program_code": "from_public_page",
+      "title": "from_public_page",
+      "duration": "from_public_page",
+      "intakes": "from_public_page",
+      "campus": "from_public_page",
+      "stages": "from_public_page",
+      "option_list": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "program_code": "BP094P23",
+    "title": "Bachelor of Computer Science",
+    "level": "bachelor",
+    "duration": {
+      "full_time_years": 3,
+      "part_time_years": 6
+    },
+    "intakes": [
+      "February",
+      "July"
+    ],
+    "campus": "Melbourne City",
+    "entry_score": "ATAR 75.10",
+    "places": "Commonwealth Supported Places",
+    "total_credit_points": 288,
+    "stages": [
+      {
+        "stage": "Year 1",
+        "credit_points": 96,
+        "note": "Students must complete a series of compulsory onboarding modules during their first semester or study period.",
+        "items": [
+          {
+            "type": "course",
+            "course_id": "COSC2801"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2803"
+          },
+          {
+            "type": "course",
+            "course_id": "MATH2466"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2802"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2804"
+          },
+          {
+            "type": "course",
+            "course_id": "MATH2411"
+          }
+        ],
+        "ordered": false
+      },
+      {
+        "stage": "Year 2",
+        "credit_points": 96,
+        "items": [
+          {
+            "type": "course",
+            "course_id": "INTE2625"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC3045"
+          },
+          {
+            "type": "course",
+            "course_id": "ISYS1118"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2960"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2123"
+          },
+          {
+            "type": "options",
+            "credit_points": 36
+          }
+        ],
+        "ordered": false
+      },
+      {
+        "stage": "Year 3",
+        "credit_points": 96,
+        "items": [
+          {
+            "type": "course",
+            "course_id": "COSC2408"
+          },
+          {
+            "type": "course",
+            "course_id": "OENG1235"
+          },
+          {
+            "type": "choice",
+            "credit_points": 12,
+            "course_ids": [
+              "COSC2299",
+              "COSC1127",
+              "COSC2673"
+            ]
+          },
+          {
+            "type": "options",
+            "credit_points": 60
+          }
+        ],
+        "ordered": false
+      }
+    ],
+    "option_list": {
+      "title": "Computer Science Option courses",
+      "course_ids": [
+        "COSC1107",
+        "COSC1114",
+        "COSC2626",
+        "COSC3047",
+        "ISYS1079",
+        "COSC2972",
+        "COSC2973",
+        "COSC1111",
+        "COSC2536",
+        "INTE2547",
+        "INTE2584",
+        "INTE2626",
+        "INTE1071",
+        "INTE2402",
+        "INTE2628",
+        "INTE2627",
+        "COSC2301",
+        "COSC2391",
+        "COSC2758",
+        "ISYS1087",
+        "ISYS1102",
+        "COSC2276",
+        "COSC2471",
+        "COSC2674",
+        "ISYS3459",
+        "COSC1183",
+        "COSC2274",
+        "COSC3091",
+        "COSC2309",
+        "COSC2527",
+        "COSC2814",
+        "ECON1349",
+        "INTE2554",
+        "INTE2629",
+        "COSC2757",
+        "COSC2821",
+        "COSC2824",
+        "COSC2829",
+        "COSC2348",
+        "COSC2349",
+        "COSC2476",
+        "COSC2738",
+        "COSC2815",
+        "MATH2237",
+        "MATH2412",
+        "COSC2816",
+        "COSC2818"
+      ]
+    },
+    "majors": [
+      {
+        "name": "Advanced Computer Science",
+        "credit_points": 96,
+        "groups": [
+          {
+            "credit_points": 96,
+            "course_ids": [
+              "COSC1107",
+              "COSC1114",
+              "COSC1127",
+              "COSC2626",
+              "COSC2673",
+              "COSC3047",
+              "ISYS1079",
+              "COSC2972",
+              "COSC2973"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1107",
+          "COSC1114",
+          "COSC1127",
+          "COSC2626",
+          "COSC2673",
+          "COSC3047",
+          "ISYS1079",
+          "COSC2972",
+          "COSC2973"
+        ]
+      },
+      {
+        "name": "Cyber Security",
+        "credit_points": 96,
+        "groups": [
+          {
+            "credit_points": 96,
+            "course_ids": [
+              "COSC1111",
+              "COSC2536",
+              "INTE2547",
+              "INTE2584",
+              "INTE2626",
+              "INTE1071",
+              "INTE2402",
+              "INTE2628",
+              "INTE2627",
+              "COSC2301"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1111",
+          "COSC2536",
+          "INTE2547",
+          "INTE2584",
+          "INTE2626",
+          "INTE1071",
+          "INTE2402",
+          "INTE2628",
+          "INTE2627",
+          "COSC2301"
+        ]
+      },
+      {
+        "name": "Enterprise Systems Development",
+        "credit_points": 96,
+        "groups": [
+          {
+            "credit_points": 96,
+            "course_ids": [
+              "COSC2391",
+              "COSC2123",
+              "COSC2758",
+              "ISYS1087",
+              "ISYS1102",
+              "COSC2276",
+              "COSC2471",
+              "COSC2299",
+              "COSC2674",
+              "ISYS3459",
+              "COSC1183",
+              "COSC2274",
+              "COSC3091",
+              "COSC2309"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2391",
+          "COSC2123",
+          "COSC2758",
+          "ISYS1087",
+          "ISYS1102",
+          "COSC2276",
+          "COSC2471",
+          "COSC2299",
+          "COSC2674",
+          "ISYS3459",
+          "COSC1183",
+          "COSC2274",
+          "COSC3091",
+          "COSC2309"
+        ]
+      }
+    ],
+    "minors": [
+      {
+        "name": "Artificial Intelligence & Machine Learning",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC1127",
+              "COSC2527",
+              "COSC2673",
+              "COSC2972",
+              "ISYS1079",
+              "COSC3047",
+              "COSC2814"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1127",
+          "COSC2527",
+          "COSC2673",
+          "COSC2972",
+          "ISYS1079",
+          "COSC3047",
+          "COSC2814"
+        ],
+        "note": "Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Blockchain Technologies",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "INTE2627",
+              "INTE2628",
+              "ECON1349",
+              "INTE2554",
+              "INTE2629"
+            ]
+          }
+        ],
+        "course_ids": [
+          "INTE2627",
+          "INTE2628",
+          "ECON1349",
+          "INTE2554",
+          "INTE2629"
+        ]
+      },
+      {
+        "name": "Cloud Computing",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2757",
+              "COSC2821",
+              "COSC2824",
+              "COSC2626",
+              "COSC2829",
+              "INTE2402"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2757",
+          "COSC2821",
+          "COSC2824",
+          "COSC2626",
+          "COSC2829",
+          "INTE2402"
+        ],
+        "note": "Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Creative Computing",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2348",
+              "COSC2349",
+              "COSC2476",
+              "COSC2527"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2348",
+          "COSC2349",
+          "COSC2476",
+          "COSC2527"
+        ]
+      },
+      {
+        "name": "Cyber Assurance",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC1111",
+              "COSC2536",
+              "INTE2547",
+              "INTE2626",
+              "INTE2402",
+              "COSC2301"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1111",
+          "COSC2536",
+          "INTE2547",
+          "INTE2626",
+          "INTE2402",
+          "COSC2301"
+        ],
+        "note": "Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Data Science",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2738",
+              "COSC2815",
+              "MATH2237",
+              "MATH2412",
+              "COSC2816",
+              "COSC2818"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2738",
+          "COSC2815",
+          "MATH2237",
+          "MATH2412",
+          "COSC2816",
+          "COSC2818"
+        ]
+      },
+      {
+        "name": "Enterprise Systems Development",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 12,
+            "course_ids": [
+              "COSC2391"
+            ]
+          },
+          {
+            "credit_points": 36,
+            "course_ids": [
+              "COSC2758",
+              "ISYS1087",
+              "ISYS1102",
+              "COSC2276",
+              "COSC2471",
+              "COSC2299",
+              "COSC2674",
+              "COSC2123",
+              "COSC3091",
+              "COSC2309"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2391",
+          "COSC2758",
+          "ISYS1087",
+          "ISYS1102",
+          "COSC2276",
+          "COSC2471",
+          "COSC2299",
+          "COSC2674",
+          "COSC2123",
+          "COSC3091",
+          "COSC2309"
+        ],
+        "note": "Students who do not complete Full Stack Development as a core course must complete it to complete this minor. Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Design & Develop for Apple Platform",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC3099",
+              "COSC3100",
+              "COSC3101",
+              "COSC3102"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC3099",
+          "COSC3100",
+          "COSC3101",
+          "COSC3102"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Bioinformatics",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "BIOL2146",
+              "BIOL2262",
+              "BIOL2526",
+              "BIOL2512"
+            ]
+          }
+        ],
+        "course_ids": [
+          "BIOL2146",
+          "BIOL2262",
+          "BIOL2526",
+          "BIOL2512"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Data Analysis",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 36,
+            "course_ids": [
+              "MATH2203",
+              "MATH2142",
+              "MATH2055"
+            ]
+          },
+          {
+            "credit_points": 12,
+            "course_ids": [
+              "MATH2305",
+              "MATH2300",
+              "MATH2204"
+            ]
+          }
+        ],
+        "course_ids": [
+          "MATH2203",
+          "MATH2142",
+          "MATH2055",
+          "MATH2305",
+          "MATH2300",
+          "MATH2204"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Digital Innovation",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2960",
+              "INTE2686",
+              "INTE2687",
+              "INTE2688"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2960",
+          "INTE2686",
+          "INTE2687",
+          "INTE2688"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Artificial Intelligence in Practice",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 36,
+            "course_ids": [
+              "COSC2960",
+              "COSC3156",
+              "COSC3157"
+            ]
+          },
+          {
+            "credit_points": 12,
+            "course_ids": [
+              "COSC1127",
+              "COSC2673",
+              "MATH2305",
+              "BIOL2525",
+              "BIOL2585",
+              "REHA2284",
+              "EEET1416",
+              "EEET2169",
+              "EEET2171",
+              "LAW2604",
+              "OART1118",
+              "COSC2785",
+              "INTE2687"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2960",
+          "COSC3156",
+          "COSC3157",
+          "COSC1127",
+          "COSC2673",
+          "MATH2305",
+          "BIOL2525",
+          "BIOL2585",
+          "REHA2284",
+          "EEET1416",
+          "EEET2169",
+          "EEET2171",
+          "LAW2604",
+          "OART1118",
+          "COSC2785",
+          "INTE2687"
+        ],
+        "cross_disciplinary": true
+      }
+    ],
+    "majors_and_minors_note": "Majors and minors are optional. A major is typically 96 credit points and a minor 48. A program can include a maximum of two minors, and a course can only be counted once: core courses cannot also count towards a major or minor, and a course used for one minor cannot be used for another. The courses in a major or minor need to be completed in the sequence listed.",
+    "combinations": [
+      "Combination 1: eight courses from one Computer Science major",
+      "Combination 2: four courses from each of two minors (one must be a Computer Science minor)",
+      "Combination 3: four courses from a Computer Science minor and four Computer Science option courses",
+      "Combination 4: four courses from a Computer Science minor and up to 48 credit points of university electives",
+      "Combination 5: four Computer Science option courses and up to 48 credit points of university electives"
+    ],
+    "study_load": {
+      "full_time_cp_per_semester": 48,
+      "part_time_cp_per_semester": 24
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "program_code": "from_public_page",
+      "title": "from_public_page",
+      "level": "from_public_page",
+      "duration": "from_public_page",
+      "intakes": "from_public_page",
+      "campus": "from_public_page",
+      "entry_score": "from_public_page",
+      "places": "from_public_page",
+      "total_credit_points": "from_public_page",
+      "stages": "from_public_page",
+      "option_list": "from_public_page",
+      "majors": "from_public_page",
+      "minors": "from_public_page",
+      "majors_and_minors_note": "from_public_page",
+      "combinations": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "program_code": "BP162P23",
+    "title": "Bachelor of Information Technology",
+    "level": "bachelor",
+    "duration": {
+      "full_time_years": 3
+    },
+    "intakes": [
+      "February",
+      "July"
+    ],
+    "campus": "Melbourne City",
+    "entry_score": "2027 Guaranteed ATAR 70.00 (2026 ATAR 70.15)",
+    "places": "Commonwealth Supported Places",
+    "total_credit_points": 288,
+    "stages": [
+      {
+        "stage": "Year 1",
+        "credit_points": 96,
+        "note": "Students must complete a series of compulsory onboarding modules during their first semester or study period.",
+        "items": [
+          {
+            "type": "course",
+            "course_id": "COSC3109"
+          },
+          {
+            "type": "course",
+            "course_id": "INTE2625"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC1111"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC3103"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC3106"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC3046"
+          }
+        ],
+        "ordered": false
+      },
+      {
+        "stage": "Year 2",
+        "credit_points": 96,
+        "items": [
+          {
+            "type": "course",
+            "course_id": "COSC2757"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC3088"
+          },
+          {
+            "type": "course",
+            "course_id": "ISYS3413"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2960"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2759"
+          },
+          {
+            "type": "options",
+            "credit_points": 36
+          }
+        ],
+        "ordered": false
+      },
+      {
+        "stage": "Year 3",
+        "credit_points": 96,
+        "items": [
+          {
+            "type": "course",
+            "course_id": "ISYS1108"
+          },
+          {
+            "type": "course",
+            "course_id": "COSC2408"
+          },
+          {
+            "type": "course",
+            "course_id": "OENG1235"
+          },
+          {
+            "type": "options",
+            "credit_points": 60
+          }
+        ],
+        "ordered": false
+      }
+    ],
+    "option_list": {
+      "title": "Information Technology Option courses",
+      "course_ids": [
+        "COSC2536",
+        "INTE2547",
+        "INTE2584",
+        "INTE2626",
+        "INTE1071",
+        "INTE2402",
+        "INTE2628",
+        "INTE2627",
+        "COSC2301",
+        "COSC2391",
+        "COSC2123",
+        "COSC2758",
+        "ISYS1087",
+        "ISYS1102",
+        "COSC2276",
+        "COSC2471",
+        "COSC2299",
+        "COSC2674",
+        "ISYS3459",
+        "COSC1183",
+        "COSC2274",
+        "COSC3091",
+        "COSC2309",
+        "COSC1127",
+        "COSC2527",
+        "COSC2673",
+        "COSC2972",
+        "ISYS1079",
+        "COSC3047",
+        "COSC2814",
+        "ECON1349",
+        "INTE2554",
+        "INTE2629",
+        "COSC2821",
+        "COSC2824",
+        "COSC2626",
+        "COSC2829",
+        "COSC2348",
+        "COSC2349",
+        "COSC2476",
+        "COSC2738",
+        "COSC2815",
+        "MATH2237",
+        "MATH2412",
+        "COSC2816",
+        "COSC2818"
+      ]
+    },
+    "majors": [
+      {
+        "name": "Cyber Security",
+        "credit_points": 96,
+        "groups": [
+          {
+            "credit_points": 96,
+            "course_ids": [
+              "COSC1111",
+              "COSC2536",
+              "INTE2547",
+              "INTE2584",
+              "INTE2626",
+              "INTE1071",
+              "INTE2402",
+              "INTE2628",
+              "INTE2627",
+              "COSC2301"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1111",
+          "COSC2536",
+          "INTE2547",
+          "INTE2584",
+          "INTE2626",
+          "INTE1071",
+          "INTE2402",
+          "INTE2628",
+          "INTE2627",
+          "COSC2301"
+        ]
+      },
+      {
+        "name": "Digital Innovation",
+        "credit_points": 96,
+        "groups": [
+          {
+            "credit_points": 96,
+            "course_ids": [
+              "BESC1123",
+              "BUSM1202",
+              "COSC2821",
+              "COSC2738",
+              "COSC2829",
+              "BUSM4052",
+              "INTE2584",
+              "COSC3099",
+              "COSC3100"
+            ]
+          }
+        ],
+        "course_ids": [
+          "BESC1123",
+          "BUSM1202",
+          "COSC2821",
+          "COSC2738",
+          "COSC2829",
+          "BUSM4052",
+          "INTE2584",
+          "COSC3099",
+          "COSC3100"
+        ]
+      },
+      {
+        "name": "Enterprise Systems Development",
+        "credit_points": 96,
+        "groups": [
+          {
+            "credit_points": 96,
+            "course_ids": [
+              "COSC2391",
+              "COSC2123",
+              "COSC2758",
+              "ISYS1087",
+              "ISYS1102",
+              "COSC2276",
+              "COSC2471",
+              "COSC2299",
+              "COSC2674",
+              "ISYS3459",
+              "COSC1183",
+              "COSC2274",
+              "COSC3091",
+              "COSC2309"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2391",
+          "COSC2123",
+          "COSC2758",
+          "ISYS1087",
+          "ISYS1102",
+          "COSC2276",
+          "COSC2471",
+          "COSC2299",
+          "COSC2674",
+          "ISYS3459",
+          "COSC1183",
+          "COSC2274",
+          "COSC3091",
+          "COSC2309"
+        ]
+      }
+    ],
+    "minors": [
+      {
+        "name": "Artificial Intelligence & Machine Learning",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC1127",
+              "COSC2527",
+              "COSC2673",
+              "COSC2972",
+              "ISYS1079",
+              "COSC3047",
+              "COSC2814"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1127",
+          "COSC2527",
+          "COSC2673",
+          "COSC2972",
+          "ISYS1079",
+          "COSC3047",
+          "COSC2814"
+        ],
+        "note": "Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Blockchain Technologies",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "INTE2627",
+              "INTE2628",
+              "ECON1349",
+              "INTE2554",
+              "INTE2629"
+            ]
+          }
+        ],
+        "course_ids": [
+          "INTE2627",
+          "INTE2628",
+          "ECON1349",
+          "INTE2554",
+          "INTE2629"
+        ]
+      },
+      {
+        "name": "Cloud Computing",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2757",
+              "COSC2821",
+              "COSC2824",
+              "COSC2626",
+              "COSC2829",
+              "INTE2402"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2757",
+          "COSC2821",
+          "COSC2824",
+          "COSC2626",
+          "COSC2829",
+          "INTE2402"
+        ],
+        "note": "Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Creative Computing",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2348",
+              "COSC2349",
+              "COSC2476",
+              "COSC2527"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2348",
+          "COSC2349",
+          "COSC2476",
+          "COSC2527"
+        ]
+      },
+      {
+        "name": "Cyber Assurance",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC1111",
+              "COSC2536",
+              "INTE2547",
+              "INTE2626",
+              "INTE2402",
+              "COSC2301"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC1111",
+          "COSC2536",
+          "INTE2547",
+          "INTE2626",
+          "INTE2402",
+          "COSC2301"
+        ],
+        "note": "Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Data Science",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2738",
+              "COSC2815",
+              "MATH2237",
+              "MATH2412",
+              "COSC2816",
+              "COSC2818"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2738",
+          "COSC2815",
+          "MATH2237",
+          "MATH2412",
+          "COSC2816",
+          "COSC2818"
+        ]
+      },
+      {
+        "name": "Enterprise Systems Development",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 12,
+            "course_ids": [
+              "COSC2391"
+            ]
+          },
+          {
+            "credit_points": 36,
+            "course_ids": [
+              "COSC2758",
+              "ISYS1087",
+              "ISYS1102",
+              "COSC2276",
+              "COSC2471",
+              "COSC2299",
+              "COSC2674",
+              "COSC2123",
+              "COSC3091",
+              "COSC2309"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2391",
+          "COSC2758",
+          "ISYS1087",
+          "ISYS1102",
+          "COSC2276",
+          "COSC2471",
+          "COSC2299",
+          "COSC2674",
+          "COSC2123",
+          "COSC3091",
+          "COSC2309"
+        ],
+        "note": "Students who do not complete Full Stack Development as a core course must complete it to complete this minor. Courses already completed as core courses do not count towards this."
+      },
+      {
+        "name": "Design & Develop for Apple Platform",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC3099",
+              "COSC3100",
+              "COSC3101",
+              "COSC3102"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC3099",
+          "COSC3100",
+          "COSC3101",
+          "COSC3102"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Bioinformatics",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "BIOL2146",
+              "BIOL2262",
+              "BIOL2526",
+              "BIOL2512"
+            ]
+          }
+        ],
+        "course_ids": [
+          "BIOL2146",
+          "BIOL2262",
+          "BIOL2526",
+          "BIOL2512"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Digital Economy",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "ECON1623",
+              "INTE2554",
+              "ECON1349",
+              "BAFI3236"
+            ]
+          }
+        ],
+        "course_ids": [
+          "ECON1623",
+          "INTE2554",
+          "ECON1349",
+          "BAFI3236"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Business Analytics",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "ISYS3446",
+              "ISYS2421",
+              "ISYS3449",
+              "OMGT2146"
+            ]
+          }
+        ],
+        "course_ids": [
+          "ISYS3446",
+          "ISYS2421",
+          "ISYS3449",
+          "OMGT2146"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Business Information Systems",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "ISYS2056",
+              "INTE2043",
+              "ISYS1051",
+              "ISYS2421"
+            ]
+          }
+        ],
+        "course_ids": [
+          "ISYS2056",
+          "INTE2043",
+          "ISYS1051",
+          "ISYS2421"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "CISCO Networking",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2385",
+              "COSC2384",
+              "COSC2382",
+              "COSC2383"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2385",
+          "COSC2384",
+          "COSC2382",
+          "COSC2383"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Data Analysis",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 36,
+            "course_ids": [
+              "MATH2203",
+              "MATH2142",
+              "MATH2055"
+            ]
+          },
+          {
+            "credit_points": 12,
+            "course_ids": [
+              "MATH2305",
+              "MATH2300",
+              "MATH2204"
+            ]
+          }
+        ],
+        "course_ids": [
+          "MATH2203",
+          "MATH2142",
+          "MATH2055",
+          "MATH2305",
+          "MATH2300",
+          "MATH2204"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Digital Innovation",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "COSC2960",
+              "INTE2686",
+              "INTE2687",
+              "INTE2688"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2960",
+          "INTE2686",
+          "INTE2687",
+          "INTE2688"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Entrepreneurship",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "BUSM1311",
+              "BUSM4052",
+              "BUSM1321",
+              "BUSM4054"
+            ]
+          }
+        ],
+        "course_ids": [
+          "BUSM1311",
+          "BUSM4052",
+          "BUSM1321",
+          "BUSM4054"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Strategy & Innovation",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 48,
+            "course_ids": [
+              "BUSM2709",
+              "BUSM2541",
+              "BUSM1321",
+              "BUSM3125"
+            ]
+          }
+        ],
+        "course_ids": [
+          "BUSM2709",
+          "BUSM2541",
+          "BUSM1321",
+          "BUSM3125"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Regenerative Futures",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 24,
+            "course_ids": [
+              "ENVI1241",
+              "ENVI1242"
+            ]
+          },
+          {
+            "credit_points": 24,
+            "course_ids": [
+              "ENVI1243",
+              "ENVI1244",
+              "ENVI1245",
+              "ECON1629",
+              "HWSS2262",
+              "BUSM2779",
+              "ECON1630",
+              "COSC3158",
+              "ENVI1246",
+              "PERF2076",
+              "PROC2131",
+              "COMM3024",
+              "ENVI1247",
+              "EMPL1008",
+              "BUSM2777",
+              "ENVI1248",
+              "ENVI1249",
+              "HUSO2459"
+            ]
+          }
+        ],
+        "course_ids": [
+          "ENVI1241",
+          "ENVI1242",
+          "ENVI1243",
+          "ENVI1244",
+          "ENVI1245",
+          "ECON1629",
+          "HWSS2262",
+          "BUSM2779",
+          "ECON1630",
+          "COSC3158",
+          "ENVI1246",
+          "PERF2076",
+          "PROC2131",
+          "COMM3024",
+          "ENVI1247",
+          "EMPL1008",
+          "BUSM2777",
+          "ENVI1248",
+          "ENVI1249",
+          "HUSO2459"
+        ],
+        "cross_disciplinary": true
+      },
+      {
+        "name": "Artificial Intelligence in Practice",
+        "credit_points": 48,
+        "groups": [
+          {
+            "credit_points": 36,
+            "course_ids": [
+              "COSC2960",
+              "COSC3156",
+              "COSC3157"
+            ]
+          },
+          {
+            "credit_points": 12,
+            "course_ids": [
+              "COSC1127",
+              "COSC2673",
+              "MATH2305",
+              "BIOL2525",
+              "BIOL2585",
+              "REHA2284",
+              "EEET1416",
+              "EEET2169",
+              "EEET2171",
+              "LAW2604",
+              "OART1118",
+              "COSC2785",
+              "INTE2687"
+            ]
+          }
+        ],
+        "course_ids": [
+          "COSC2960",
+          "COSC3156",
+          "COSC3157",
+          "COSC1127",
+          "COSC2673",
+          "MATH2305",
+          "BIOL2525",
+          "BIOL2585",
+          "REHA2284",
+          "EEET1416",
+          "EEET2169",
+          "EEET2171",
+          "LAW2604",
+          "OART1118",
+          "COSC2785",
+          "INTE2687"
+        ],
+        "cross_disciplinary": true
+      }
+    ],
+    "majors_and_minors_note": "Majors and minors are optional. A major is typically 96 credit points and a minor 48. A program can include a maximum of two minors, and a course can only be counted once: core courses cannot also count towards a major or minor, and a course used for one minor cannot be used for another. The courses in a major or minor need to be completed in the sequence listed.",
+    "combinations": [
+      "Combination 1: eight courses from one Information Technology major",
+      "Combination 2: four courses from each of two minors (one must be an Information Technology minor)",
+      "Combination 3: four courses from an Information Technology minor and four Information Technology option courses",
+      "Combination 4: four courses from an Information Technology minor and up to 48 credit points of university electives",
+      "Combination 5: four Information Technology option courses and up to 48 credit points of university electives"
+    ],
+    "study_load": {
+      "full_time_cp_per_semester": 48
+    },
+    "provenance": "synthetic",
+    "field_provenance": {
+      "program_code": "from_public_page",
+      "title": "from_public_page",
+      "level": "from_public_page",
+      "duration": "from_public_page",
+      "intakes": "from_public_page",
+      "campus": "from_public_page",
+      "entry_score": "from_public_page",
+      "places": "from_public_page",
+      "total_credit_points": "from_public_page",
+      "stages": "from_public_page",
+      "option_list": "from_public_page",
+      "majors": "from_public_page",
+      "minors": "from_public_page",
+      "majors_and_minors_note": "from_public_page",
+      "combinations": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  }
+]

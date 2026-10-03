@@ -1,0 +1,146 @@
+[
+  {
+    "team_id": "school_office",
+    "name": "School of Computing Technologies Office",
+    "email": "computing.office@example.invalid",
+    "use_for": "Questions about the program, courses, timetables, thesis and supervisors, and anything the assistant cannot answer.",
+    "topics": [
+      "program",
+      "course",
+      "timetable",
+      "thesis",
+      "supervisor",
+      "class",
+      "workshop",
+      "lecture",
+      "school",
+      "prerequisite",
+      "study plan"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "student_connect",
+    "name": "Student Connect (enrolment and records)",
+    "email": "student.connect@example.invalid",
+    "use_for": "Enrolment problems, results and academic record queries, changing or withdrawing from courses.",
+    "topics": [
+      "enrol",
+      "withdraw",
+      "results",
+      "transcript",
+      "record",
+      "census",
+      "discontinue"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "fees_and_payments",
+    "name": "Fees and Payments Team",
+    "email": "fees@example.invalid",
+    "use_for": "Fees, payments, HECS-HELP, refunds, overdue balances and account holds.",
+    "topics": [
+      "fee",
+      "payment",
+      "pay ",
+      "hecs",
+      "refund",
+      "balance",
+      "hold",
+      "invoice",
+      "overdue",
+      "cost"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "international_student_office",
+    "name": "International Student Office",
+    "email": "international@example.invalid",
+    "use_for": "Visa conditions, study load rules and other matters for international students.",
+    "topics": [
+      "visa",
+      "international",
+      "coe",
+      "study load",
+      "immigration"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "equitable_learning_services",
+    "name": "Equitable Learning Services",
+    "email": "equitable.learning@example.invalid",
+    "use_for": "Disability, medical and other conditions that need study adjustments or equitable assessment arrangements.",
+    "topics": [
+      "disability",
+      "adjustment",
+      "equitable",
+      "medical",
+      "condition",
+      "accessibility",
+      "special consideration",
+      "extension"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "student_support",
+    "name": "Student Support and Wellbeing",
+    "email": "student.support@example.invalid",
+    "use_for": "Counselling, wellbeing and personal support.",
+    "topics": [
+      "wellbeing",
+      "counselling",
+      "stress",
+      "mental",
+      "housing"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "scholarships_office",
+    "name": "Scholarships Office",
+    "email": "scholarships@example.invalid",
+    "use_for": "Scholarships, bursaries and financial support applications.",
+    "topics": [
+      "scholarship",
+      "bursary",
+      "grant",
+      "financial support"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "team_id": "credit_and_advanced_standing",
+    "name": "Credit and Advanced Standing Team",
+    "email": "credit@example.invalid",
+    "use_for": "Credit transfer and recognition of prior learning.",
+    "topics": [
+      "credit transfer",
+      "credit",
+      "recognition",
+      "prior learning",
+      "advanced standing",
+      "exemption"
+    ],
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  }
+]

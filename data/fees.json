@@ -1,0 +1,36 @@
+{
+  "currency": "AUD",
+  "fee_types": {
+    "hecs_csp": {
+      "label": "Commonwealth supported place (HECS-HELP)",
+      "fee_per_12cp": 1800,
+      "payment_options": [
+        "defer_to_hecs_help",
+        "pay_upfront"
+      ],
+      "payment_rule": "No payment is due at enrolment. You can defer the fee with a HECS-HELP loan and repay it later through the tax system, or pay upfront by the payment due date.",
+      "withdrawal_rule": "Withdraw before the census date and you are not charged for the course and take on no loan debt for it."
+    },
+    "domestic_full_fee": {
+      "label": "Domestic full-fee place",
+      "fee_per_12cp": 3600,
+      "payment_options": [
+        "pay_upfront"
+      ],
+      "payment_rule": "The full fee is due by the payment due date for the term. There is no loan option in this demo data.",
+      "withdrawal_rule": "Withdraw before the census date for a full refund of the fee for that course."
+    },
+    "international": {
+      "label": "International student place",
+      "fee_per_12cp": 5400,
+      "payment_options": [
+        "pay_upfront"
+      ],
+      "payment_rule": "The full fee is due by the payment due date for the term and must be paid upfront. No loan is available.",
+      "withdrawal_rule": "Withdraw before the census date for a refund of the fee for that course. Changes to your study load may affect visa conditions: ask the international student office."
+    }
+  },
+  "provenance": "synthetic",
+  "field_provenance": {},
+  "snapshot_date": "2026-09-21"
+}

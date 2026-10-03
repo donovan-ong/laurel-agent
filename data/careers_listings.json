@@ -1,0 +1,390 @@
+[
+  {
+    "listing_id": "L0001",
+    "title": "Software Engineering Intern",
+    "employer": "Fictional Corp",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-10-12",
+    "posted_date": "2026-09-14",
+    "description": "Work on a small team shipping features for an internal web application. Some Python, some TypeScript.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0002",
+    "title": "Data Analyst Intern",
+    "employer": "Synthetic Systems",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-10-26",
+    "posted_date": "2026-09-14",
+    "description": "Clean and analyse operational datasets, build a couple of dashboards, present findings to the team.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0003",
+    "title": "Graduate Software Developer",
+    "employer": "NorthWind Digital",
+    "type": "graduate",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-11-20",
+    "posted_date": "2026-09-14",
+    "description": "A 12-month graduate program rotating through two product teams, with a mentor throughout.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0004",
+    "title": "IT Support Officer (Casual)",
+    "employer": "Example State University",
+    "type": "casual",
+    "location": "Melbourne (multiple campuses)",
+    "relevant_programs": [],
+    "deadline": "2026-10-05",
+    "posted_date": "2026-09-14",
+    "description": "Frontline IT support for staff and students: password resets, hardware loans, basic troubleshooting.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0005",
+    "title": "Machine Learning Intern",
+    "employer": "Placeholder Analytics",
+    "type": "internship",
+    "location": "Remote (Australia)",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-11-05",
+    "posted_date": "2026-09-14",
+    "description": "Support a small ML team building a recommendation model; requires Python and some statistics.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0006",
+    "title": "Cyber Security Graduate",
+    "employer": "BrightPath Technologies",
+    "type": "graduate",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-11-30",
+    "posted_date": "2026-09-14",
+    "description": "Rotate through security operations, risk assessment and secure development over a two-year program.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0007",
+    "title": "Junior Web Developer (Part-time)",
+    "employer": "Fictional Corp",
+    "type": "part_time",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-10-19",
+    "posted_date": "2026-09-14",
+    "description": "10-15 hours a week maintaining a small client's website alongside study.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0008",
+    "title": "Business Analyst Intern",
+    "employer": "Meridian Consulting Group",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [],
+    "deadline": "2026-11-10",
+    "posted_date": "2026-09-14",
+    "description": "Support a consulting team gathering requirements and documenting processes for client projects.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0009",
+    "title": "Cloud Engineering Intern",
+    "employer": "Synthetic Systems",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-10-31",
+    "posted_date": "2026-09-14",
+    "description": "Help migrate internal tools to a cloud platform; exposure to CI/CD pipelines and infrastructure as code.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0010",
+    "title": "Library Student Assistant (Casual)",
+    "employer": "Example State University",
+    "type": "casual",
+    "location": "Melbourne (City campus)",
+    "relevant_programs": [],
+    "deadline": "2026-10-01",
+    "posted_date": "2026-09-14",
+    "description": "Shelving, circulation desk cover and helping students find resources, a few shifts a week.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0011",
+    "title": "Games Programming Intern",
+    "employer": "Ninth Circle Interactive",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23"
+    ],
+    "deadline": "2026-11-15",
+    "posted_date": "2026-09-14",
+    "description": "Join a small indie studio building a prototype; C# and Unity experience helpful but not required.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0012",
+    "title": "IT Helpdesk Graduate",
+    "employer": "Fictional Corp",
+    "type": "graduate",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BP162P23"
+    ],
+    "deadline": "2026-12-10",
+    "posted_date": "2026-09-14",
+    "description": "A one-year rotation through service desk, systems administration and a small development team.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0013",
+    "title": "Marketing Assistant (Casual)",
+    "employer": "BrightPath Technologies",
+    "type": "casual",
+    "location": "Melbourne CBD",
+    "relevant_programs": [],
+    "deadline": "2026-10-09",
+    "posted_date": "2026-09-14",
+    "description": "Support the marketing team with social media scheduling and simple content edits, flexible hours.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0014",
+    "title": "Database Administration Intern",
+    "employer": "Meridian Consulting Group",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-10-24",
+    "posted_date": "2026-09-14",
+    "description": "Assist a DBA team with routine maintenance, backups and query performance tuning.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0015",
+    "title": "UX Research Intern",
+    "employer": "NorthWind Digital",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [],
+    "deadline": "2026-10-16",
+    "posted_date": "2026-09-14",
+    "description": "Support user interviews and usability testing for a redesign project; no coding required.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0016",
+    "title": "Network Engineering Graduate",
+    "employer": "Placeholder Analytics",
+    "type": "graduate",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-12-20",
+    "posted_date": "2026-09-14",
+    "description": "A structured graduate pathway toward a networking certification, working alongside senior engineers.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0017",
+    "title": "Retail Team Member (Casual)",
+    "employer": "Southbank Outfitters",
+    "type": "casual",
+    "location": "Melbourne CBD",
+    "relevant_programs": [],
+    "deadline": "2026-09-28",
+    "posted_date": "2026-09-14",
+    "description": "Weekend and evening shifts on the shop floor, no experience required.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0018",
+    "title": "Mobile App Developer Intern",
+    "employer": "Ninth Circle Interactive",
+    "type": "internship",
+    "location": "Remote (Australia)",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-10-29",
+    "posted_date": "2026-09-14",
+    "description": "Contribute to a small Flutter codebase, fixing bugs and building simple new screens.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0019",
+    "title": "Finance Graduate Program",
+    "employer": "Meridian Consulting Group",
+    "type": "graduate",
+    "location": "Melbourne CBD",
+    "relevant_programs": [],
+    "deadline": "2026-12-30",
+    "posted_date": "2026-09-14",
+    "description": "A two-year rotational program across financial planning, reporting and analysis.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0020",
+    "title": "DevOps Intern",
+    "employer": "Synthetic Systems",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-11-02",
+    "posted_date": "2026-09-14",
+    "description": "Support a platform team automating deployments and monitoring; some scripting experience expected.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0021",
+    "title": "Campus Ambassador (Casual)",
+    "employer": "Example State University",
+    "type": "casual",
+    "location": "Melbourne (City campus)",
+    "relevant_programs": [],
+    "deadline": "2026-10-03",
+    "posted_date": "2026-09-14",
+    "description": "Represent the university at open days and orientation events, a few hours a week during term.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0022",
+    "title": "Product Management Intern",
+    "employer": "NorthWind Digital",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [],
+    "deadline": "2026-11-07",
+    "posted_date": "2026-09-14",
+    "description": "Shadow a product manager, help write specs and run a small piece of the roadmap yourself.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0023",
+    "title": "Embedded Systems Intern",
+    "employer": "Placeholder Analytics",
+    "type": "internship",
+    "location": "Melbourne CBD",
+    "relevant_programs": [
+      "BH013P26",
+      "BP094P23",
+      "BP162P23"
+    ],
+    "deadline": "2026-11-25",
+    "posted_date": "2026-09-14",
+    "description": "Work on firmware for a small IoT device, C and some Python for tooling.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "listing_id": "L0024",
+    "title": "Customer Support Officer (Casual)",
+    "employer": "Fictional Corp",
+    "type": "casual",
+    "location": "Remote (Australia)",
+    "relevant_programs": [],
+    "deadline": "2026-09-30",
+    "posted_date": "2026-09-14",
+    "description": "Answer customer tickets over chat and email, flexible casual hours.",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  }
+]

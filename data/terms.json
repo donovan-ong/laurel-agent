@@ -1,0 +1,167 @@
+[
+  {
+    "term": "2026-S2",
+    "start_date": "2026-07-20",
+    "end_date": "2026-11-13",
+    "enrolment_opens": "2026-04-27",
+    "enrolment_closes": "2026-08-02",
+    "payment_due_date": "2026-08-10",
+    "census_date": "2026-08-31",
+    "provenance": "synthetic",
+    "field_provenance": {
+      "start_date": "from_public_page",
+      "enrolment_closes": "from_public_page",
+      "census_date": "from_public_page",
+      "end_date": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2027-S1",
+    "start_date": "2027-03-01",
+    "end_date": "2027-06-25",
+    "enrolment_opens": "2026-10-01",
+    "enrolment_closes": "2027-03-15",
+    "payment_due_date": "2027-03-22",
+    "census_date": "2027-04-09",
+    "provenance": "synthetic",
+    "field_provenance": {
+      "enrolment_opens": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2027-S2",
+    "start_date": "2027-07-19",
+    "end_date": "2027-11-12",
+    "enrolment_opens": "2026-10-01",
+    "enrolment_closes": "2027-08-02",
+    "payment_due_date": "2027-08-09",
+    "census_date": "2027-08-27",
+    "provenance": "synthetic",
+    "field_provenance": {
+      "enrolment_opens": "from_public_page"
+    },
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2028-S1",
+    "start_date": "2028-02-28",
+    "end_date": "2028-06-23",
+    "enrolment_opens": "2027-12-06",
+    "enrolment_closes": "2028-03-13",
+    "payment_due_date": "2028-03-20",
+    "census_date": "2028-04-07",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2028-S2",
+    "start_date": "2028-07-17",
+    "end_date": "2028-11-10",
+    "enrolment_opens": "2028-04-24",
+    "enrolment_closes": "2028-07-31",
+    "payment_due_date": "2028-08-07",
+    "census_date": "2028-08-25",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2029-S1",
+    "start_date": "2029-02-26",
+    "end_date": "2029-06-22",
+    "enrolment_opens": "2028-12-04",
+    "enrolment_closes": "2029-03-12",
+    "payment_due_date": "2029-03-19",
+    "census_date": "2029-04-06",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2029-S2",
+    "start_date": "2029-07-16",
+    "end_date": "2029-11-09",
+    "enrolment_opens": "2029-04-23",
+    "enrolment_closes": "2029-07-30",
+    "payment_due_date": "2029-08-06",
+    "census_date": "2029-08-24",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2030-S1",
+    "start_date": "2030-02-25",
+    "end_date": "2030-06-21",
+    "enrolment_opens": "2029-12-03",
+    "enrolment_closes": "2030-03-11",
+    "payment_due_date": "2030-03-18",
+    "census_date": "2030-04-05",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2030-S2",
+    "start_date": "2030-07-15",
+    "end_date": "2030-11-08",
+    "enrolment_opens": "2030-04-22",
+    "enrolment_closes": "2030-07-29",
+    "payment_due_date": "2030-08-05",
+    "census_date": "2030-08-23",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2031-S1",
+    "start_date": "2031-03-03",
+    "end_date": "2031-06-27",
+    "enrolment_opens": "2030-12-09",
+    "enrolment_closes": "2031-03-17",
+    "payment_due_date": "2031-03-24",
+    "census_date": "2031-04-11",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2031-S2",
+    "start_date": "2031-07-21",
+    "end_date": "2031-11-14",
+    "enrolment_opens": "2031-04-28",
+    "enrolment_closes": "2031-08-04",
+    "payment_due_date": "2031-08-11",
+    "census_date": "2031-08-29",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2032-S1",
+    "start_date": "2032-03-01",
+    "end_date": "2032-06-25",
+    "enrolment_opens": "2031-12-08",
+    "enrolment_closes": "2032-03-15",
+    "payment_due_date": "2032-03-22",
+    "census_date": "2032-04-09",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "term": "2032-S2",
+    "start_date": "2032-07-19",
+    "end_date": "2032-11-12",
+    "enrolment_opens": "2032-04-26",
+    "enrolment_closes": "2032-08-02",
+    "payment_due_date": "2032-08-09",
+    "census_date": "2032-08-27",
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  }
+]

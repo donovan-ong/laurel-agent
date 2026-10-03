@@ -1,0 +1,827 @@
+[
+  {
+    "student_number": "S0000001",
+    "name": "Donovan Ong",
+    "email": "s0000001@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "admitted_not_enrolled",
+    "study_load": "part_time",
+    "start_term": "2027-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": {
+      "title": "Bachelor of Information Technology",
+      "institution": "Synthetic University",
+      "year": 2025,
+      "gpa": 3.2
+    },
+    "results": [],
+    "current_enrolments": [],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000002",
+    "name": "Jordan Whitfield",
+    "email": "s0000002@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "admitted_not_enrolled",
+    "study_load": "full_time",
+    "start_term": "2027-S1",
+    "residency": "domestic",
+    "fee_type": "domestic_full_fee",
+    "prior_qualification": {
+      "title": "Bachelor of Science (Computer Science)",
+      "institution": "Example State University",
+      "year": 2025,
+      "gpa": 3.4
+    },
+    "results": [],
+    "current_enrolments": [],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000003",
+    "name": "Noor Halvorsen",
+    "email": "s0000003@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "admitted_not_enrolled",
+    "study_load": "full_time",
+    "start_term": "2027-S1",
+    "residency": "international",
+    "fee_type": "international",
+    "prior_qualification": {
+      "title": "Bachelor of Computer Science",
+      "institution": "Fictional Institute of Technology",
+      "year": 2025,
+      "gpa": 3.6
+    },
+    "results": [],
+    "current_enrolments": [],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000004",
+    "name": "Casey Delacroix",
+    "email": "s0000004@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "enrolled",
+    "study_load": "part_time",
+    "start_term": "2026-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": {
+      "title": "Bachelor of Software Engineering",
+      "institution": "Synthetic University",
+      "year": 2024,
+      "gpa": 3.3
+    },
+    "results": [
+      {
+        "course_id": "COSC2148",
+        "term": "2026-S1",
+        "mark": 78
+      },
+      {
+        "course_id": "COSC2462",
+        "term": "2026-S1",
+        "mark": 85
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "COSC2110",
+        "term": "2026-S2",
+        "class_ids": [
+          "1038",
+          "1045"
+        ]
+      },
+      {
+        "course_id": "COSC2673",
+        "term": "2026-S2",
+        "class_ids": [
+          "1071",
+          "1075"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000005",
+    "name": "Morgan Ashby",
+    "email": "s0000005@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "enrolled",
+    "study_load": "part_time",
+    "start_term": "2026-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": {
+      "title": "Bachelor of Information Technology",
+      "institution": "Example State University",
+      "year": 2024,
+      "gpa": 2.7
+    },
+    "results": [
+      {
+        "course_id": "COSC2148",
+        "term": "2026-S1",
+        "mark": 55
+      },
+      {
+        "course_id": "COSC2462",
+        "term": "2026-S1",
+        "mark": 42
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "COSC2462",
+        "term": "2026-S2",
+        "class_ids": [
+          "1023",
+          "1026"
+        ]
+      },
+      {
+        "course_id": "COSC2633",
+        "term": "2026-S2",
+        "class_ids": [
+          "1032",
+          "1034"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000006",
+    "name": "Taylor Nakamura",
+    "email": "s0000006@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "enrolled",
+    "study_load": "full_time",
+    "start_term": "2025-S2",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": {
+      "title": "Bachelor of Computer Science",
+      "institution": "Synthetic University",
+      "year": 2024,
+      "gpa": 3.8
+    },
+    "results": [
+      {
+        "course_id": "COSC2148",
+        "term": "2025-S2",
+        "mark": 72
+      },
+      {
+        "course_id": "COSC2462",
+        "term": "2025-S2",
+        "mark": 68
+      },
+      {
+        "course_id": "COSC2110",
+        "term": "2025-S2",
+        "mark": 75
+      },
+      {
+        "course_id": "COSC2673",
+        "term": "2025-S2",
+        "mark": 81
+      },
+      {
+        "course_id": "COSC3154",
+        "term": "2026-S1",
+        "mark": 70
+      },
+      {
+        "course_id": "COSC2632",
+        "term": "2026-S1",
+        "mark": 66
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "COSC3155",
+        "term": "2026-S2",
+        "class_ids": [
+          "1030",
+          "1031"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000007",
+    "name": "Jamie Kowalczyk",
+    "email": "s0000007@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "enrolled",
+    "study_load": "part_time",
+    "start_term": "2026-S1",
+    "residency": "domestic",
+    "fee_type": "domestic_full_fee",
+    "prior_qualification": {
+      "title": "Bachelor of Information Systems",
+      "institution": "Fictional Institute of Technology",
+      "year": 2023,
+      "gpa": 2.9
+    },
+    "results": [
+      {
+        "course_id": "COSC2148",
+        "term": "2026-S1",
+        "mark": 63
+      },
+      {
+        "course_id": "COSC2462",
+        "term": "2026-S1",
+        "mark": 61
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "INTE2402",
+        "term": "2026-S2",
+        "class_ids": [
+          "1048",
+          "1052"
+        ]
+      },
+      {
+        "course_id": "COSC2527",
+        "term": "2026-S2",
+        "class_ids": [
+          "1053",
+          "1055"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 3600,
+      "due_date": "2026-08-10",
+      "hold": {
+        "type": "unpaid_fees",
+        "blocks": [
+          "enrolment"
+        ],
+        "message": "An overdue balance of 3600 AUD blocks new enrolments until it is paid."
+      }
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000008",
+    "name": "Robin Achterberg",
+    "email": "s0000008@example.invalid",
+    "program_code": "BH013P26",
+    "enrolment_status": "enrolled",
+    "study_load": "part_time",
+    "start_term": "2027-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": {
+      "title": "Bachelor of Data Science",
+      "institution": "Example State University",
+      "year": 2025,
+      "gpa": 3.1
+    },
+    "results": [],
+    "current_enrolments": [
+      {
+        "course_id": "COSC2148",
+        "term": "2027-S1",
+        "class_ids": [
+          "1015",
+          "1102"
+        ]
+      },
+      {
+        "course_id": "COSC2462",
+        "term": "2027-S1",
+        "class_ids": [
+          "1106",
+          "1110"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000009",
+    "name": "Kai Bellamy",
+    "email": "s0000009@example.invalid",
+    "program_code": "BP094P23",
+    "enrolment_status": "admitted_not_enrolled",
+    "study_load": "full_time",
+    "start_term": "2027-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": null,
+    "results": [],
+    "current_enrolments": [],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000010",
+    "name": "Mika Torres",
+    "email": "s0000010@example.invalid",
+    "program_code": "BP094P23",
+    "enrolment_status": "enrolled",
+    "study_load": "part_time",
+    "start_term": "2024-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": null,
+    "results": [
+      {
+        "course_id": "COSC2801",
+        "term": "2024-S1",
+        "mark": 72
+      },
+      {
+        "course_id": "MATH2466",
+        "term": "2024-S1",
+        "mark": 65
+      },
+      {
+        "course_id": "COSC2803",
+        "term": "2024-S2",
+        "mark": 70
+      },
+      {
+        "course_id": "COSC2802",
+        "term": "2025-S1",
+        "mark": 68
+      },
+      {
+        "course_id": "MATH2411",
+        "term": "2025-S1",
+        "mark": 61
+      },
+      {
+        "course_id": "COSC2804",
+        "term": "2025-S2",
+        "mark": 74
+      },
+      {
+        "course_id": "INTE2625",
+        "term": "2026-S1",
+        "mark": 77
+      },
+      {
+        "course_id": "COSC2123",
+        "term": "2026-S1",
+        "mark": 58
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "ISYS1118",
+        "term": "2026-S2",
+        "class_ids": [
+          "1498",
+          "1500"
+        ]
+      },
+      {
+        "course_id": "COSC3045",
+        "term": "2026-S2",
+        "class_ids": [
+          "1493",
+          "1497"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000011",
+    "name": "Elliot Marchetti",
+    "email": "s0000011@example.invalid",
+    "program_code": "BP094P23",
+    "enrolment_status": "enrolled",
+    "study_load": "full_time",
+    "start_term": "2025-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": null,
+    "results": [
+      {
+        "course_id": "COSC2801",
+        "term": "2025-S1",
+        "mark": 75
+      },
+      {
+        "course_id": "MATH2466",
+        "term": "2025-S1",
+        "mark": 68
+      },
+      {
+        "course_id": "COSC2802",
+        "term": "2025-S1",
+        "mark": 71
+      },
+      {
+        "course_id": "INTE2625",
+        "term": "2025-S1",
+        "mark": 80
+      },
+      {
+        "course_id": "COSC2803",
+        "term": "2025-S2",
+        "mark": 66
+      },
+      {
+        "course_id": "COSC2804",
+        "term": "2025-S2",
+        "mark": 73
+      },
+      {
+        "course_id": "MATH2411",
+        "term": "2026-S1",
+        "mark": 62
+      },
+      {
+        "course_id": "COSC3045",
+        "term": "2026-S1",
+        "mark": 70
+      },
+      {
+        "course_id": "COSC1111",
+        "term": "2026-S1",
+        "mark": 77
+      },
+      {
+        "course_id": "ISYS1118",
+        "term": "2026-S1",
+        "mark": 64
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "COSC2123",
+        "term": "2026-S2",
+        "class_ids": [
+          "1511",
+          "1512"
+        ]
+      },
+      {
+        "course_id": "COSC2960",
+        "term": "2026-S2",
+        "class_ids": [
+          "1503",
+          "1505"
+        ]
+      },
+      {
+        "course_id": "COSC2536",
+        "term": "2026-S2",
+        "class_ids": [
+          "1551",
+          "1553"
+        ]
+      },
+      {
+        "course_id": "INTE2402",
+        "term": "2026-S2",
+        "class_ids": [
+          "1048",
+          "1050"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000012",
+    "name": "Riley Okafor",
+    "email": "s0000012@example.invalid",
+    "program_code": "BP162P23",
+    "enrolment_status": "enrolled",
+    "study_load": "full_time",
+    "start_term": "2025-S2",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": null,
+    "results": [
+      {
+        "course_id": "COSC3109",
+        "term": "2025-S2",
+        "mark": 70
+      },
+      {
+        "course_id": "INTE2625",
+        "term": "2025-S2",
+        "mark": 64
+      },
+      {
+        "course_id": "COSC1111",
+        "term": "2025-S2",
+        "mark": 48
+      },
+      {
+        "course_id": "COSC3103",
+        "term": "2025-S2",
+        "mark": 72
+      },
+      {
+        "course_id": "COSC3106",
+        "term": "2026-S1",
+        "mark": 66
+      },
+      {
+        "course_id": "COSC3046",
+        "term": "2026-S1",
+        "mark": 59
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "COSC1111",
+        "term": "2026-S2",
+        "class_ids": [
+          "1548",
+          "1549"
+        ]
+      },
+      {
+        "course_id": "COSC2757",
+        "term": "2026-S2",
+        "class_ids": [
+          "1613",
+          "1615"
+        ]
+      },
+      {
+        "course_id": "COSC3088",
+        "term": "2026-S2",
+        "class_ids": [
+          "1771",
+          "1773"
+        ]
+      },
+      {
+        "course_id": "ISYS3413",
+        "term": "2026-S2",
+        "class_ids": [
+          "1776",
+          "1777"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000013",
+    "name": "Devon Ashworth",
+    "email": "s0000013@example.invalid",
+    "program_code": "BP162P23",
+    "enrolment_status": "admitted_not_enrolled",
+    "study_load": "full_time",
+    "start_term": "2027-S1",
+    "residency": "international",
+    "fee_type": "international",
+    "prior_qualification": null,
+    "results": [],
+    "current_enrolments": [],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  },
+  {
+    "student_number": "S0000014",
+    "name": "Sasha Whitlock",
+    "email": "s0000014@example.invalid",
+    "program_code": "BP094P23",
+    "enrolment_status": "enrolled",
+    "study_load": "full_time",
+    "start_term": "2024-S1",
+    "residency": "domestic",
+    "fee_type": "hecs_csp",
+    "prior_qualification": null,
+    "results": [
+      {
+        "course_id": "COSC2801",
+        "term": "2024-S1",
+        "mark": 70
+      },
+      {
+        "course_id": "MATH2466",
+        "term": "2024-S1",
+        "mark": 66
+      },
+      {
+        "course_id": "COSC2802",
+        "term": "2024-S1",
+        "mark": 68
+      },
+      {
+        "course_id": "INTE2625",
+        "term": "2024-S1",
+        "mark": 74
+      },
+      {
+        "course_id": "COSC2803",
+        "term": "2024-S2",
+        "mark": 72
+      },
+      {
+        "course_id": "COSC2804",
+        "term": "2024-S2",
+        "mark": 65
+      },
+      {
+        "course_id": "MATH2411",
+        "term": "2025-S1",
+        "mark": 60
+      },
+      {
+        "course_id": "COSC3045",
+        "term": "2025-S1",
+        "mark": 71
+      },
+      {
+        "course_id": "ISYS1118",
+        "term": "2025-S1",
+        "mark": 69
+      },
+      {
+        "course_id": "COSC2123",
+        "term": "2025-S1",
+        "mark": 63
+      },
+      {
+        "course_id": "COSC2960",
+        "term": "2025-S2",
+        "mark": 75
+      },
+      {
+        "course_id": "COSC1111",
+        "term": "2025-S2",
+        "mark": 78
+      },
+      {
+        "course_id": "INTE2547",
+        "term": "2025-S2",
+        "mark": 70
+      },
+      {
+        "course_id": "INTE2584",
+        "term": "2025-S2",
+        "mark": 82
+      },
+      {
+        "course_id": "COSC2408",
+        "term": "2026-S1",
+        "mark": 73
+      },
+      {
+        "course_id": "OENG1235",
+        "term": "2026-S1",
+        "mark": 68
+      },
+      {
+        "course_id": "COSC2299",
+        "term": "2026-S1",
+        "mark": 66
+      },
+      {
+        "course_id": "COSC2536",
+        "term": "2026-S1",
+        "mark": 71
+      }
+    ],
+    "current_enrolments": [
+      {
+        "course_id": "INTE2626",
+        "term": "2026-S2",
+        "class_ids": [
+          "1084",
+          "1086"
+        ]
+      },
+      {
+        "course_id": "INTE2402",
+        "term": "2026-S2",
+        "class_ids": [
+          "1048",
+          "1050"
+        ]
+      },
+      {
+        "course_id": "ISYS1079",
+        "term": "2026-S2",
+        "class_ids": [
+          "1076",
+          "1078"
+        ]
+      },
+      {
+        "course_id": "COSC2276",
+        "term": "2026-S2",
+        "class_ids": [
+          "1584",
+          "1585"
+        ]
+      }
+    ],
+    "account": {
+      "balance_due": 0,
+      "due_date": null,
+      "hold": null
+    },
+    "provenance": "synthetic",
+    "field_provenance": {},
+    "snapshot_date": "2026-09-21"
+  }
+]
