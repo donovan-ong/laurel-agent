@@ -67,6 +67,8 @@ def test_a_bearer_token_opens_the_existing_protected_routes():
     assert c.get("/api/chat/history", headers=headers).status_code == 200
     profile = c.get("/api/profile", headers=headers).json()
     assert profile["found"] is True and profile["student"]["student_number"] == "S0000004"
+    week = c.get("/api/week", headers=headers).json()
+    assert week["found"] is True and week["name"] == "Casey Delacroix"
 
 
 def test_no_token_and_a_bad_token_are_rejected():

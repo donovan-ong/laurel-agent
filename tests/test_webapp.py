@@ -264,6 +264,28 @@ def test_profile_does_not_call_the_chat_agent(monkeypatch):
     assert calls_made == []  # connect()/ask() never touched for a profile lookup
 
 
+
+def test_week_requires_login():
+    assert client().get("/api/week").status_code == 401
+
+
+def test_week_lists_the_logged_in_students_own_items_most_urgent_first():
+    c = login(client(), "demo4")
+    body = c.get("/api/week", params={"on": "2026-10-03"}).json()
+    assert body["found"] is True and body["week_label"] == "Week 10, Semester 2 2026"
+    assert body["items"][0]["urgency"] == "overdue"
+    assert "Assignment 2 for Data Mining" in [i["title"] for i in body["items"]]
+    assert all(i["prompt"] for i in body["items"])
+
+
+def test_week_does_not_call_the_chat_agent(monkeypatch):
+    calls_made = []
+    monkeypatch.setattr(server, "connect", lambda number, agent_name=None: calls_made.append(number) or FakeClient(number, script))
+    c = login(client())
+    calls_made.clear()
+    c.get("/api/week")
+    assert calls_made == []
+
 # The SPA shell: a single built React app serves every page and client-side route; React itself decides
 # what to render, and redirects if not logged in, so the server-sent HTML is the same for all of these.
 

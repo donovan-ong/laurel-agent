@@ -13,6 +13,7 @@ from ibm_watsonx_orchestrate.run.context import AgentRun
 from planner import auth
 from planner.client import ChatError, connect, message_text
 from tools.student_tools import get_student_profile
+from tools.week_tools import get_my_week
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST_DIR = ROOT / "frontend" / "dist"  # built by `cd frontend && npm run build`
@@ -200,6 +201,11 @@ def create_app() -> FastAPI:
     def profile(session: dict = Depends(require_session)):
         # Called directly, not through the agent: no LLM latency, nothing to parse out of markdown.
         return get_student_profile.fn(context=AgentRun(request_context={"student_number": session["student_number"]}))
+
+    @app.get("/api/week")
+    def week(on: str | None = None, session: dict = Depends(require_session)):
+        # The home screen's "Your week" panel: called directly like /api/profile, so it shows straight away.
+        return get_my_week.fn(context=AgentRun(request_context={"student_number": session["student_number"]}), on_date=on)
 
     # The SPA shell. Registered last: Starlette tries routes in registration order, and this wildcard would
     # otherwise swallow every /api/* request above it. Serves index.html for any client-side route (/, /login,
