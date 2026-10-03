@@ -71,7 +71,7 @@ The demo accounts are real-feeling personas, not test fixtures. Each password is
 | **Desirability and impact** | It tells you what's coming up before you ask, so nothing is missed, then helps you get it done. No new app to learn. It sits on the pages students already visit, knows who they are without asking, works 24/7, and *does* things instead of linking to them. Nobody is left stuck: out-of-scope questions get a ready-to-send draft to the right team. | *Coming up* appearing the moment the widget opens. A study plan for the week with rooms, and one booked. The handoff draft. |
 | **Solution and creativity** | Proactive rather than reactive: *Coming up* is computed straight from the tools with no model call, so it is instant, and each item is a ready-made question. The study-week planner joins coursework, the timetable and room booking into a plan to learn by. Underneath, a tool-calling agent over the university's own systems, not a document-search chatbot. Every fact is an exact lookup with a source line. Every action uses a check-then-confirm pattern enforced in code. Identity is wired through the login, so the model can never reach another student's record. A mock enrolment service with a live dashboard shows real API calls as they happen. | The trace toggle under a reply. The live dashboard lighting up during an enrolment. A refused probe for another student's results. |
 | **UI/UX** | A home screen that starts with what matters, where one click asks about it. Clean chat in the university's own colours. Suggested questions change with the page you're on. A lively loading indicator, per-message copy, thumbs and retry, and an expand button. Plans and timetables come back as tables. Mobile-safe input. The widget hands off to the full web app already signed in. | Clicking a suggestion chip, expanding the widget, then opening the full web app. |
-| **Functionality** | 30 tools across 10 domains, a fixed-seed synthetic dataset with a validator, unit tests for every tool, and a scenario runner that asks the live agent scripted questions and reports pass rates. | Everything in the demo is live, not mocked screenshots. |
+| **Functionality** | 31 tools across 10 domains, a fixed-seed synthetic dataset with a validator, unit tests for every tool, and a scenario runner that asks the live agent scripted questions and reports pass rates. | Everything in the demo is live, not mocked screenshots. |
 | **Presentation** | A four-minute storyline (section 12.1) built on four live turns, following one student with two deadlines this Sunday, with traces making the invisible visible. A recorded video backs up the live demo. | Section 12.1. |
 
 ## 5. Hard rules (do not violate)
@@ -95,7 +95,7 @@ Laurel is a **tool-calling agent**, not a document-search system. A foundation m
  student ──► widget on a uni page / web app / CLI
                 │  message + run context {student_number}  (set by the login, never by the model)
                 ▼
-     IBM watsonx Orchestrate ──► Laurel agent (instructions + 30 tools + model)
+     IBM watsonx Orchestrate ──► Laurel agent (instructions + 31 tools + model)
                 │                        │ picks a tool, fills its arguments
                 ▼                        ▼
      Python tools (tools/*_tools.py) ──► data/*.json, or the mock enrolment service (mockapi/)
@@ -111,7 +111,7 @@ Laurel is a **tool-calling agent**, not a document-search system. A foundation m
 - **Identity.** A `context: AgentRun` parameter gives the tool `context.request_context["student_number"]`, set from the authenticated session. The model never sees or supplies it, so it cannot be asked or tricked into fetching someone else's data.
 - **Programs are data, not code.** `data/programs.json` models each program as stages of ordered items (`course`, `options`, `choice`). `tools/programs.py` resolves the student's program, so adding a degree is a data change.
 - **The confirmation pattern.** Every action that changes something is split into a `check_*` tool with no side effects and a paired action tool. The action tool refuses unless it gets a matching `check_id` and `student_confirmed: true`. The agent must show a summary and wait for a clear yes on the *next* message.
-- **The human safety net.** `draft_enquiry` is what Laurel calls instead of guessing. It picks the right team from `contacts.json` and returns only that team at first, so Laurel asks whether the student wants a draft; the email is written only on a yes (`include_draft`), or straight away when the student already asked to be put in touch. Nothing is sent.
+- **The human safety net.** `draft_enquiry` is what Laurel calls instead of guessing. `find_support_team` picks the right team from `contacts.json` and writes nothing, so Laurel names the team and its email and asks whether the student wants a draft; `draft_enquiry` writes the email only on a yes, or straight away when the student already asked to be put in touch. Nothing is sent.
 - **Interfaces.** All three share the same session and chat-client code:
   - a React web app (`frontend/`, served by `webapp/`)
   - a floating chat widget for university pages (`widget/`), delivered by a Chrome extension (`extension/`)
@@ -149,7 +149,7 @@ When something is not found, a tool returns `{"found": false, "reason": "..."}`.
 | Campus services | `get_print_balance`, `create_it_ticket`, `check_it_ticket_status`, `search_internships` | FR-29 |
 | Library | `get_current_loans`, `renew_loans` | FR-30 |
 | Coming up | `get_my_week`, `plan_study_week` | FR-33, FR-34 |
-| Human handoff | `draft_enquiry` | FR-14, FR-15 |
+| Human handoff | `find_support_team`, `draft_enquiry` | FR-14, FR-15 |
 
 **Availability** is parsed by `tools/scheduling.py`. The format is `{"busy": [{"days": ["Mon","Tue","Wed","Thu","Fri"], "start": "09:00", "end": "17:00"}]}`. A workshop option is `fits` if it overlaps no busy block, `clashes` if it does, and `unknown` if its time is missing. Lectures are assumed online with recordings, so they are never compared. A course can be attended if at least one open workshop option fits. When the student has given no availability, tools assume none and say so.
 
