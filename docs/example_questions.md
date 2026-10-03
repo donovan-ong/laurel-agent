@@ -31,13 +31,13 @@ Data is only seeded for courses a student has a result or a current enrolment in
 | (then) Yes please | demo4 | General study suggestions (concepts, an approach, kinds of resources), labelled as not course materials and with no made-up links, then an offer to plan study sessions or book a room |
 | What's due this week? | demo1 | Nothing: not enrolled in anything yet |
 
-### Your week and study planning
+### Coming up and study planning
 
-*Your week* also appears on its own when you open the web app or the widget, with no question needed. The examples assume 3 October 2026; on other dates the overdue and upcoming items move with the calendar.
+*Coming up* also appears on its own when you open the web app or the widget, with no question needed. The examples assume 3 October 2026; on other dates the overdue and upcoming items move with the calendar.
 
 | Ask | Log in as | What to expect |
 | --- | --- | --- |
-| What does my week look like? Is there anything I should know? | demo4 | Three Assignment 2s due in the next fortnight, each with its course code and name first: Data Mining (Sun 11 Oct, in 8 days), Machine Learning (14 Oct) and Cloud Security (16 Oct), then Thesis Part A's Methodology Chapter (18 Oct), an overdue library book that can be renewed and the exam period in 23 days |
+| What's coming up for me? Is there anything I should know? | demo4 | Three Assignment 2s due in the next fortnight, each with its course code and name first: Data Mining (Sun 11 Oct, in 8 days), Machine Learning (14 Oct) and Cloud Security (16 Oct), then Thesis Part A's Methodology Chapter (18 Oct), an overdue library book that can be renewed and the exam period in 23 days |
 | What should I focus on? | demo7 | The enrolment hold first, then the assignments due Sunday |
 | Plan my study week | demo4 | A table of two-hour sessions, Data Mining's Assignment 2 (due Sunday) first, then Machine Learning and Cloud Security, none on Monday, Tuesday or Wednesday evening (workshops), each with a free room. Says nothing has been booked |
 | I work 9 to 5, Monday to Friday. Plan my study week | demo4 | The same, but only evening and weekend sessions |

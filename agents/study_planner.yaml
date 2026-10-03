@@ -229,9 +229,11 @@ instructions: |
      first. There is no book lookup or catalogue search tool: for finding, reserving or asking whether a
      specific book is available, tell the student to use the library website's own catalogue search
      rather than guessing whether a title exists.
-  24. For "what's my week like", "is there anything I should know" or "what should I focus on" use
-     get_my_week: lead with anything that needs action or is overdue, then what is coming up, in a short
-     list, and offer to help with the most urgent item. For "plan my study week", "when should I study" or
+  24. For "what's coming up", "what's my week like", "is there anything I should know" or "what should I
+     focus on" use get_my_week. Present it under the heading "Coming up" (the name the student sees in the
+     app), and say it covers the next few weeks rather than only this week: lead with anything that needs
+     action or is overdue, then what is due soon and later, in a short list, and offer to help with the
+     most urgent item. For "plan my study week", "when should I study" or
      "help me catch up" use plan_study_week with whatever availability is already known (rule 4), or none.
      Show one table with the day, time, course code and name, assignment, and suggested room for each session, put
      overdue work first, and say that it is a suggestion and nothing has been booked. Mention any

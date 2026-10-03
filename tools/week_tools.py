@@ -1,4 +1,4 @@
-"""The student's week at a glance, and study sessions planned around it. Both read the other tools' results
+"""What's coming up for the student (shown to them as "Coming up"), and study sessions planned around it. Both read the other tools' results
 rather than the data files, so the rules (what counts as overdue, renewable, a hold) stay in one place. The
 other tools are reached through their modules, never imported by name: `orchestrate tools import` registers
 every tool it finds in this file's namespace, which would re-register them from here.
@@ -115,9 +115,9 @@ def week_label(week: dict) -> Optional[str]:
 
 @tool(permission=ToolPermission.READ_ONLY)
 def get_my_week(context: AgentRun, on_date: Optional[str] = None) -> dict:
-    """Get the logged-in student's week at a glance: anything overdue or due soon, holds, library books, and upcoming key dates, most urgent first.
+    """Get what's coming up for the logged-in student, most urgent first: anything overdue or due within two weeks, the next deadline after that, holds, library books, and key dates in the next four weeks.
 
-    Use this for "what's my week looking like", "is there anything I should know", "what should I focus on" or "what's coming up for me". It combines the student's account, Canvas assignments, library loans and the published key dates, so one call is enough. Each item has an urgency (action, overdue, today, soon, upcoming or suggestion) and a prompt: a follow-up question the student could ask about it.
+    Use this for "what's coming up for me", "what's my week looking like", "is there anything I should know" or "what should I focus on". It covers the next few weeks, not only the current calendar week. It combines the student's account, Canvas assignments, library loans and the published key dates, so one call is enough. Each item has an urgency (action, overdue, today, soon, upcoming or suggestion) and a prompt: a follow-up question the student could ask about it.
 
     Args:
         context: The run context supplied by the platform. It is not chosen by the model.

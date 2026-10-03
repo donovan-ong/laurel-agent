@@ -757,12 +757,12 @@ scenarios:
           tools_called: [build_plan]
           contains_any: [["updated", "rebuilt", "new plan", "revised", "here's", "here is", "plan"], ["3pm", "3 pm", "15:00", "3:00", "wednesday"]]
 
-  # Your week and study planning (demo4 on 3 October 2026: Assignment 2 due Sunday 11 October in Data Mining
+  # Coming up and study planning (demo4 on 3 October 2026: Assignment 2 due Sunday 11 October in Data Mining
   # and Machine Learning, the priority but not overdue; Assignment 3 due 9 November; an overdue library book)
   - id: week_at_a_glance_leads_with_the_priority_assignments
     login: demo4
     tags: [week]
-    prompt: "As of 3 October 2026, what does my week look like? Is there anything I should know?"
+    prompt: "As of 3 October 2026, what's coming up for me? Is there anything I should know?"
     checks:
       tools_called: [get_my_week]
       contains: ["assignment 2", "cosc2110", "data mining"]
