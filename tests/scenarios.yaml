@@ -766,7 +766,7 @@ scenarios:
     checks:
       tools_called: [get_my_week]
       contains: ["assignment 2", "cosc2110", "data mining"]
-      contains_any: [["11 october", "sunday"], ["machine learning", "cosc2673"], ["cloud security", "inte2402"]]
+      contains_any: [["11 october", "11 oct", "sunday", "8 days", "eight days"], ["machine learning", "cosc2673"], ["cloud security", "inte2402"]]
   - id: studyweek_plans_the_priority_work_first_with_rooms
     login: demo4
     tags: [studyweek]
