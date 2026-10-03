@@ -756,3 +756,31 @@ scenarios:
         checks:
           tools_called: [build_plan]
           contains_any: [["updated", "rebuilt", "new plan", "revised", "here's", "here is", "plan"], ["3pm", "3 pm", "15:00", "3:00", "wednesday"]]
+
+  # Your week and study planning (demo4 on 3 October 2026: Assignment 2 overdue in Data Mining and
+  # Machine Learning, Assignment 3 due 9 November, an overdue library book)
+  - id: week_at_a_glance_leads_with_overdue_work
+    login: demo4
+    tags: [week]
+    prompt: "As of 3 October 2026, what does my week look like? Is there anything I should know?"
+    checks:
+      tools_called: [get_my_week]
+      contains: ["assignment 2"]
+      contains_any: [["overdue", "not submitted", "not been submitted", "late", "past due"], ["data mining", "machine learning"]]
+  - id: studyweek_plans_overdue_work_first_with_rooms
+    login: demo4
+    tags: [studyweek]
+    prompt: "Plan my study week starting 3 October 2026."
+    checks:
+      tools_called: [plan_study_week]
+      tools_not_called: [book_room]
+      contains: ["assignment 2"]
+      contains_any: [["room", "8.", "14.", "80."], ["suggest", "not booked", "nothing has been booked", "haven't booked", "have not booked", "no room has been booked"]]
+  - id: studyweek_respects_work_hours
+    login: demo4
+    tags: [studyweek]
+    prompt: "I work 9 to 5, Monday to Friday. Plan my study week from 5 October 2026."
+    checks:
+      tools_called: [plan_study_week]
+      tools_not_called: [book_room]
+      contains_any: [["evening", "19:00", "7pm", "7 pm", "saturday", "sunday", "17:00", "after work"]]
