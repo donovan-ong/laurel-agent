@@ -1,0 +1,35 @@
+/* Design tokens — the file a redesign should mostly need to touch. Restyled to match the RMIT theme built for
+   the floating chat widget (widget/src/styles/widget.css): navy header, RMIT red, white cards with a red top
+   rule, sans-serif throughout. White theme only — no dark mode, the same call the widget made, since this is
+   meant to look like part of the real RMIT site rather than a themeable app. */
+:root {
+  --bg: #f2f3f9;
+  --bg-raised: #ffffff;
+  --line: #d8d8e6;
+  --text: #16163f;
+  --text-dim: #5f5f88;
+  --navy: #000054;
+  --accent: #e4002b;
+  --accent-text: #ffffff;
+  --accent-soft: #fbe3e7;
+  --danger: #b8001f;
+  --bubble-user: #f2f3f9; /* the widget's --soft: user bubbles and table headers both use this one pale-blue accent */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 20px;
+  --text-greeting: clamp(28px, 5vw, 40px);
+
+  --radius: 10px;
+  --radius-lg: 22px; /* the chat box: a rounded rectangle, not a full pill — less exaggerated than a stadium shape */
+  --radius-pill: 999px;
+}
