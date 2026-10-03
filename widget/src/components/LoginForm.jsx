@@ -26,7 +26,7 @@ export default function LoginForm({ onLogin, showDemoHint }) {
   return (
     <form className="lw-login" onSubmit={submit}>
       <span className="lw-login-mark">
-        <LaurelMark size={46} />
+        <LaurelMark size={88} faces />
       </span>
       <h2>Sign in to Laurel</h2>
       <p className="lw-dim">Your study assistant. Sign in to see your own record, enrolments and more.</p>

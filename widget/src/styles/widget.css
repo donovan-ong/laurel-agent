@@ -223,15 +223,20 @@
   padding-top: 8px;
 }
 
+/* The large mark with faces, centred above a centred heading and intro, as on the web app's sign-in page. */
 .lw-login-mark {
-  color: var(--white);
+  align-self: center;
+  display: flex;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 4px;
   background: var(--red);
   border-radius: 50%;
-  width: 46px;
-  height: 46px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+}
+
+.lw-login > h2,
+.lw-login > p {
+  text-align: center;
 }
 
 /* ---------- phone panel ---------- */
