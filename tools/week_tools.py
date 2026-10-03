@@ -1,5 +1,5 @@
-"""The student's week at a glance. It reads the other tools' results rather than the data files, so the rules
-(what counts as overdue, renewable, a hold) stay in one place.
+"""The student's week at a glance, and study sessions planned around it. Both read the other tools' results
+rather than the data files, so the rules (what counts as overdue, renewable, a hold) stay in one place.
 """
 from datetime import date, timedelta
 from typing import Optional
@@ -7,9 +7,11 @@ from typing import Optional
 from ibm_watsonx_orchestrate.agent_builder.tools import tool, ToolPermission
 from ibm_watsonx_orchestrate.run.context import AgentRun
 
+from tools import scheduling as sch
+from tools import study_week
 from tools.calendar_tools import get_current_week, label, resolve_date
 from tools.canvas_tools import list_assignments, week_bounds
-from tools.common import current_student
+from tools.common import current_student, load, not_found, source, today
 from tools.library_tools import get_current_loans
 from tools.student_tools import get_fees, get_student_profile
 
@@ -24,6 +26,8 @@ KEY_DATE_PROMPTS = {
     "assessment_period": "When do exams start and when are results released?",
     "results_release": "When are results released?",
 }
+STUDY_NOTE = ("These are suggested study sessions only: nothing has been booked. Any room can be booked through "
+              "check_room_availability and book_room once the student confirms.")
 
 
 def day_text(iso: str) -> str:
@@ -158,3 +162,49 @@ def get_my_week(context: AgentRun, on_date: Optional[str] = None) -> dict:
     return {"found": True, "date": on.isoformat(), "date_text": label(on), "name": student["name"],
             "week_label": week_label(week), "items": items, "sources": sources}
 
+
+@tool(permission=ToolPermission.READ_ONLY)
+def plan_study_week(context: AgentRun, availability: Optional[dict] = None, on_date: Optional[str] = None,
+                    max_sessions: int = 6) -> dict:
+    """Suggest study sessions for the next seven days for the logged-in student's unsubmitted assignments, placed around their workshops and any times they are busy, each with a free study room.
+
+    Use this for "plan my study week", "when should I study", "help me catch up" or "how do I fit in my assignments". Overdue work comes first, then whatever is due soonest. Sessions are two hours, at most two a day, and never clash with the student's own workshops (lectures are online with recordings). If the student has said when they are busy, for example at work, pass it as availability; otherwise leave it empty and say no other commitments were assumed. Nothing is booked: offer to book a session's room through check_room_availability and book_room, with the student's confirmation.
+
+    Args:
+        context: The run context supplied by the platform. It is not chosen by the model.
+        availability: The times the student cannot study, as a dict like {"busy": [{"days": ["Mon", "Tue", "Wed", "Thu", "Fri"], "start": "09:00", "end": "17:00"}]}, with days Mon to Sun and 24 hour HH:MM times. Leave empty if none are known.
+        on_date: Optional date as YYYY-MM-DD for the first day of the plan. Leave empty for today in Melbourne.
+        max_sessions: The most sessions to suggest for the week, 6 unless the student asks for more or fewer.
+
+    Returns:
+        found, the week planned, sessions in date order (date, time, course, assignment, due date, whether it is overdue, and a suggested free room), unscheduled assignments with the reason, busy_used, a note that nothing is booked, and the sources. If nobody is logged in or the availability is malformed, found is false with a reason.
+    """
+    student, error = current_student(context)
+    if error:
+        return error
+    on, _, error = resolve_date(on_date)
+    if error:
+        return error
+    try:
+        stated = sch.parse_availability(availability)
+    except sch.AvailabilityError as e:
+        return not_found(str(e))
+    week = get_current_week.fn(on_date=on.isoformat())
+    term = week["teaching_weeks"][0]["period"] if week.get("found") and week["teaching_weeks"] else None
+    classes = study_week.class_blocks(student["current_enrolments"], term)
+    busy = stated + [(c["day"], c["start"], c["end"]) for c in classes]
+    after = study_week.now_melbourne().strftime("%H:%M") if not on_date and on == today() else None
+    spaces = load("study_spaces.json")
+    assignments = open_assignments(context, on)
+    result = study_week.plan(assignments, busy, spaces["rooms"], spaces["bookings"], on, after, max(1, max_sessions))
+    end = on + timedelta(days=study_week.DAYS - 1)
+    return {
+        "found": True,
+        "week": {"start": on.isoformat(), "end": end.isoformat(), "when": f"{label(on)} to {label(end)}"},
+        **result,
+        "busy_used": [f"{c['what']}: {c['day']} {c['start']} to {c['end']}" for c in classes]
+                     + [f"you said busy: {d} {s} to {e}" for d, s, e in stated],
+        "availability_used": [f"{d} {s} to {e}" for d, s, e in stated] or "none given, so only workshops were avoided",
+        "note": STUDY_NOTE,
+        "sources": [source(spaces, "study_spaces.json")] + ([week["source"]] if week.get("found") else []),
+    }
