@@ -1,0 +1,64 @@
+from datetime import date, timedelta
+from typing import Optional
+
+from ibm_watsonx_orchestrate.agent_builder.tools import tool, ToolPermission
+from ibm_watsonx_orchestrate.run.context import AgentRun
+
+from tools.calendar_tools import resolve_date
+from tools.common import current_student, load, not_found, source
+
+
+def week_bounds(on: date) -> tuple[date, date]:
+    """The Monday to Sunday span containing a date."""
+    start = on - timedelta(days=on.weekday())
+    return start, start + timedelta(days=6)
+
+
+@tool(permission=ToolPermission.READ_ONLY)
+def list_assignments(context: AgentRun, course_id: Optional[str] = None,
+                     due_this_week_only: bool = False, on_date: Optional[str] = None) -> dict:
+    """Get the logged-in student's Canvas assignments: due date, whether it was submitted and when, and the mark and feedback once graded.
+
+    Use this for "what's due this week", "did I submit assignment 2" or "what mark did I get for my first
+    assignment", or any question about coursework due dates, submission status or a specific assignment's
+    grade. Each assignment's title says which one it is (Assignment 1, Assignment 2, and so on), so match
+    "my first assignment" to Assignment 1. course_title says which course it belongs to. An assignment not
+    yet submitted has submitted false and submitted_at and mark both null: never guess a mark for one.
+
+    Args:
+        context: The run context supplied by the platform. It is not chosen by the model.
+        course_id: Optional course code, for example COSC2148, to see only that course's assignments.
+        due_this_week_only: If true, only assignments due Monday to Sunday of the current week.
+        on_date: Optional date as YYYY-MM-DD to treat as today when working out the current week. Leave empty for today in Melbourne.
+
+    Returns:
+        found, the matching assignments in due-date order, the week used if due_this_week_only was set, and a source block. A student with no current or completed courses has an empty list, not an error. If nobody is logged in, found is false with a reason.
+    """
+    student, error = current_student(context)
+    if error:
+        return error
+    courses = {c["course_id"]: c for c in load("courses.json")}
+    if course_id and course_id not in courses:
+        return not_found(f"Unknown course {course_id}.")
+    raw = load("canvas.json")
+    items = [a for a in raw if a["student_number"] == student["student_number"]]
+    if course_id:
+        items = [a for a in items if a["course_id"] == course_id]
+    week_start = week_end = None
+    if due_this_week_only:
+        on, _, date_error = resolve_date(on_date)
+        if date_error:
+            return date_error
+        week_start, week_end = week_bounds(on)
+        items = [a for a in items if week_start.isoformat() <= a["due_date"] <= week_end.isoformat()]
+    items = sorted(items, key=lambda a: (a["due_date"], a["sequence"]))
+    listed = [{
+        "course_id": a["course_id"], "course_title": courses[a["course_id"]]["title"], "term": a["term"],
+        "assignment_id": a["assignment_id"], "title": a["title"], "sequence": a["sequence"],
+        "due_date": a["due_date"], "max_mark": a["max_mark"], "submitted": a["submitted"],
+        "submitted_at": a["submitted_at"], "mark": a["mark"], "feedback": a["feedback"],
+    } for a in items]
+    response = {"found": True, "assignments": listed, "source": source(raw[0], "canvas.json")}
+    if due_this_week_only:
+        response["week"] = {"start": week_start.isoformat(), "end": week_end.isoformat()}
+    return response
