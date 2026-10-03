@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mock Student Systems API</title>
+<style>
+  :root {
+    --bg: #0e1116; --panel: #151a22; --line: #262d38; --text: #d7dde6; --dim: #8a94a3;
+    --ok: #4cc38a; --warn: #e5a93d; --bad: #ef6b6b; --accent: #6aa6ff; --get: #6aa6ff; --post: #b892ff; --delete: #ef8f6b;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #f4f6f9; --panel: #ffffff; --line: #d9dee6; --text: #1d232c; --dim: #5d6775;
+            --ok: #16875a; --warn: #a86a00; --bad: #c0392b; --accent: #1f5fbf; --get: #1f5fbf; --post: #6b3fc4; --delete: #b5541f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--panel); }
+  h1 { font-size: 16px; margin: 0; font-weight: 600; }
+  .meta { color: var(--dim); font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--bad); margin-right: 6px; }
+  .live .dot { background: var(--ok); box-shadow: 0 0 6px var(--ok); }
+  button { font: inherit; color: var(--text); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 4px 12px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  #reset { margin-left: auto; }
+  main { display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 1.2fr); gap: 12px; padding: 12px 16px; align-items: start; }
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  section h2 { margin: 0; padding: 8px 12px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--dim); border-bottom: 1px solid var(--line); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+  .chip { padding: 2px 10px; border-radius: 999px; font-size: 12px; }
+  .chip.on { border-color: var(--accent); color: var(--accent); }
+  #log { font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; height: calc(100vh - 190px); min-height: 320px; overflow-y: auto; }
+  .empty { color: var(--dim); padding: 24px 12px; font-family: system-ui, sans-serif; }
+  .row { padding: 6px 12px; border-bottom: 1px solid var(--line); cursor: pointer; border-left: 3px solid transparent; }
+  .row:hover { background: rgba(127,127,127,.08); }
+  .row.s2 { border-left-color: var(--ok); } .row.s4 { border-left-color: var(--warn); } .row.s5 { border-left-color: var(--bad); }
+  .line1 { display: flex; flex-wrap: wrap; gap: 2px 12px; align-items: baseline; }
+  .time { color: var(--dim); }
+  .GET { color: var(--get); } .POST { color: var(--post); } .DELETE { color: var(--delete); }
+  .method { font-weight: 700; min-width: 3.6em; }
+  .path { word-break: break-all; }
+  .who { color: var(--dim); }
+  .status { font-weight: 700; margin-left: auto; }
+  .s2 .status { color: var(--ok); } .s4 .status { color: var(--warn); } .s5 .status { color: var(--bad); }
+  .summary { padding-left: 0; color: var(--text); opacity: .9; }
+  .detail { display: none; margin-top: 6px; }
+  .row.open .detail { display: block; }
+  .detail pre { margin: 4px 0; padding: 8px; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; white-space: pre-wrap; word-break: break-word; cursor: text; font-size: 12px; }
+  .detail b { color: var(--dim); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+  .flash { animation: flash 1.2s ease-out; }
+  @keyframes flash { from { background: rgba(106,166,255,.25); } to { background: transparent; } }
+  #follow { display: none; position: sticky; bottom: 8px; margin: 0 auto; }
+  aside section + section { margin-top: 12px; }
+  .panel { padding: 8px 12px; font-size: 13px; }
+  .who-head { font-weight: 600; margin-top: 6px; }
+  .who-head:first-child { margin-top: 0; }
+  .item { padding-left: 10px; color: var(--dim); }
+  .item .strong { color: var(--text); }
+  .tag { font-size: 11px; padding: 0 6px; border-radius: 4px; border: 1px solid var(--line); margin-left: 4px; }
+  .tag.svc { color: var(--ok); border-color: var(--ok); } .tag.gone { color: var(--delete); border-color: var(--delete); }
+  .plus { color: var(--ok); } .minus { color: var(--delete); }
+  footer { padding: 4px 16px 16px; color: var(--dim); font-size: 12px; }
+</style>
+</head>
+<body>
+<header id="head">
+  <h1>Mock Student Systems API</h1>
+  <div class="meta">
+    <span id="live"><span class="dot"></span><span id="livetext">connecting</span></span>
+    <span>up <span id="uptime">--:--:--</span></span>
+    <span>date used for drop rules: <span id="today">-</span></span>
+    <span id="origin"></span>
+  </div>
+  <button id="reset" title="Clear the service's memory and this log">Reset</button>
+</header>
+<main>
+  <section>
+    <h2>Requests</h2>
+    <div class="chips" id="chips"></div>
+    <div id="log"></div>
+    <button id="follow">Jump to latest</button>
+  </section>
+  <aside>
+    <section><h2>Enrolments</h2><div class="panel" id="enrolments"></div></section>
+    <section><h2>Seats taken or freed by this service</h2><div class="panel" id="seats"></div></section>
+  </aside>
+</main>
+<footer>Everything here is simulated. Click a request to see what was sent and returned. The log keeps the last 500 requests.</footer>
+<script>
+"use strict";
+const key = new URLSearchParams(location.search).get("key") || "";
+const q = "key=" + encodeURIComponent(key);
+const KINDS = [["check", "check"], ["enrol", "enrol"], ["list", "list"], ["drop_check", "drop check"], ["drop", "drop"]];
+const events = [];
+const seen = new Set();
+let filter = "all", following = true, startedAt = null, lastStarted = null, refreshTimer = null;
+
+const $ = id => document.getElementById(id);
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+
+$("origin").textContent = location.origin;
+
+function counts() {
+  const c = {all: events.length};
+  for (const [k] of KINDS) c[k] = 0;
+  for (const e of events) if (e.kind in c) c[e.kind]++;
+  return c;
+}
+
+function renderChips() {
+  const c = counts(), box = $("chips");
+  box.replaceChildren();
+  for (const [k, label] of [["all", "all"], ...KINDS]) {
+    const b = el("button", "chip" + (filter === k ? " on" : ""), `${label} ${c[k]}`);
+    b.onclick = () => { filter = k; renderChips(); renderLog(); };
+    box.append(b);
+  }
+}
+
+function rowFor(e) {
+  const row = el("div", `row s${Math.floor(e.status / 100)}`);
+  row.dataset.id = e.id;
+  const l1 = el("div", "line1");
+  l1.append(el("span", "time", e.time), el("span", `method ${e.method}`, e.method), el("span", "path", e.path));
+  if (e.student) l1.append(el("span", "who", e.student));
+  l1.append(el("span", "status", `${e.status}  ${e.ms}ms`));
+  row.append(l1, el("div", "summary", e.summary));
+  const d = el("div", "detail");
+  for (const [label, value] of [["request", e.request], ["response", e.response]]) {
+    if (value === null || value === undefined) continue;
+    d.append(el("b", "", label), el("pre", "", JSON.stringify(value, null, 2)));
+  }
+  if (e.request_id) d.append(el("b", "", "request id"), el("pre", "", e.request_id));
+  d.onclick = ev => ev.stopPropagation();
+  row.append(d);
+  row.onclick = () => row.classList.toggle("open");
+  return row;
+}
+
+function renderLog() {
+  const log = $("log");
+  const open = new Set([...log.querySelectorAll(".row.open")].map(r => r.dataset.id));
+  log.replaceChildren();
+  const shown = events.filter(e => filter === "all" || e.kind === filter);
+  if (!shown.length) log.append(el("div", "empty", events.length ? "No requests of this kind." : "Waiting for requests. Ask the agent to enrol or drop a class."));
+  for (const e of shown) {
+    const row = rowFor(e);
+    if (open.has(String(e.id))) row.classList.add("open");
+    log.append(row);
+  }
+  if (following) log.scrollTop = log.scrollHeight;
+}
+
+function addEvent(e) {
+  if (seen.has(e.id)) return;
+  seen.add(e.id);
+  if (e.kind === "reset") { events.length = 0; }
+  events.push(e);
+  while (events.length > 500) events.shift();
+  renderChips();
+  const log = $("log");
+  const matches = filter === "all" || e.kind === filter;
+  if (matches && e.kind !== "reset" && log.querySelector(".empty") === null) {
+    const row = rowFor(e);
+    row.classList.add("flash");
+    log.append(row);
+    if (following) log.scrollTop = log.scrollHeight;
+  } else {
+    renderLog();
+  }
+  clearTimeout(refreshTimer);
+  refreshTimer = setTimeout(refreshState, 150);
+}
+
+$("log").addEventListener("scroll", () => {
+  const log = $("log");
+  following = log.scrollTop + log.clientHeight >= log.scrollHeight - 24;
+  $("follow").style.display = following ? "none" : "block";
+});
+$("follow").onclick = () => { following = true; $("log").scrollTop = $("log").scrollHeight; $("follow").style.display = "none"; };
+
+function renderState(s) {
+  $("today").textContent = s.today;
+  const box = $("enrolments");
+  box.replaceChildren();
+  const byStudent = new Map();
+  for (const e of s.enrolments) {
+    if (!byStudent.has(e.student)) byStudent.set(e.student, {name: e.name, items: []});
+    byStudent.get(e.student).items.push(e);
+  }
+  for (const d of s.dropped_from_record) {
+    if (!byStudent.has(d.student)) byStudent.set(d.student, {name: d.name, items: []});
+  }
+  if (!byStudent.size) box.append(el("div", "empty", "No enrolments."));
+  for (const [number, info] of [...byStudent].sort()) {
+    box.append(el("div", "who-head", `${number}  ${info.name}`));
+    for (const e of info.items) {
+      const row = el("div", "item");
+      row.append(el("span", "strong", `${e.course_id} ${e.term}`), document.createTextNode(`  classes ${e.class_ids.join(" + ")}`));
+      if (e.source === "service") row.append(el("span", "tag svc", e.reference || "enrolled here"));
+      box.append(row);
+    }
+    for (const d of s.dropped_from_record.filter(x => x.student === number)) {
+      const row = el("div", "item");
+      row.append(el("span", "strong", `${d.course_id} ${d.term}`), el("span", "tag gone", "dropped"));
+      box.append(row);
+    }
+  }
+  const seats = $("seats");
+  seats.replaceChildren();
+  const entries = Object.entries(s.seats);
+  if (!entries.length) seats.append(el("div", "empty", "No changes yet."));
+  for (const [id, n] of entries) {
+    const row = el("div", "item");
+    row.append(el("span", "strong", `class ${id}  `), el("span", n > 0 ? "plus" : "minus", n > 0 ? `+${n}` : String(n)));
+    seats.append(row);
+  }
+  startedAt = s.started;
+  tick();
+}
+
+async function refreshState() {
+  try {
+    const r = await fetch(`/admin/state.json?${q}`);
+    if (!r.ok) return;
+    const s = await r.json();
+    if (lastStarted !== null && s.started !== lastStarted) {
+      events.length = 0; seen.clear();
+      const h = await (await fetch(`/admin/events.json?${q}`)).json();
+      h.events.forEach(e => { seen.add(e.id); events.push(e); });
+      renderChips(); renderLog();
+    }
+    lastStarted = s.started;
+    renderState(s);
+  } catch (e) { /* the next event or reconnect tries again */ }
+}
+
+function tick() {
+  if (startedAt === null) return;
+  const t = Math.max(0, Math.floor(Date.now() / 1000 - startedAt));
+  const p = n => String(n).padStart(2, "0");
+  $("uptime").textContent = `${p(Math.floor(t / 3600))}:${p(Math.floor(t % 3600 / 60))}:${p(t % 60)}`;
+}
+setInterval(tick, 1000);
+
+$("reset").onclick = async () => {
+  if (!confirm("Clear the service's memory (enrolments and drops made here) and the request log?")) return;
+  await fetch(`/admin/reset?${q}`, {method: "POST"});
+  await refreshState();
+};
+
+function connect() {
+  const source = new EventSource(`/admin/events?${q}`);
+  source.onopen = () => { $("head").classList.add("live"); $("livetext").textContent = "live"; refreshState(); };
+  source.addEventListener("request", m => addEvent(JSON.parse(m.data)));
+  source.onerror = () => { $("head").classList.remove("live"); $("livetext").textContent = source.readyState === 2 ? "disconnected (reload)" : "reconnecting"; };
+}
+
+renderChips(); renderLog(); refreshState(); connect();
+</script>
+</body>
+</html>
