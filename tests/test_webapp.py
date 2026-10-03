@@ -244,7 +244,7 @@ def test_profile_returns_the_logged_in_students_own_fields():
     assert body["found"] is True
     student = body["student"]
     assert (student["student_number"], student["name"], student["program_code"]) == ("S0000004", "Casey Delacroix", "BH013P26")
-    assert {e["course_id"] for e in student["current_enrolments"]} == {"COSC2110", "COSC2673"}
+    assert {e["course_id"] for e in student["current_enrolments"]} == {"COSC2110", "COSC2673", "INTE2402", "COSC3154"}
     assert all("title" in e for e in student["current_enrolments"])
     assert body["source"]["file"] == "students.json"
 
@@ -274,7 +274,7 @@ def test_week_lists_the_logged_in_students_own_items_most_urgent_first():
     body = c.get("/api/week", params={"on": "2026-10-03"}).json()
     assert body["found"] is True and body["week_label"] == "Week 10, Semester 2 2026"
     assert [i["urgency"] for i in body["items"] if i["kind"] == "assignment"][:2] == ["soon", "soon"]
-    assert "Assignment 2: Classification Models (Data Mining)" in [i["title"] for i in body["items"]]
+    assert "COSC2110 Data Mining — Assignment 2: Classification Models" in [i["title"] for i in body["items"]]
     assert all(i["prompt"] for i in body["items"])
 
 

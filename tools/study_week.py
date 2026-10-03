@@ -79,7 +79,7 @@ def plan(assignments: list[dict], busy: list[tuple[str, str, str]], rooms: list[
             placed += 1
             sessions.append({"date": day.isoformat(), "weekday": weekday, "start": start, "end": end,
                              "course_id": a["course_id"], "course_title": a["course_title"],
-                             "assignment": a["full_title"], "due_date": a["due_date"],
+                             "assignment": a["full_title"], "display_title": a["display_title"], "due_date": a["due_date"],
                              "overdue": due < on, "room": view(free[0]) if free else None})
         if placed == 0:
             reason = ("the session limit for the week was reached" if len(sessions) >= max_sessions

@@ -50,8 +50,8 @@ def assignment_items(assignments: list[dict], on: date) -> list[dict]:
     items, later = [], []
     for a in assignments:
         due = date.fromisoformat(a["due_date"])
-        name = f"{a['full_title']} ({a['course_title']})"
-        prompt = f"Did I submit {a['full_title']} for {a['course_title']}?"
+        name = a["display_title"]
+        prompt = f"Did I submit {a['full_title']} for {a['course_id']} {a['course_title']}?"
         days = (due - on).days
         if days < 0:
             items.append({"kind": "assignment", "urgency": "overdue", "title": name,
@@ -66,9 +66,9 @@ def assignment_items(assignments: list[dict], on: date) -> list[dict]:
     if later:
         first = min(a["due_date"] for a in later)
         for a in (a for a in later if a["due_date"] == first):
-            items.append({"kind": "assignment", "urgency": "upcoming", "title": f"{a['full_title']} ({a['course_title']})",
+            items.append({"kind": "assignment", "urgency": "upcoming", "title": a["display_title"],
                           "detail": f"Due {due_text(a)} ({in_days((date.fromisoformat(first) - on).days)})",
-                          "when": first, "prompt": f"What is {a['full_title']} for {a['course_title']} about?"})
+                          "when": first, "prompt": f"What is {a['full_title']} for {a['course_id']} {a['course_title']} about?"})
     return items
 
 

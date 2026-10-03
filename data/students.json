@@ -86,7 +86,7 @@
     "email": "s0000004@example.invalid",
     "program_code": "BH013P26",
     "enrolment_status": "enrolled",
-    "study_load": "part_time",
+    "study_load": "full_time",
     "start_term": "2026-S1",
     "residency": "domestic",
     "fee_type": "hecs_csp",
@@ -123,6 +123,22 @@
         "class_ids": [
           "1071",
           "1075"
+        ]
+      },
+      {
+        "course_id": "INTE2402",
+        "term": "2026-S2",
+        "class_ids": [
+          "1048",
+          "1052"
+        ]
+      },
+      {
+        "course_id": "COSC3154",
+        "term": "2026-S2",
+        "class_ids": [
+          "1028",
+          "1029"
         ]
       }
     ],

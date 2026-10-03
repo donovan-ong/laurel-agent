@@ -408,10 +408,11 @@ def build_students(offerings: list[dict], snapshot_date: str) -> list[dict]:
          prior("Bachelor of Science (Computer Science)", "Example State University", 2025, 3.4), [], [], NO_ACCOUNT_ISSUES),
         ("Noor Halvorsen", "admitted_not_enrolled", "full_time", "2027-S1", "international", "international",
          prior("Bachelor of Computer Science", "Fictional Institute of Technology", 2025, 3.6), [], [], NO_ACCOUNT_ISSUES),
-        ("Casey Delacroix", "enrolled", "part_time", "2026-S1", "domestic", "hecs_csp",
+        ("Casey Delacroix", "enrolled", "full_time", "2026-S1", "domestic", "hecs_csp",
          prior("Bachelor of Software Engineering", "Synthetic University", 2024, 3.3),
          [result("COSC2148", "2026-S1", 78), result("COSC2462", "2026-S1", 85)],
-         [enrol("COSC2110", "2026-S2", "Mon", "18:00"), enrol("COSC2673", "2026-S2", "Wed", "18:00")], NO_ACCOUNT_ISSUES),
+         [enrol("COSC2110", "2026-S2", "Mon", "18:00"), enrol("COSC2673", "2026-S2", "Wed", "18:00"),
+          enrol("INTE2402", "2026-S2", "Tue", "18:00"), enrol("COSC3154", "2026-S2")], NO_ACCOUNT_ISSUES),
         ("Morgan Ashby", "enrolled", "part_time", "2026-S1", "domestic", "hecs_csp",
          prior("Bachelor of Information Technology", "Example State University", 2024, 2.7),
          [result("COSC2148", "2026-S1", 55), result("COSC2462", "2026-S1", 42)],
@@ -506,20 +507,28 @@ def next_sunday_night(demo_date: str) -> date:
     return day + timedelta(days=(6 - day.weekday()) % 7)
 
 
-def assignment_plan(term: str, snapshot_date: str, demo_date: str = DEMO_DATE) -> list[tuple[str, bool]]:
+# How far each of a student's current courses is staggered, in their enrolment order: a student juggling
+# several courses has deadlines spread over the weeks, not all on the same day.
+CANVAS_STAGGER = [(0, 0, 0), (-4, 3, 4), (-7, 5, 9), (-10, 7, 13)]
+
+
+def assignment_plan(term: str, snapshot_date: str, demo_date: str = DEMO_DATE, position: int = 0) -> list[tuple[str, bool]]:
     """(due_date, submitted) for a term's three demo assignments.
 
-    Laurel's point is that students don't miss deadlines, so on the demo date nothing is overdue: in the
-    current term assignment 1 is already submitted and graded, assignment 2 is unsubmitted and due on the
-    Sunday night after next (the student's priority: see next_sunday_night), and assignment 3 is at least
-    three weeks after that. Every assignment in a completed term was submitted.
+    Laurel's point is that students don't miss deadlines, so on the demo date nothing is overdue. In the
+    current term assignment 1 is already submitted and graded, assignment 2 is unsubmitted and due soon, and
+    assignment 3 is at least three weeks after that. A student's first current course has assignment 2 due
+    the Sunday night after next (their priority: see next_sunday_night); their other courses follow a few days
+    apart (CANVAS_STAGGER), so the coming weeks hold several deadlines. Every assignment in a completed term
+    was submitted.
     """
     snap = date.fromisoformat(snapshot_date)
     if term == CURRENT_TERM:
         start = TERM_STARTS[CURRENT_TERM]
-        second = next_sunday_night(demo_date)
-        third = max(start + timedelta(days=112), second + timedelta(days=21))
-        return [((start + timedelta(days=31)).isoformat(), True), (second.isoformat(), False),
+        first_shift, second_shift, third_shift = CANVAS_STAGGER[position % len(CANVAS_STAGGER)]
+        second = next_sunday_night(demo_date) + timedelta(days=second_shift)
+        third = max(start + timedelta(days=112), second + timedelta(days=21)) + timedelta(days=third_shift)
+        return [((start + timedelta(days=31 + first_shift)).isoformat(), True), (second.isoformat(), False),
                 (third.isoformat(), False)]
     # A completed term: every assignment was due, and submitted, well before the snapshot date. The exact
     # historical date does not matter for a finished course; a per-term hash just keeps different terms
@@ -538,12 +547,14 @@ def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str, 
         entries = [(r["course_id"], r["term"], r["mark"]) for r in s["results"]]
         entries += [(e["course_id"], e["term"], None) for e in s["current_enrolments"]]
         seen = set()
+        current = [e["course_id"] for e in s["current_enrolments"] if e["term"] == CURRENT_TERM]
         for course_id, term, final_mark in entries:
             if course_id not in known or (course_id, term) in seen:
                 continue
             seen.add((course_id, term))
             rng = random.Random(f"canvas:{s['student_number']}:{course_id}:{term}")
-            for i, (due_date, submitted) in enumerate(assignment_plan(term, snapshot_date, demo_date), 1):
+            for i, (due_date, submitted) in enumerate(assignment_plan(
+                    term, snapshot_date, demo_date, current.index(course_id) if course_id in current else 0), 1):
                 about = canvas_assignment(names, known[course_id], i)
                 if not submitted:
                     mark = None

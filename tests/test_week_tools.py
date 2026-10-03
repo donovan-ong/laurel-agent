@@ -6,9 +6,10 @@ from tools.common import load
 from tools.studyspaces import is_free
 from tools.week_tools import get_my_week, plan_study_week
 
-# On 3 October 2026 (week 10 of Semester 2, the demo date): S0000004 (Casey Delacroix) has Assignment 2 due
-# Sunday 11 October, 11:59 pm in both current courses (the priority, not yet overdue), Assignment 3 due
-# 9 November, and an overdue library book that can be renewed. S0000007
+# On 3 October 2026 (week 10 of Semester 2, the demo date): S0000004 (Casey Delacroix) is full-time in four
+# courses. Assignment 2 is due Sunday 11 October, 11:59 pm in Data Mining (the priority, not yet overdue),
+# then 14, 16 and 18 October in Machine Learning, Cloud Security and Thesis Part A; Assignment 3s fall in
+# November. Casey also has an overdue library book that can be renewed. S0000007
 # has an enrolment hold. S0000001 is admitted but not enrolled, so has no coursework or loans.
 CASEY, HOLD, NOT_ENROLLED = "S0000004", "S0000007", "S0000001"
 ON = "2026-10-03"
@@ -46,8 +47,9 @@ def test_the_most_urgent_items_come_first_then_upcoming_then_the_plan_suggestion
     urgencies = [i["urgency"] for i in items]
     assert urgencies == sorted(urgencies, key=["action", "overdue", "today", "soon", "upcoming", "suggestion"].index)
     soon = [i for i in items if i["urgency"] == "soon"]
-    assert [i["title"] for i in soon] == ["Assignment 2: Classification Models (Data Mining)",
-                                          "Assignment 2: Classification with Neural Networks (Machine Learning)"]
+    assert [i["title"] for i in soon] == ["COSC2110 Data Mining — Assignment 2: Classification Models",
+                                          "COSC2673 Machine Learning — Assignment 2: Classification with Neural Networks",
+                                          "INTE2402 Cloud Security — Assignment 2: Identity and Access Management"]
     assert "Sunday 11 October 2026, 11:59 pm (in 8 days)" in soon[0]["detail"]
     assert [i["kind"] for i in items if i["urgency"] == "overdue"] == ["loan"]  # no assignment is overdue
     assert items[-1]["kind"] == "plan" and items[-1]["prompt"] == "Plan my study week"
@@ -61,12 +63,12 @@ def test_upcoming_items_are_in_date_order():
 def test_work_left_past_its_due_date_is_still_flagged_overdue():
     items = week(CASEY, on="2026-10-13")["items"]
     assert [i["title"] for i in items if i["urgency"] == "overdue" and i["kind"] == "assignment"][:1] == [
-        "Assignment 2: Classification Models (Data Mining)"]
+        "COSC2110 Data Mining — Assignment 2: Classification Models"]
 
 
 def test_only_the_next_upcoming_due_date_is_listed():
     upcoming = [i for i in week(CASEY)["items"] if i["kind"] == "assignment" and i["urgency"] == "upcoming"]
-    assert {i["when"] for i in upcoming} == {"2026-11-09"} and len(upcoming) == 2
+    assert [i["when"] for i in upcoming] == ["2026-10-18"]  # Thesis Part A, just past the two-week window
 
 
 def test_key_dates_within_four_weeks_are_included_with_days_to_go():
@@ -86,8 +88,9 @@ def test_a_student_with_no_coursework_gets_no_assignments_and_no_plan_suggestion
 
 def test_assignment_prompts_name_the_specific_assignment():
     prompts = [i["prompt"] for i in week(CASEY)["items"] if i["kind"] == "assignment"]
-    assert "Did I submit Assignment 2: Classification Models for Data Mining?" in prompts
-    assert "What is Assignment 3: Clustering and Association Rules for Data Mining about?" in prompts
+    assert "Did I submit Assignment 2: Classification Models for COSC2110 Data Mining?" in prompts
+    assert ("What is Assignment 2: Methodology Chapter for COSC3154 Computer Science Honours Thesis Part A about?"
+            in prompts)
 
 
 def test_every_item_has_a_prompt_to_ask_about_it():
@@ -96,7 +99,7 @@ def test_every_item_has_a_prompt_to_ask_about_it():
 
 def test_another_students_work_never_appears():
     titles = " ".join(i["title"] for i in week(CASEY)["items"])
-    assert "Cloud Security" not in titles  # S0000007's course
+    assert "Games and Artificial Intelligence" not in titles  # S0000007's course
 
 
 def test_the_plan_puts_the_most_urgent_work_first():
@@ -108,8 +111,9 @@ def test_the_plan_puts_the_most_urgent_work_first():
 
 def test_the_plan_avoids_the_students_own_workshops():
     r = plan(CASEY)
-    assert r["busy_used"] == ["COSC2110 workshop: Mon 18:00 to 20:00", "COSC2673 workshop: Wed 18:00 to 20:00"]
-    assert not any(s["weekday"] in ("Mon", "Wed") and s["start"] == "19:00" for s in r["sessions"])
+    assert r["busy_used"] == ["COSC2110 workshop: Mon 18:00 to 20:00", "COSC2673 workshop: Wed 18:00 to 20:00",
+                              "INTE2402 workshop: Tue 18:00 to 20:00"]  # Thesis Part A's workshop has no fixed time
+    assert not any(s["weekday"] in ("Mon", "Tue", "Wed") and s["start"] == "19:00" for s in r["sessions"])
 
 
 def test_the_plan_respects_stated_commitments():

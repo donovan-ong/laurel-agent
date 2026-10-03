@@ -40,8 +40,9 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
     assignment" or "what is the data pre-processing assignment about", or any question about coursework due
     dates, submission status, what an assignment involves or a specific assignment's grade. title says which
     one it is (Assignment 1, Assignment 2, and so on), so match "my first assignment" to Assignment 1; name is
-    its topic, so match "the data pre-processing assignment" by name. Refer to an assignment by full_title,
-    for example "Assignment 1: Data Pre-processing", and say which course (course_title) it belongs to.
+    its topic, so match "the data pre-processing assignment" by name. Refer to an assignment by display_title,
+    which puts the course code and name first, for example "COSC2110 Data Mining — Assignment 1: Data
+    Pre-processing", so the student always knows which class it belongs to.
     summary is a one-sentence description of the assignment: give it when the student asks about that
     specific assignment. An assignment not yet submitted has submitted false and submitted_at and mark both
     null: never guess a mark for one. due_status ("overdue by 5 days", "due in 3 days", "submitted") and
@@ -55,7 +56,7 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
         on_date: Optional date as YYYY-MM-DD to treat as today, for the current week and for due_status. Leave empty for today in Melbourne.
 
     Returns:
-        found, the matching assignments in due-date order, each with its title, name, full_title, one-sentence summary, due_text, due_status and days_until_due, date_used (today), the week used if due_this_week_only was set, and a source block. A student with no current or completed courses has an empty list, not an error. If nobody is logged in, found is false with a reason.
+        found, the matching assignments in due-date order, each with its title, name, full_title, display_title (course code and name first), one-sentence summary, due_text, due_status and days_until_due, date_used (today), the week used if due_this_week_only was set, and a source block. A student with no current or completed courses has an empty list, not an error. If nobody is logged in, found is false with a reason.
     """
     student, error = current_student(context)
     if error:
@@ -78,7 +79,9 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
     listed = [{
         "course_id": a["course_id"], "course_title": courses[a["course_id"]]["title"], "term": a["term"],
         "assignment_id": a["assignment_id"], "title": a["title"], "name": a["name"],
-        "full_title": f"{a['title']}: {a['name']}", "summary": a["summary"], "sequence": a["sequence"],
+        "full_title": f"{a['title']}: {a['name']}",
+        "display_title": f"{a['course_id']} {courses[a['course_id']]['title']} — {a['title']}: {a['name']}",
+        "summary": a["summary"], "sequence": a["sequence"],
         "due_date": a["due_date"], "due_time": a["due_time"], "due_text": due_text(a),
         "due_status": due_status(date.fromisoformat(a["due_date"]), a["submitted"], on),
         "days_until_due": (date.fromisoformat(a["due_date"]) - on).days,

@@ -35,7 +35,7 @@ def test_each_demo_login_gets_only_their_own_profile():
 
 def test_profile_shows_current_enrolments_with_titles_and_holds():
     student = get_student_profile.fn(context=ctx("S0000004"))["student"]
-    assert [e["title"] for e in student["current_enrolments"]] == ["Data Mining", "Machine Learning"]
+    assert [e["title"] for e in student["current_enrolments"]] == ["Data Mining", "Machine Learning", "Cloud Security", "Computer Science Honours Thesis Part A"]
     assert get_student_profile.fn(context=ctx("S0000007"))["student"]["account_hold"]["type"] == "unpaid_fees"
     assert get_student_profile.fn(context=ctx("S0000001"))["student"]["account_hold"] is None
 

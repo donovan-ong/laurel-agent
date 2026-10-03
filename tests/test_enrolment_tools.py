@@ -227,7 +227,7 @@ def test_bad_availability_is_explained():
 
 def test_list_enrolments_shows_the_record_with_times():
     r = list_enrolments.fn(context=ctx("S0000004"))
-    assert [e["title"] for e in r["enrolments"]] == ["Data Mining", "Machine Learning"]
+    assert [e["title"] for e in r["enrolments"]] == ["Data Mining", "Machine Learning", "Cloud Security", "Computer Science Honours Thesis Part A"]
     assert all(e["status"] == "enrolled, this term" and e["lecture"]["when"] and e["workshop"]["when"] for e in r["enrolments"])
     assert "not included" in r["note"] and "SIMULATION" in r["simulation_notice"]
 

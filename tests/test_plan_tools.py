@@ -98,10 +98,11 @@ def test_a_course_bigger_than_the_semester_limit_is_reported_not_forced():
 
 def test_a_student_partway_through_only_gets_the_rest():
     p = plan_for("S0000004", WORK)
-    assert p["already_passed"] == ["COSC2148", "COSC2462"] and p["in_progress_assumed_passed"] == ["COSC2110", "COSC2673"]
-    assert p["start_term"] == "2027-S1" and p["semesters_needed"] == 2
-    assert [c["course_id"] for c in p["semesters"][0]["courses"]][0] == "COSC3154" and len(p["suggested_options"]) == 1
-    assert [c["course_id"] for c in p["semesters"][1]["courses"]] == ["COSC3155"]
+    # Full-time this semester (Data Mining, Machine Learning, Cloud Security and Thesis Part A): only Part B is left
+    assert p["already_passed"] == ["COSC2148", "COSC2462"]
+    assert p["in_progress_assumed_passed"] == ["COSC2110", "COSC2673", "COSC3154", "INTE2402"]
+    assert p["start_term"] == "2027-S1" and p["semesters_needed"] == 1 and p["suggested_options"] == []
+    assert [c["course_id"] for c in p["semesters"][0]["courses"]] == ["COSC3155"]
     assert p["published_duration_note"] is None
     assert any("assumed to be passed" in a for a in build_plan.fn(context=AgentRun(request_context={"student_number": "S0000004"}))["plan"]["assumptions"])
 

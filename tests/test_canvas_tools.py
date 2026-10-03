@@ -39,7 +39,7 @@ def test_assignments_are_listed_in_due_date_order_across_every_course():
     r = assignments(CASEY)
     dates = [a["due_date"] for a in r["assignments"]]
     assert dates == sorted(dates)
-    assert {a["course_id"] for a in r["assignments"]} == {"COSC2148", "COSC2462", "COSC2110", "COSC2673"}
+    assert {a["course_id"] for a in r["assignments"]} == {"COSC2148", "COSC2462", "COSC2110", "COSC2673", "INTE2402", "COSC3154"}
 
 
 def test_course_id_filters_to_just_that_course():
@@ -67,9 +67,20 @@ def test_a_current_courses_second_assignment_is_not_yet_submitted():
 def test_due_this_week_only_finds_assignment_2_in_its_week():
     r = assignments(CASEY, due_this_week_only=True, on_date=NEXT_WEEK)
     assert r["week"] == {"start": "2026-10-05", "end": "2026-10-11"}
-    titles = {(a["course_id"], a["title"]) for a in r["assignments"]}
-    assert ("COSC2110", "Assignment 2") in titles and ("COSC2673", "Assignment 2") in titles
-    assert all(a["due_date"] == "2026-10-11" for a in r["assignments"])
+    # Deadlines are staggered across a student's courses, so only Data Mining's falls in that week
+    assert [(a["course_id"], a["title"], a["due_date"]) for a in r["assignments"]] == [("COSC2110", "Assignment 2", "2026-10-11")]
+
+
+def test_a_full_time_students_deadlines_are_spread_over_the_coming_weeks():
+    due = [(a["due_date"], a["course_id"]) for a in assignments(CASEY, on_date=DEMO_DAY)["assignments"]
+           if a["title"] == "Assignment 2" and a["term"] == "2026-S2"]
+    assert due == [("2026-10-11", "COSC2110"), ("2026-10-14", "COSC2673"), ("2026-10-16", "INTE2402"),
+                   ("2026-10-18", "COSC3154")]
+
+
+def test_the_display_title_puts_the_course_code_and_name_first():
+    second = next(a for a in assignments(CASEY, course_id="COSC2110")["assignments"] if a["sequence"] == 2)
+    assert second["display_title"] == "COSC2110 Data Mining — Assignment 2: Classification Models"
 
 
 def test_nothing_unsubmitted_is_overdue_on_the_demo_date():

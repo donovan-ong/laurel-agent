@@ -238,7 +238,7 @@ def test_a_class_enrolled_here_can_be_dropped_and_enrolled_again(api):
 def test_a_drop_after_the_deadline_is_refused_and_keeps_the_enrolment(api):
     r = do_drop(api, "S0000004", "COSC2110", "2026-S2")
     assert r.status_code == 409 and r.json()["error"]["code"] == "DROP_DEADLINE_PASSED"
-    assert len(api.get("/v1/students/S0000004/enrolments", headers=H).json()["enrolments"]) == 2
+    assert len(api.get("/v1/students/S0000004/enrolments", headers=H).json()["enrolments"]) == 4
 
 
 def test_a_drop_needs_confirmation_and_the_right_check_id(api):
