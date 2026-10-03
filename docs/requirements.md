@@ -45,7 +45,7 @@ Laurel replaces "which system do I need, and where in it?" with a single convers
 | **Easier** | Answers and actions in one place. Laurel plans your study week around your classes and commitments, with a free study room for each session. It checks a timetable against your commitments, builds a semester-by-semester plan, enrols you, drops a class, books a study room, renews library loans or logs an IT ticket. Anything that changes something is shown to you first and only happens after a clear yes. |
 | **More enjoyable** | It lives where students already are: a chat bubble on the university's own web pages (through a Chrome extension), a full web app, and a CLI. It suggests questions to try, makes waiting feel friendly, and lets you peek behind the curtain at the tools it used. |
 
-When Laurel can't help, because the question is out of scope or the data doesn't have the answer, it says so plainly. It names the right team and drafts the email for you to send. It never guesses.
+When Laurel can't help, because the question is out of scope or the data doesn't have the answer, it says so plainly. It names the right team and, if you'd like, drafts the email for you to send. It never guesses.
 
 ## 3. Who it's for
 
@@ -111,7 +111,7 @@ Laurel is a **tool-calling agent**, not a document-search system. A foundation m
 - **Identity.** A `context: AgentRun` parameter gives the tool `context.request_context["student_number"]`, set from the authenticated session. The model never sees or supplies it, so it cannot be asked or tricked into fetching someone else's data.
 - **Programs are data, not code.** `data/programs.json` models each program as stages of ordered items (`course`, `options`, `choice`). `tools/programs.py` resolves the student's program, so adding a degree is a data change.
 - **The confirmation pattern.** Every action that changes something is split into a `check_*` tool with no side effects and a paired action tool. The action tool refuses unless it gets a matching `check_id` and `student_confirmed: true`. The agent must show a summary and wait for a clear yes on the *next* message.
-- **The human safety net.** `draft_enquiry` is what Laurel calls instead of guessing. It picks the right team from `contacts.json` and drafts the email. Nothing is sent.
+- **The human safety net.** `draft_enquiry` is what Laurel calls instead of guessing. It picks the right team from `contacts.json` and returns only that team at first, so Laurel asks whether the student wants a draft; the email is written only on a yes (`include_draft`), or straight away when the student already asked to be put in touch. Nothing is sent.
 - **Interfaces.** All three share the same session and chat-client code:
   - a React web app (`frontend/`, served by `webapp/`)
   - a floating chat widget for university pages (`widget/`), delivered by a Chrome extension (`extension/`)
