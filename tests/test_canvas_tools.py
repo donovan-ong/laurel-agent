@@ -88,3 +88,15 @@ def test_a_students_assignments_never_include_another_students():
     expected = {a["assignment_id"] for a in raw if a["student_number"] == CASEY}
     assert {a["assignment_id"] for a in r["assignments"]} == expected
     assert expected  # the fixture actually has some, or this test proves nothing
+
+
+def test_every_assignment_has_a_descriptive_title_and_a_one_sentence_summary():
+    r = assignments(CASEY)
+    assert all(a["name"] and a["full_title"] == f"{a['title']}: {a['name']}" for a in r["assignments"])
+    assert all(a["summary"].endswith(".") and ". " not in a["summary"] for a in r["assignments"])
+
+
+def test_the_first_data_mining_assignment_is_data_pre_processing():
+    first = next(a for a in assignments(CASEY, course_id="COSC2110")["assignments"] if a["sequence"] == 1)
+    assert first["full_title"] == "Assignment 1: Data Pre-processing"
+    assert "missing values" in first["summary"]

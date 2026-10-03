@@ -45,7 +45,8 @@ def test_overdue_work_comes_first_then_upcoming_then_the_plan_suggestion():
     urgencies = [i["urgency"] for i in items]
     assert urgencies == sorted(urgencies, key=["action", "overdue", "today", "soon", "upcoming", "suggestion"].index)
     overdue = [i["title"] for i in items if i["urgency"] == "overdue"]
-    assert overdue[:2] == ["Assignment 2 for Data Mining", "Assignment 2 for Machine Learning"]
+    assert overdue[:2] == ["Assignment 2: Classification Models (Data Mining)",
+                           "Assignment 2: Classification with Neural Networks (Machine Learning)"]
     assert any("Computer Networks" in t for t in overdue)
     assert items[-1]["kind"] == "plan" and items[-1]["prompt"] == "Plan my study week"
 
@@ -68,6 +69,12 @@ def test_a_hold_is_the_first_thing_shown():
 def test_a_student_with_no_coursework_gets_no_assignments_and_no_plan_suggestion():
     kinds = {i["kind"] for i in week(NOT_ENROLLED)["items"]}
     assert "assignment" not in kinds and "plan" not in kinds and "loan" not in kinds
+
+
+def test_assignment_prompts_name_the_specific_assignment():
+    prompts = [i["prompt"] for i in week(CASEY)["items"] if i["kind"] == "assignment"]
+    assert "Did I submit Assignment 2: Classification Models for Data Mining?" in prompts
+    assert "What is Assignment 3: Clustering and Association Rules for Data Mining about?" in prompts
 
 
 def test_every_item_has_a_prompt_to_ask_about_it():
@@ -106,7 +113,7 @@ def test_the_plan_keeps_to_two_sessions_a_day_and_the_session_limit():
 
 def test_work_due_today_can_still_be_planned_for_today():
     r = plan(CASEY, on="2026-09-28")
-    assert any(s["date"] == "2026-09-28" and s["assignment"] == "Assignment 2" for s in r["sessions"])
+    assert any(s["date"] == "2026-09-28" and s["assignment"] == "Assignment 2: Classification Models" for s in r["sessions"])
 
 
 def test_suggested_rooms_are_free_for_their_session():

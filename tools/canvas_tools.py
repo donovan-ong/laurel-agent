@@ -19,11 +19,15 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
                      due_this_week_only: bool = False, on_date: Optional[str] = None) -> dict:
     """Get the logged-in student's Canvas assignments: due date, whether it was submitted and when, and the mark and feedback once graded.
 
-    Use this for "what's due this week", "did I submit assignment 2" or "what mark did I get for my first
-    assignment", or any question about coursework due dates, submission status or a specific assignment's
-    grade. Each assignment's title says which one it is (Assignment 1, Assignment 2, and so on), so match
-    "my first assignment" to Assignment 1. course_title says which course it belongs to. An assignment not
-    yet submitted has submitted false and submitted_at and mark both null: never guess a mark for one.
+    Use this for "what's due this week", "did I submit assignment 2", "what mark did I get for my first
+    assignment" or "what is the data pre-processing assignment about", or any question about coursework due
+    dates, submission status, what an assignment involves or a specific assignment's grade. title says which
+    one it is (Assignment 1, Assignment 2, and so on), so match "my first assignment" to Assignment 1; name is
+    its topic, so match "the data pre-processing assignment" by name. Refer to an assignment by full_title,
+    for example "Assignment 1: Data Pre-processing", and say which course (course_title) it belongs to.
+    summary is a one-sentence description of the assignment: give it when the student asks about that
+    specific assignment. An assignment not yet submitted has submitted false and submitted_at and mark both
+    null: never guess a mark for one.
 
     Args:
         context: The run context supplied by the platform. It is not chosen by the model.
@@ -32,7 +36,7 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
         on_date: Optional date as YYYY-MM-DD to treat as today when working out the current week. Leave empty for today in Melbourne.
 
     Returns:
-        found, the matching assignments in due-date order, the week used if due_this_week_only was set, and a source block. A student with no current or completed courses has an empty list, not an error. If nobody is logged in, found is false with a reason.
+        found, the matching assignments in due-date order, each with its title, name, full_title and one-sentence summary, the week used if due_this_week_only was set, and a source block. A student with no current or completed courses has an empty list, not an error. If nobody is logged in, found is false with a reason.
     """
     student, error = current_student(context)
     if error:
@@ -54,7 +58,8 @@ def list_assignments(context: AgentRun, course_id: Optional[str] = None,
     items = sorted(items, key=lambda a: (a["due_date"], a["sequence"]))
     listed = [{
         "course_id": a["course_id"], "course_title": courses[a["course_id"]]["title"], "term": a["term"],
-        "assignment_id": a["assignment_id"], "title": a["title"], "sequence": a["sequence"],
+        "assignment_id": a["assignment_id"], "title": a["title"], "name": a["name"],
+        "full_title": f"{a['title']}: {a['name']}", "summary": a["summary"], "sequence": a["sequence"],
         "due_date": a["due_date"], "max_mark": a["max_mark"], "submitted": a["submitted"],
         "submitted_at": a["submitted_at"], "mark": a["mark"], "feedback": a["feedback"],
     } for a in items]

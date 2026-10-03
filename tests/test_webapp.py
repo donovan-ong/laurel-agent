@@ -274,7 +274,7 @@ def test_week_lists_the_logged_in_students_own_items_most_urgent_first():
     body = c.get("/api/week", params={"on": "2026-10-03"}).json()
     assert body["found"] is True and body["week_label"] == "Week 10, Semester 2 2026"
     assert body["items"][0]["urgency"] == "overdue"
-    assert "Assignment 2 for Data Mining" in [i["title"] for i in body["items"]]
+    assert "Assignment 2: Classification Models (Data Mining)" in [i["title"] for i in body["items"]]
     assert all(i["prompt"] for i in body["items"])
 
 
