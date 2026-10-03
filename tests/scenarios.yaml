@@ -718,8 +718,9 @@ scenarios:
     turns:
       - prompt: "Am I allowed to study part-time on my student visa?"
         checks:
-          tools_called: [draft_enquiry]
-          contains: ["international student office", "draft"]
+          tools_called: [find_support_team]
+          tools_not_called: [draft_enquiry]
+          contains: ["international student office", "international@example.invalid", "draft"]
           contains_any: [["would you like", "do you want", "shall i", "should i"]]
           not_contains: ["hello international student office", "thank you,", "has been sent to"]
       - prompt: "Yes please."

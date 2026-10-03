@@ -2,19 +2,29 @@ import pytest
 from ibm_watsonx_orchestrate.run.context import AgentRun
 
 from tools.common import load
-from tools.handoff_tools import NOT_SENT, draft_enquiry, suggest_team
+from tools.handoff_tools import NOT_SENT, draft_enquiry, find_support_team, suggest_team
 
 
-def draft(topic, details="Some details.", team=None, number="S0000003", include_draft=True):
+def draft(topic, details="Some details.", team=None, number="S0000003"):
     ctx = AgentRun(request_context={"student_number": number}) if number else AgentRun()
-    return draft_enquiry.fn(context=ctx, topic=topic, details=details, suggested_team=team, include_draft=include_draft)
+    return draft_enquiry.fn(context=ctx, topic=topic, details=details, suggested_team=team)
 
 
-def test_by_default_only_the_team_is_returned_so_the_student_can_be_asked_first():
-    r = draft("Part-time study on my visa", "Can I study part-time on my visa?", include_draft=False)
-    assert r["found"] and r["team"]["team_id"] == "international_student_office" and r["team"]["email"]
-    assert "draft" not in r and r["draft_available"] is True and "ask whether" in r["next_step"]
-    assert r["sent"] is False
+def test_finding_the_team_names_it_and_writes_nothing_so_the_student_can_be_asked_first():
+    r = find_support_team.fn(topic="Part-time study on my visa", details="Can I study part-time on my visa?")
+    assert r["found"] and r["team"]["team_id"] == "international_student_office"
+    assert r["team"]["email"] == "international@example.invalid" and r["team"]["use_for"]
+    assert "draft" not in r and "ask the student" in r["next_step"]
+
+
+def test_finding_and_drafting_agree_on_the_team_and_an_unknown_team_is_reported():
+    found = find_support_team.fn(topic="Scholarship options", details="Are there scholarships?")
+    assert draft("Scholarship options", "Are there scholarships?", team=found["team"]["team_id"])["draft"]["to"] == found["team"]["email"]
+    assert find_support_team.fn(topic="x", details="y", suggested_team="the dean")["found"] is False
+
+
+def test_the_team_finder_takes_no_student():
+    assert "context" not in find_support_team.__tool_spec__.input_schema.properties
 
 
 @pytest.mark.parametrize("topic,details,team", [
