@@ -795,6 +795,15 @@ scenarios:
       tools_called: [list_assignments]
       contains: ["data pre-processing"]
       contains_any: [["missing values", "outliers", "messy", "clean"], ["resources"]]
+  - id: assignment_overdue_status_comes_from_the_tool
+    login: demo4
+    tags: [canvas]
+    prompt: "Did I submit Assignment 2: Classification Models for Data Mining?"
+    checks:
+      tools_called: [list_assignments]
+      contains: ["classification models"]
+      contains_any: [["overdue", "past due", "was due", "late"], ["resources"]]
+      not_contains: ["still have time", "about a week", "due in"]
   - id: assignment_resources_are_general_suggestions
     login: demo4
     tags: [canvas]

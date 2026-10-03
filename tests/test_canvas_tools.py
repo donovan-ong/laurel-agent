@@ -30,7 +30,7 @@ def test_an_unknown_course_is_reported_plainly():
 
 def test_a_student_not_enrolled_in_anything_has_no_assignments():
     r = assignments(NOT_ENROLLED)
-    assert r == {"found": True, "assignments": [], "source": r["source"]}
+    assert r["found"] is True and r["assignments"] == [] and r["date_used"]
     assert r["source"]["file"] == "canvas.json"
 
 
@@ -100,3 +100,26 @@ def test_the_first_data_mining_assignment_is_data_pre_processing():
     first = next(a for a in assignments(CASEY, course_id="COSC2110")["assignments"] if a["sequence"] == 1)
     assert first["full_title"] == "Assignment 1: Data Pre-processing"
     assert "missing values" in first["summary"]
+
+
+def test_due_status_is_worked_out_from_today_not_the_snapshot_date():
+    r = assignments(CASEY, course_id="COSC2110", on_date="2026-10-03")
+    assert r["date_used"] == "2026-10-03"
+    by_title = {a["title"]: a for a in r["assignments"]}
+    second, third = by_title["Assignment 2"], by_title["Assignment 3"]
+    assert (second["due_status"], second["days_until_due"]) == ("overdue by 5 days", -5)
+    assert second["due_text"] == "Monday 28 September 2026"
+    assert third["due_status"] == "due in 37 days"
+    assert by_title["Assignment 1"]["due_status"] == "submitted"
+
+
+@pytest.mark.parametrize("on, expected", [("2026-09-28", "due today"), ("2026-09-27", "due tomorrow"),
+                                          ("2026-09-29", "overdue by 1 day")])
+def test_due_status_wording_near_the_due_date(on, expected):
+    second = next(a for a in assignments(CASEY, course_id="COSC2110", on_date=on)["assignments"] if a["sequence"] == 2)
+    assert second["due_status"] == expected
+
+
+def test_a_bad_date_is_reported_plainly():
+    r = assignments(CASEY, on_date="3 October")
+    assert r["found"] is False and "on_date" in r["reason"]
