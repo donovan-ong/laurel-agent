@@ -167,7 +167,7 @@ export default function Widget({ transport, showDemoHint = true }) {
           else setOpenPref(false);
         }}
       >
-        <header className={`lw-header${showWeekButton ? " lw-header-crowded" : ""}`}>
+        <header className="lw-header">
           <span className="lw-mark">
             <ChatIcon size={18} />
           </span>
@@ -181,7 +181,6 @@ export default function Widget({ transport, showDemoHint = true }) {
               >
                 Laurel
               </button>
-              <span className="lw-badge">Prototype</span>
             </div>
             <span className="lw-model">{MODEL_LABEL}</span>
           </div>

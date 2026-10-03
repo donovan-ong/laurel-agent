@@ -169,32 +169,12 @@
   gap: 8px;
 }
 
-/* With the Your week button the header has one more button than it was laid out for: drop the Prototype
-   badge (the footer still says it is a prototype) and tighten the spacing so nothing overlaps. */
-.lw-header-crowded {
-  gap: 6px;
-}
-
-.lw-header-crowded .lw-badge {
-  display: none;
-}
-
 .lw-model {
   font-size: 11px;
   opacity: 0.8;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.lw-badge {
-  flex: none;
-  font-size: 10px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 999px;
-  padding: 1px 8px;
 }
 
 .lw-header-btn {
