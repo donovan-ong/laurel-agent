@@ -1,0 +1,687 @@
+/* Laurel widget, styled to match the RMIT site: navy top bar, RMIT red, white cards with a red top rule, pill
+   fields, and white buttons with a red bottom border (the "Study / Research / Partner" buttons on the home page).
+   Everything lives in a shadow root, so none of this can reach the page and none of the page's CSS reaches it. */
+
+/* Inherited properties (font, colour, text-transform, letter-spacing...) cross a shadow boundary from the host
+   element, and for the host itself the page's rules beat anything in here, so `:host { all: initial }` is not
+   enough: a page with `* { text-transform: uppercase }` still reaches everything. The reset therefore goes on
+   the container inside the shadow tree, which page selectors cannot match. */
+:host {
+  all: initial;
+}
+
+.lw-root {
+  all: initial;
+  display: block;
+  --red: #e4002b;
+  --red-dark: #b8001f;
+  --navy: #000054;
+  --ink: #16163f;
+  --dim: #5f5f88;
+  --line: #d8d8e6;
+  --soft: #f2f3f9;
+  --white: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.lw-root *,
+.lw-root *::before,
+.lw-root *::after {
+  box-sizing: border-box;
+}
+
+/* :where() keeps this reset at low specificity, so component rules (white icon on the red launcher, etc.) win. */
+.lw-root :where(button, input) {
+  font: inherit;
+  color: inherit;
+}
+
+.lw-root :focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+/* ---------- launcher ---------- */
+
+.lw-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: var(--lw-bottom, 24px);
+  z-index: 2147483646;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.lw-launcher:hover {
+  background: var(--red-dark);
+  transform: scale(1.05);
+}
+
+.lw-launcher:focus-visible {
+  outline: 3px solid var(--white);
+  box-shadow: 0 0 0 6px var(--navy), 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- panel ---------- */
+
+.lw-panel {
+  position: fixed;
+  right: 24px;
+  bottom: calc(var(--lw-bottom, 24px) + 72px);
+  z-index: 2147483647;
+  width: 380px;
+  height: min(640px, calc(100vh - var(--lw-bottom, 24px) - 96px));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--white);
+  border-top: 4px solid var(--red);
+  border-radius: 4px 4px 10px 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 40, 0.28);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
+}
+
+/* Expanded: a roomier window for longer conversations, still a panel on the page (not full screen). */
+[data-expanded="true"] .lw-panel {
+  width: min(760px, calc(100vw - 48px));
+  height: calc(100vh - var(--lw-bottom, 24px) - 96px);
+  max-height: 900px;
+}
+
+[data-open="true"] .lw-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.lw-header {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px 10px 14px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.lw-mark {
+  display: flex;
+  color: var(--white);
+  background: var(--red);
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.lw-title {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.lw-title strong {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* "Laurel" itself: opens the full webapp in a new tab, staying logged in if the widget already is. Styled
+   to read exactly like the plain text it replaces, with only a hover/focus underline as the link affordance. */
+.lw-brand-link {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline transparent;
+  text-underline-offset: 2px;
+  transition: text-decoration-color 0.12s ease;
+}
+
+.lw-brand-link:hover,
+.lw-brand-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.lw-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lw-model {
+  font-size: 11px;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lw-badge {
+  flex: none;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  padding: 1px 8px;
+}
+
+.lw-header-btn {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lw-header-btn.lw-on {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.lw-header-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.lw-header-btn:focus-visible {
+  outline-color: var(--white);
+}
+
+.lw-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px;
+  background: var(--white);
+}
+
+.lw-dim {
+  color: var(--dim);
+}
+
+/* ---------- login ---------- */
+
+.lw-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+.lw-login-mark {
+  color: var(--white);
+  background: var(--red);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* ---------- phone panel ---------- */
+
+.lw-phone {
+  flex: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 8px 12px 16px;
+  background: var(--white);
+  border-bottom: 1px solid var(--line, #d9dbe3);
+  box-shadow: 0 4px 10px rgba(0, 0, 40, 0.08);
+}
+
+.lw-phone > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lw-phone-label {
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.lw-phone-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.lw-phone-number:hover {
+  color: var(--red);
+}
+
+.lw-phone-more {
+  font-size: 13px;
+  color: var(--red);
+}
+
+.lw-phone-close {
+  color: var(--dim);
+}
+
+.lw-phone-close:hover {
+  background: rgba(0, 0, 40, 0.06);
+}
+
+.lw-login h2,
+.lw-empty h2 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.lw-login p,
+.lw-empty p {
+  margin: 0;
+}
+
+.lw-login label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.lw-login input {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-weight: 400;
+  background: var(--white);
+}
+
+.lw-login input:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 2px rgba(0, 0, 84, 0.15);
+}
+
+.lw-primary {
+  border: 0;
+  border-radius: 999px;
+  background: var(--red);
+  color: var(--white);
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lw-primary:hover:not(:disabled) {
+  background: var(--red-dark);
+}
+
+.lw-primary:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.lw-form-error {
+  color: var(--red-dark);
+  font-size: 13px;
+}
+
+.lw-hint {
+  font-size: 12px;
+}
+
+/* ---------- empty state and chips ---------- */
+
+.lw-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.lw-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.lw-chip {
+  text-align: left;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-bottom: 3px solid var(--red);
+  border-radius: 2px;
+  padding: 9px 12px;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.lw-chip:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 84, 0.14);
+  transform: translateY(-1px);
+}
+
+/* ---------- messages ---------- */
+
+.lw-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lw-msg {
+  overflow-wrap: anywhere;
+}
+
+.lw-user {
+  align-self: flex-end;
+  max-width: 85%;
+  background: var(--soft);
+  color: var(--navy);
+  border-radius: 14px 14px 4px 14px;
+  padding: 8px 12px;
+}
+
+.lw-error {
+  align-self: flex-start;
+  background: #fdecef;
+  color: var(--red-dark);
+  border: 1px solid #f5b8c2;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.lw-assistant > :first-child {
+  margin-top: 0;
+}
+
+.lw-assistant p,
+.lw-assistant ul,
+.lw-assistant ol {
+  margin: 0 0 8px;
+}
+
+.lw-assistant ul,
+.lw-assistant ol {
+  padding-left: 20px;
+}
+
+.lw-assistant a {
+  color: var(--red-dark);
+  text-decoration: underline;
+}
+
+.lw-assistant code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  background: var(--soft);
+  border-radius: 3px;
+  padding: 1px 4px;
+}
+
+.lw-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 8px;
+}
+
+.lw-assistant table {
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.lw-assistant th,
+.lw-assistant td {
+  border: 1px solid var(--line);
+  padding: 4px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.lw-assistant th {
+  background: var(--soft);
+  color: var(--navy);
+}
+
+/* ---------- reply actions and trace ---------- */
+
+.lw-actions {
+  display: flex;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.lw-icon-btn {
+  width: 26px;
+  height: 26px;
+  border: 0;
+  background: none;
+  color: var(--dim);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lw-icon-btn:hover:not(:disabled) {
+  color: var(--navy);
+  background: var(--soft);
+}
+
+.lw-icon-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.lw-icon-btn.lw-active {
+  color: var(--red);
+}
+
+.lw-trace {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.lw-trace summary {
+  cursor: pointer;
+}
+
+.lw-trace ol {
+  margin: 6px 0 0;
+  padding-left: 20px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+}
+
+.lw-tool {
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
+/* ---------- loading ---------- */
+
+.lw-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dim);
+}
+
+.lw-spinner {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  border-top-color: var(--red);
+  animation: lw-spin 0.8s linear infinite;
+}
+
+@keyframes lw-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- footer ---------- */
+
+.lw-footer {
+  flex: none;
+  padding: 10px 14px 8px;
+  border-top: 1px solid var(--line);
+  background: var(--white);
+}
+
+.lw-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 4px 4px 14px;
+  background: var(--white);
+}
+
+.lw-input:focus-within {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 2px rgba(0, 0, 84, 0.15);
+}
+
+.lw-input input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  padding: 6px 0;
+}
+
+.lw-input input:focus-visible {
+  outline: none; /* the pill shows its own focus ring via :focus-within */
+}
+
+.lw-input input::placeholder {
+  color: var(--dim);
+}
+
+.lw-send {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lw-send:hover:not(:disabled) {
+  background: var(--red-dark);
+}
+
+.lw-send:disabled {
+  background: var(--line);
+  cursor: default;
+}
+
+.lw-fine {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--dim);
+}
+
+.lw-fine span {
+  flex: 1;
+  text-align: center;
+}
+
+.lw-fine .lw-icon-btn {
+  width: 22px;
+  height: 22px;
+}
+
+/* ---------- small screens: a full-screen sheet ---------- */
+
+@media (max-width: 480px) {
+  .lw-panel,
+  [data-expanded="true"] .lw-panel {
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100dvh;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  /* Already full screen: nothing to expand. */
+  .lw-size-btn {
+    display: none;
+  }
+
+  [data-open="true"] .lw-launcher {
+    display: none;
+  }
+
+  /* iOS Safari zooms the page when a focused field's text is under 16px. */
+  .lw-input input,
+  .lw-login input {
+    font-size: 16px;
+  }
+
+  .lw-launcher {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lw-panel,
+  .lw-launcher,
+  .lw-chip {
+    transition: none;
+  }
+
+  .lw-spinner {
+    animation-duration: 2.4s;
+  }
+}

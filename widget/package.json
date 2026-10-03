@@ -1,0 +1,23 @@
+{
+  "name": "laurel-widget",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "build:extension": "vite build && cp dist/laurel-widget.js ../extension/laurel-widget.js",
+    "smoke": "node smoke.cjs",
+    "smoke:extension": "node smoke-extension.cjs"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "puppeteer-core": "^25.12.0",
+    "vite": "^8.3.0"
+  }
+}
