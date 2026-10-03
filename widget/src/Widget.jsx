@@ -59,14 +59,22 @@ export default function Widget({ transport, showDemoHint = true }) {
   useEffect(() => {
     if (!open || auth.status !== "in" || loaded.current) return;
     loaded.current = true;
+    // A 401 here means the backend no longer knows this session (it restarted): show the sign-in form rather
+    // than a signed-in panel that silently has no name and no week.
+    const signedOutIf401 = (err) => {
+      if (err && err.status === 401) {
+        loaded.current = false;
+        setAuth({ status: "out" });
+      }
+    };
     api
       .profile()
       .then((d) => d.found && setFirstName(String(d.student.name).split(" ")[0]))
-      .catch(() => {});
+      .catch(signedOutIf401);
     api
       .week()
       .then((d) => d.found && setWeek(d))
-      .catch(() => {});
+      .catch(signedOutIf401);
     loadHistory();
   }, [open, auth.status, api, loadHistory]);
 
