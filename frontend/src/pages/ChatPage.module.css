@@ -1,0 +1,50 @@
+/* The page scrolls normally (the browser's own full-height scrollbar, at the true edge of the window) —
+   the nav bar and the input area (both position: sticky, see below and NavBar.module.css) are what stay
+   pinned in the viewport as that scroll happens, rather than the page being height-clamped with its own
+   separate inner scroll region next to the chat column. */
+/* White, like the widget's own chat body (var(--bg-raised) rather than the page's usual pale-blue canvas). */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-raised);
+}
+
+/* No bottom padding here — .inputArea supplies its own (below), and it must be the very last thing in
+   .content's box. Any trailing space after a position: sticky; bottom: 0 element is space its containing
+   block still has to scroll past once you reach the true end of the page; sticky can't hold the element
+   at the viewport edge through that last bit, so it visibly un-sticks and shifts up right at the bottom
+   of the scroll. Keeping .inputArea flush against .content's own end removes that trailing space. */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-4) 0;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Empty state: greeting + input centred together in the remaining space, matching claude.ai's layout. */
+.emptyContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: var(--space-4);
+}
+
+/* Matches .content's own max-width, so the reply box is as wide as the conversation above it. Sticky so
+   it stays at the bottom of the viewport while the page scrolls; the matching background covers the
+   message text scrolling up behind it. */
+.inputArea {
+  width: 100%;
+  max-width: 760px;
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  background: var(--bg-raised);
+  padding: var(--space-2) 0 var(--space-4);
+}

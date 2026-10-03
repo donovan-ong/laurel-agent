@@ -1,0 +1,49 @@
+/* Three columns so the disclaimer is centred on the chat box itself (not just visually between its
+   neighbours) and the model label sits flush right, regardless of either text's length. */
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  /* No horizontal padding: flush with the chat box's own left/right edges, one level up in .inputArea. */
+  padding-top: var(--space-1);
+}
+
+.disclaimer {
+  margin: 0;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+}
+
+.model {
+  text-align: right;
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.modelName {
+  color: var(--text);
+}
+
+/* Bare icon, no circular border/background — just the glyph itself, slightly smaller than before. */
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: none;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+
+.iconBtn:hover {
+  color: var(--text);
+}
+
+.iconBtnActive {
+  color: var(--accent);
+}

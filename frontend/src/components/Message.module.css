@@ -1,0 +1,52 @@
+.assistant {
+  font-family: var(--font-sans);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.assistant :global(code) {
+  font-family: var(--font-mono);
+}
+
+.assistant :global(p:first-child) {
+  margin-top: 0;
+}
+
+.assistant :global(p:last-child) {
+  margin-bottom: 0;
+}
+
+.assistant :global(table) {
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.assistant :global(th),
+.assistant :global(td) {
+  border: 1px solid var(--line);
+  padding: var(--space-1) var(--space-2);
+  text-align: left;
+}
+
+/* The same pale-blue accent as the user bubble below, matching the widget's table headers. */
+.assistant :global(th) {
+  background: var(--bubble-user);
+  color: var(--navy);
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--bubble-user);
+  color: var(--navy);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  max-width: 80%;
+}
+
+.error {
+  align-self: flex-start;
+  background: var(--danger);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+}

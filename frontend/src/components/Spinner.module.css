@@ -1,0 +1,17 @@
+/* A local keyframe (not the one in styles/global.css) — CSS Modules scope @keyframes names too, so this
+   keeps the component self-contained rather than depending on cross-file global naming. */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  border-radius: 50%;
+  /* var(--line) track with the accent as the moving arc — reads clearly in both themes and ties the
+     loading state to the same RMIT red used everywhere else, rather than a neutral white. */
+  border: 2px solid var(--line);
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}

@@ -1,0 +1,25 @@
+.trace {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+}
+
+.trace summary {
+  cursor: pointer;
+}
+
+.trace ol {
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-4);
+}
+
+.trace li {
+  margin-bottom: var(--space-2);
+  word-break: break-word;
+}
+
+.toolName {
+  color: var(--accent);
+  font-weight: 600;
+}

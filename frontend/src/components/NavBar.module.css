@@ -1,0 +1,89 @@
+/* Navy header bar, matching the floating chat widget's header (widget/src/styles/widget.css's .lw-header) —
+   text colours here are explicit (white/translucent-white) rather than the --text tokens, which are tuned for
+   light backgrounds elsewhere on the page. */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  background: var(--navy);
+  border-bottom: 3px solid var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: #fff;
+}
+
+.brandName {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  /* Explicit line-height on every nav text item (see below) — the serif and sans faces have different
+     ascent/descent ratios, so at the browser's default "normal" line-height each one centres its glyphs
+     within its own line box slightly differently. That's what made the row look uneven even though every
+     item's box was already flex-centred. Pinning line-height: 1 everywhere removes that per-font leading
+     as a variable. */
+  line-height: 1;
+}
+
+.badge {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-pill);
+  padding: 1px 8px;
+  line-height: 1.6;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1;
+  /* Nudged down relative to the brand (logo + "Laurel"), which stays the alignment reference point. */
+  position: relative;
+  top: 3px;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.user {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--text-sm);
+  line-height: 1;
+  position: relative;
+  top: 3px;
+}
+
+.logoutBtn {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-pill);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
+  line-height: 1;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}
+
+.logoutBtn:hover {
+  border-color: #fff;
+  color: #fff;
+}
