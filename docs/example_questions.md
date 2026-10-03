@@ -29,6 +29,19 @@ Data is only seeded for courses a student has a result or a current enrolment in
 | What are all my assignments for Machine Learning? | demo4 | Three assignments: two submitted and graded, one due 28 September and not yet submitted |
 | What's due this week? | demo1 | Nothing: not enrolled in anything yet |
 
+### Your week and study planning
+
+*Your week* also appears on its own when you open the web app or the widget, with no question needed. The examples assume 3 October 2026; on other dates the overdue and upcoming items move with the calendar.
+
+| Ask | Log in as | What to expect |
+| --- | --- | --- |
+| What does my week look like? Is there anything I should know? | demo4 | Assignment 2 overdue for Data Mining and Machine Learning, an overdue library book that can be renewed, the exam period in 23 days and Assignment 3 due 9 November |
+| What should I focus on? | demo7 | The enrolment hold first, then the overdue work |
+| Plan my study week | demo4 | A table of two-hour sessions, overdue Assignment 2 first, none on Monday or Wednesday evening (workshops), each with a free room. Says nothing has been booked |
+| I work 9 to 5, Monday to Friday. Plan my study week | demo4 | The same, but only evening and weekend sessions |
+| Book the room for the first session | demo4 | After a plan: a room check and a summary, then a ROOM reference only after you say yes |
+| Plan my study week | demo1 | Nothing to plan: not enrolled in anything yet |
+
 ### Study spaces
 
 Bookings are simulated: nothing is written back to the data, so checking the same room and time again always gives the same answer, whether or not you "booked" it in an earlier message. Bookings are pre-seeded across 28 September to 4 October 2026 (Thursday 1 October is that week's Thursday), so this is the window to ask about for a realistic mix of free and busy rooms. There is no tool for the current clock time, so give a specific date and time rather than just "now" — but everything else (how long, which building) gets a stated assumption instead of another question, so a request with only a date and start time still gets a real answer in one turn.

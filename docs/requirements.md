@@ -1,6 +1,6 @@
 # Laurel: Requirements
 
-Laurel is a conversational assistant that gives every student one front door to university life. It knows who you are, answers from your own data, says where each answer came from, and takes action for you once you say yes. It was built for the CSIT hackathon, under the theme *Innovating Education: make education smarter, easier and more enjoyable.*
+Laurel is a conversational assistant that gives every student one front door to university life. It knows who you are, shows you what needs your attention before you ask, answers from your own data with a source on every reply, and takes action for you once you say yes. Laurel takes the admin out of the way so students can get back to learning. It was built for the CSIT hackathon, under the theme *Innovating Education: make education smarter, easier and more enjoyable.*
 
 This document is the source of truth for scope, rules and demo. Requirement IDs (FR, NFR, US, D) are stable. Code, tests and scenarios refer to them.
 
@@ -33,14 +33,16 @@ The answers exist, but they are split across systems. Help desks keep office hou
 
 The friction falls hardest on the students with the least slack: first-years who don't know the vocabulary yet, international students working in a second language, and anyone fitting study around work, caring or commuting.
 
-## 2. The idea: one front door
+Every hour spent hunting through portals, or recovering from a missed deadline, is an hour not spent learning. And none of these systems tells a student what they've forgotten: they only answer the questions students already know to ask.
 
-Laurel replaces "which system do I need, and where in it?" with a single conversation.
+## 2. The idea: one front door that gets admin out of the way
+
+Laurel replaces "which system do I need, and where in it?" with a single conversation, and starts that conversation for you: the moment you open it, it shows what needs your attention this week.
 
 | Theme | How Laurel delivers it |
 | --- | --- |
-| **Smarter** | Personal and grounded. Laurel already knows the logged-in student's program, results, enrolments, fees and holds, so it answers *their* question rather than giving generic advice. Every fact comes from a tool call over the university's data and ends with a source line. It never comes from the model's memory. |
-| **Easier** | Answers and actions in one place. Laurel checks a timetable against your commitments, builds a semester-by-semester plan, enrols you, drops a class, books a study room, renews library loans or logs an IT ticket. Anything that changes something is shown to you first and only happens after a clear yes. |
+| **Smarter** | Proactive, personal and grounded. Before you type anything, *Your week* lists what's overdue, what's due soon, holds, library books and the next key dates, most urgent first. Laurel already knows the logged-in student's program, results, enrolments, fees and holds, so it answers *their* question rather than giving generic advice. Every fact comes from a tool call over the university's data and ends with a source line. It never comes from the model's memory. |
+| **Easier** | Answers and actions in one place. Laurel plans your study week around your classes and commitments, with a free study room for each session. It checks a timetable against your commitments, builds a semester-by-semester plan, enrols you, drops a class, books a study room, renews library loans or logs an IT ticket. Anything that changes something is shown to you first and only happens after a clear yes. |
 | **More enjoyable** | It lives where students already are: a chat bubble on the university's own web pages (through a Chrome extension), a full web app, and a CLI. It suggests questions to try, makes waiting feel friendly, and lets you peek behind the curtain at the tools it used. |
 
 When Laurel can't help, because the question is out of scope or the data doesn't have the answer, it says so plainly. It names the right team and drafts the email for you to send. It never guesses.
@@ -54,7 +56,7 @@ The demo accounts are real-feeling personas, not test fixtures. Each password is
 | New domestic student with fixed weekday commitments | `demo1` | Finds classes that fit around a 9-to-5 week, plans every semester to graduation, and enrols with confirmation |
 | New full-time, full-fee student who can't attend Tuesdays | `demo2` | Builds a two-semester plan with no Tuesday workshops, and explains upfront fees |
 | New international student | `demo3` | Explains international fees, and hands visa and study-load questions to the right office instead of guessing |
-| Continuing student mid-semester | `demo4` | Covers what's due this week, submission status, marks, print credit, IT tickets and internships |
+| Continuing student mid-semester who has fallen behind | `demo4` | Shows two overdue assignments and an overdue library book the moment they open Laurel, plans catch-up study sessions with free rooms, and covers marks, print credit, IT tickets and internships |
 | Student who failed a course | `demo5` | Gives honest GPA and WAM numbers and shows what the fail means for their plan |
 | Final-semester student | `demo6` | Shows what's left to graduate, and handles library loans and renewal |
 | Student with an overdue balance and hold | `demo7` | Explains the hold, what it blocks and what is owed |
@@ -65,12 +67,12 @@ The demo accounts are real-feeling personas, not test fixtures. Each password is
 
 | Criterion | What in Laurel addresses it | Where it shows in the demo |
 | --- | --- | --- |
-| **Problem relevance** | Built around questions students really ask, across nine everyday domains. It covers the moments that cost students most (deadlines, census and drop dates, clashes, holds), not just FAQs. | Personas in section 3. Each demo beat starts from a real student question. |
-| **Desirability and impact** | No new app to learn. It sits on the pages students already visit, knows who they are without asking, works 24/7, and *does* things instead of linking to them. Nobody is left stuck: out-of-scope questions get a ready-to-send draft to the right team. | The widget opening on the university home page. A room booked in one exchange. The handoff draft. |
-| **Solution and creativity** | A tool-calling agent over the university's own systems, not a document-search chatbot. Every fact is an exact lookup with a source line. Every action uses a check-then-confirm pattern enforced in code. Identity is wired through the login, so the model can never reach another student's record. A mock enrolment service with a live dashboard shows real API calls as they happen. | The trace toggle under a reply. The live dashboard lighting up during an enrolment. A refused probe for another student's results. |
-| **UI/UX** | Clean chat in the university's own colours. Suggested questions change with the page you're on. A lively loading indicator, per-message copy, thumbs and retry, and an expand button. Plans and timetables come back as tables. Mobile-safe input. The widget hands off to the full web app already signed in. | Clicking a suggestion chip, expanding the widget, then opening the full web app. |
-| **Functionality** | 28 tools across 9 domains, a fixed-seed synthetic dataset with a validator, unit tests for every tool, and a scenario runner that asks the live agent scripted questions and reports pass rates. | Everything in the demo is live, not mocked screenshots. |
-| **Presentation** | A four-minute storyline (section 12.1) that follows students through a week, with the dashboard and traces making the invisible visible. | Section 12.1. |
+| **Problem relevance** | Built around questions students really ask, across ten everyday domains. It covers the moments that cost students most (deadlines, census and drop dates, clashes, holds), not just FAQs, and turns them into time back for learning. | Personas in section 3. Each demo beat starts from a real student question. |
+| **Desirability and impact** | It tells you what you've forgotten before you ask, then helps you fix it. No new app to learn. It sits on the pages students already visit, knows who they are without asking, works 24/7, and *does* things instead of linking to them. Nobody is left stuck: out-of-scope questions get a ready-to-send draft to the right team. | *Your week* appearing the moment the widget opens. A catch-up study plan with rooms, and one booked. The handoff draft. |
+| **Solution and creativity** | Proactive rather than reactive: *Your week* is computed straight from the tools with no model call, so it is instant, and each item is a ready-made question. The study-week planner joins coursework, the timetable and room booking into a plan to learn by. Underneath, a tool-calling agent over the university's own systems, not a document-search chatbot. Every fact is an exact lookup with a source line. Every action uses a check-then-confirm pattern enforced in code. Identity is wired through the login, so the model can never reach another student's record. A mock enrolment service with a live dashboard shows real API calls as they happen. | The trace toggle under a reply. The live dashboard lighting up during an enrolment. A refused probe for another student's results. |
+| **UI/UX** | A home screen that starts with what matters, where one click asks about it. Clean chat in the university's own colours. Suggested questions change with the page you're on. A lively loading indicator, per-message copy, thumbs and retry, and an expand button. Plans and timetables come back as tables. Mobile-safe input. The widget hands off to the full web app already signed in. | Clicking a suggestion chip, expanding the widget, then opening the full web app. |
+| **Functionality** | 30 tools across 10 domains, a fixed-seed synthetic dataset with a validator, unit tests for every tool, and a scenario runner that asks the live agent scripted questions and reports pass rates. | Everything in the demo is live, not mocked screenshots. |
+| **Presentation** | A four-minute storyline (section 12.1) built on four live turns, following one student who has fallen behind, with traces making the invisible visible. A recorded video backs up the live demo. | Section 12.1. |
 
 ## 5. Hard rules (do not violate)
 
@@ -93,7 +95,7 @@ Laurel is a **tool-calling agent**, not a document-search system. A foundation m
  student ──► widget on a uni page / web app / CLI
                 │  message + run context {student_number}  (set by the login, never by the model)
                 ▼
-     IBM watsonx Orchestrate ──► Laurel agent (instructions + 28 tools + model)
+     IBM watsonx Orchestrate ──► Laurel agent (instructions + 30 tools + model)
                 │                        │ picks a tool, fills its arguments
                 ▼                        ▼
      Python tools (tools/*_tools.py) ──► data/*.json, or the mock enrolment service (mockapi/)
@@ -146,6 +148,7 @@ When something is not found, a tool returns `{"found": false, "reason": "..."}`.
 | Study spaces | `check_room_availability`, `book_room` | FR-28 |
 | Campus services | `get_print_balance`, `create_it_ticket`, `check_it_ticket_status`, `search_internships` | FR-29 |
 | Library | `get_current_loans`, `renew_loans` | FR-30 |
+| Your week | `get_my_week`, `plan_study_week` | FR-33, FR-34 |
 | Human handoff | `draft_enquiry` | FR-14, FR-15 |
 
 **Availability** is parsed by `tools/scheduling.py`. The format is `{"busy": [{"days": ["Mon","Tue","Wed","Thu","Fri"], "start": "09:00", "end": "17:00"}]}`. A workshop option is `fits` if it overlaps no busy block, `clashes` if it does, and `unknown` if its time is missing. Lectures are assumed online with recordings, so they are never compared. A course can be attended if at least one open workshop option fits. When the student has given no availability, tools assume none and say so.
@@ -174,6 +177,10 @@ Workshops in the same term must not overlap. Option credit points are filled wit
 | Not enrolled in that course | `NOT_ENROLLED` |
 
 Laurel quotes the tool's consequences message, so the fee and the dates are never worked out by the model.
+
+**Your week** (`tools/week_tools.py`) reads the other tools' results rather than the data files, so the rules for overdue, renewable and holds live in one place. Items are ordered action, overdue, today, soon, upcoming, then the study-plan suggestion. It covers holds and balances, unsubmitted assignments (recently overdue, due this week, and the next due date), loans overdue or due within 7 days, and key dates within 28 days.
+
+**Study-week plans** (`tools/study_week.py`) cover the next seven days with two-hour slots (09–11, 11–13, 14–16, 16–18, 19–21), at most two a day. They skip the student's workshops and any stated busy times. Overdue work gets two sessions first, work due within the week gets two before its due date, and later work gets one to make a start. Each session gets the first room free in the bookings data. Nothing is booked; booking a room goes through the usual confirmation.
 
 **Room booking** follows the same check-then-confirm pattern. **Print balance, IT tickets, internship search and library renewal** are harmless or reversible, so Laurel acts straight away.
 
@@ -216,6 +223,7 @@ An optional HTTPS service that stands in for the university's enrolment system. 
 | **Know me** | Be greeted by name. See their status, load, enrolments and holds. Get results, GPA and WAM computed from their record. |
 | **Plan my study** | Ask about any program or course by name, code or handbook code. Check whether a course fits their week. Find courses that do fit. Get a semester-by-semester plan to graduation. Ask what a major or minor still needs. |
 | **Act for me** | Enrol and drop with check-then-confirm. Book a study room. Renew library loans. Log an IT ticket. |
+| **See my week** | Open Laurel and see what's overdue, what's due soon, holds, library books and upcoming key dates, then ask about any of them in one click. Get study sessions for the week planned around classes and commitments, each with a free room. |
 | **Stay on top** | Ask what week it is and when the break, exams, results, census and deadlines are. Ask what's due this week, whether something was submitted, and what mark they got. |
 | **Money and services** | Get fees for their fee type and how to pay. Check balance and holds, print credit and internships open to their program. |
 | **Human safety net** | Out-of-scope or unanswerable questions get a plain "I can't help with that", the right team named, and a draft email to send themselves. |
@@ -256,6 +264,8 @@ An optional HTTPS service that stands in for the university's enrolment system. 
 | FR-30 | Library tools list current loans and due dates, and renew one or all loans, explaining any refusal (holds, renewal limit) | US-34 | Could |
 | FR-31 | A web app offers login, chat with a trace toggle, and a profile page. It recovers the conversation after a reload | US-35 | Must |
 | FR-32 | A chat widget runs on the university's web pages through a Chrome extension (or a saved-page fallback). It offers page-aware suggested questions and opens the full web app already signed in | US-36 | Should |
+| FR-33 | A week summary lists, most urgent first, holds and balances, overdue and upcoming assignments, library loans due or overdue, and key dates within four weeks, each with a follow-up question. The web app and widget show it on opening, without a model call | US-37 | Must |
+| FR-34 | A study-week planner suggests sessions for the next seven days for unsubmitted assignments, overdue first, around the student's workshops and stated busy times, each with a free study room. It books nothing | US-38 | Should |
 
 ## 9. Non-functional requirements
 
@@ -314,6 +324,8 @@ Each line is a test to automate (tools) or script (agent conversation).
 | US-34 | …to keep on top of library loans | Could | Loans with due dates. Renewal of one or all, with refusals explained. No invented catalogue results |
 | US-35 | …a proper app, not a terminal | Must | Web login, chat with a loading indicator and trace toggle, and a profile page. The transcript survives a reload |
 | US-36 | …help right where I am | Should | A chat bubble on the university site, with suggestions that match the page, expand and collapse, and a link that opens the full app already signed in |
+| US-37 | …to be told what I've forgotten, before I ask | Must | Opening the web app or widget shows *Your week* at once: overdue first, each item matching the data, and one click asks about it |
+| US-38 | …a realistic plan to catch up | Should | Sessions never clash with my workshops or the hours I gave, overdue work comes first, at most two a day, each with a room that's free. It says nothing was booked and offers to book one |
 
 ## 11. Data and provenance
 
@@ -345,7 +357,7 @@ Every record carries `provenance` and `snapshot_date`.
 
 `seed/generate.py` uses a fixed seed (same seed, same output). `seed/validate.py` checks the files (NFR-07) and writes `seed/validation_report.txt`. To change a public fact, edit `seed/public_values.json` rather than the generator.
 
-Canvas due dates and room bookings are anchored to the week of **28 September to 4 October 2026**. If the demo date moves, re-run `python seed/generate.py` close to the day.
+Canvas due dates and room bookings are anchored to the week of **28 September to 4 October 2026**: Assignment 2 is due 28 September and left unsubmitted, and Assignment 3 is due 9 November. *Your week* treats recent overdue work as first-class, so it stays useful for about three weeks after that. If the demo is much later, re-run `python seed/generate.py` close to the day.
 
 ## 12. Demo scenarios
 
@@ -365,22 +377,26 @@ Canvas due dates and room bookings are anchored to the week of **28 September to
 | D12 Everyday services | As `demo6`: "Can I renew everything?" As `demo4`: "My wifi keeps dropping in Building 8, can you log a ticket?" | One loan renewed with a new due date, and the held one refused with the reason. An IT ticket number straight away |
 | D13 Help where I am | Open the university home page with the extension loaded and click the chat bubble | The widget opens with page-aware suggestions. After sign-in, the "Laurel" title opens the full web app already signed in |
 | D14 The safety net | As `demo3`: "Am I allowed to study part-time on my student visa?" | Laurel says it can't advise on this, names the International Student Office and its email, and offers a draft. It is never sent |
+| D15 Your week | As `demo4`, open the web app or widget (on 3 October 2026) | Before anything is typed: Assignment 2 overdue for Data Mining and Machine Learning, an overdue library book that can be renewed, the assessment period in 23 days, Assignment 3 due 9 November, and *Plan my study week*. Clicking an item asks about it |
+| D16 Plan my study week | As `demo4`: "Plan my study week", then "Book the room for the first session" and "yes" | Overdue Assignment 2 sessions come first, none clash with the Monday and Wednesday 18:00 workshops, each has a free room, and it says nothing was booked. Booking goes check, summary, yes, `ROOM-` reference |
 
 `python -m planner.scenarios` runs the scripted versions of these, with the 10 NFR-01 questions tagged `nfr01`, against the live agent several times each. It checks the tools called, the facts in the reply, and that no other student's data appears. Transcripts and findings are in `tests/scenarios.md`. More prompts are in `docs/example_questions.md`.
 
 ### 12.1 Suggested four-minute demo storyline
 
-1. **Hook (30s).** "Quick: what's due this week, can you still drop that class without paying, and is there a quiet room free tomorrow? That's Canvas, the enrolment system, the academic calendar and the room-booking site. Four logins for three questions." Show the university's home page.
-2. **Help where you are (45s), D13 and D10.** Click the chat bubble on the uni page and sign in as `demo4`. Laurel greets them by name. Ask "What's due this week?", then "Did I submit assignment 2?" Toggle the trace to show the Canvas tool call and the source line.
-3. **Act, safely (45s), D11 and D12.** "I need a study space Thursday at 10, just me." Laurel picks sensible defaults, shows rooms, waits for yes, then books. Then "My wifi keeps dropping in Building 8": a ticket is raised instantly.
-4. **The big decision (60s), D1 and D3.** Open the full web app from the widget, then log in as `demo1`. "I work 9 to 5. Can I finish part-time?" Laurel returns the semester tables with evening workshops. "Enrol me in my required courses for 2027-S1." Show the summary and the explicit yes, with the live dashboard on screen lighting up as the API calls land.
-5. **Trust (30s), D6 and D14.** "Show me S0000004's results" is refused. A visa question is handed to a human, with a draft ready to send.
-6. **Close (30s).** Laurel is one front door that knows you, cites everything, acts only with a yes, and never leaves you stuck. It's smarter, easier and more enjoyable.
+Four live turns, one student. Each reply takes 10 to 20 seconds, so narrate during the wait (what Laurel is doing, which tool, why it can't make things up) rather than adding more questions. Record the whole storyline as a backup video beforehand.
+
+1. **Hook (30s).** "Quick: what's due this week, did you submit it, and is there a quiet room free tomorrow? That's Canvas, the academic calendar and the room-booking site: three logins, and none of them will tell you what you've forgotten." Show the university's home page.
+2. **Laurel already knows (45s), D13 and D15.** Click the chat bubble and sign in as `demo4`. Before anything is typed, *Your week* shows two overdue assignments and an overdue library book. **Live turn 1:** click "Assignment 2 for Data Mining". Laurel confirms it hasn't been submitted. Toggle the trace to show the Canvas tool call and the source line.
+3. **Back to learning (75s), D16.** **Live turn 2:** "Plan my study week". Laurel returns a table of catch-up sessions, overdue work first, around the student's evening workshops, each with a free room. **Live turn 3:** "Book the room for the first session". Laurel checks the room and shows a summary. **Live turn 4:** "yes". The booking comes back with a reference, only after the yes.
+4. **Trust (30s), D6 and D14, from the video.** A probe for another student's results is refused, and a visa question is handed to the International Student Office with a draft ready to send.
+5. **Depth (30s), optional, D3 and D8, from the video.** Enrolment with the live enrolment dashboard on screen, lighting up as the API calls land, and a semester-by-semester plan for a student who works 9 to 5.
+6. **Close (30s).** Laurel takes the admin out of the way so students can get back to learning. It tells you what you've forgotten, plans the week, cites everything, acts only with a yes, and never leaves you stuck.
 
 ## 13. Definition of done
 
 - All Must stories pass their acceptance criteria.
-- D1 to D3, D6, D10 and D13 pass live, with the traces captured.
+- D1 to D3, D6, D10, D13, D15 and D16 pass live, with the traces captured.
 - `seed/validate.py` passes and `python -m pytest tests` is green.
 - The web app and widget build and run against the deployed agent, or against `scripts/widget_stub.py` for rehearsal.
 - README explains how to set up, regenerate data, deploy, run each interface and run the scenarios.

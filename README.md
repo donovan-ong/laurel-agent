@@ -1,12 +1,12 @@
 # Laurel
 
-**One front door to university life.** A student's everyday questions are scattered across a dozen systems: Canvas, the handbook, the timetable, enrolment, fees, the academic calendar, the library, room booking and the IT desk. Laurel is a conversational assistant that already knows who you are. It answers from your own data with a source on every reply, and it takes action for you (enrol, drop, book a room, renew a loan, log a ticket) only after you say yes. When it can't help, it names the right team and drafts the email for you to send.
+**One front door to university life.** A student's everyday questions are scattered across a dozen systems: Canvas, the handbook, the timetable, enrolment, fees, the academic calendar, the library, room booking and the IT desk. Laurel is a conversational assistant that already knows who you are. The moment you open it, *Your week* shows what's overdue, what's due soon and what's coming up, and one click asks about it or plans your study week around your classes. It answers from your own data with a source on every reply, and it takes action for you (enrol, drop, book a room, renew a loan, log a ticket) only after you say yes. It takes the admin out of the way so you can get back to learning. When it can't help, it names the right team and drafts the email for you to send.
 
 Built for the CSIT hackathon (*Innovating Education*) on IBM watsonx Orchestrate, using synthetic data. Laurel runs in three places: a chat widget on the university's own pages, a web app and a CLI. See [docs/requirements.md](docs/requirements.md) for the problem, scope, how it maps to the judging criteria, and the demo storyline.
 
 ## Approach and architecture
 
-This is a **tool-calling agent**, not a document-search system. There is no vector store, no embeddings and no unstructured corpus to search: a foundation model reads the student's message against a fixed instruction set, decides which of 28 Python functions to call and with what arguments, gets a structured JSON result back, and writes the reply from that — always citing where the fact came from. Every "retrieval" is an exact, deterministic lookup or computation over small JSON files, not a similarity search.
+This is a **tool-calling agent**, not a document-search system. There is no vector store, no embeddings and no unstructured corpus to search: a foundation model reads the student's message against a fixed instruction set, decides which of 30 Python functions to call and with what arguments, gets a structured JSON result back, and writes the reply from that — always citing where the fact came from. Every "retrieval" is an exact, deterministic lookup or computation over small JSON files, not a similarity search.
 
 ```
 planner CLI (login, chat)
@@ -97,7 +97,7 @@ For a scripted run use `python -m planner login -u demo1 -p demo1`. To switch st
 
 ## Run the web app
 
-**Laurel** — a browser front end for the same agent: log in, chat (with a trace toggle and a livelier "thinking" indicator) and a profile page, no CLI needed. The backend (`webapp/`) reuses the same `planner.auth`/`planner.client` code the CLI uses, so both can be logged in at once, even as different students, and neither affects the other. The frontend (`frontend/`) is a React app (Vite, plain JavaScript), styled to match the RMIT theme the chat widget below uses: a navy header bar, RMIT red and white throughout, sans-serif text, and a chat-bubble mark as the logo.
+**Laurel** — a browser front end for the same agent: log in to a home screen that opens on *Your week* (overdue and upcoming work, holds, library books and key dates, straight from the tools with no wait), chat (with a trace toggle and a livelier "thinking" indicator) and a profile page, no CLI needed. The backend (`webapp/`) reuses the same `planner.auth`/`planner.client` code the CLI uses, so both can be logged in at once, even as different students, and neither affects the other. The frontend (`frontend/`) is a React app (Vite, plain JavaScript), styled to match the RMIT theme the chat widget below uses: a navy header bar, RMIT red and white throughout, sans-serif text, and a chat-bubble mark as the logo.
 
 Build the frontend once (and again after changing anything under `frontend/src`):
 
