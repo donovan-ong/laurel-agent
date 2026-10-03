@@ -1,5 +1,7 @@
 """The student's week at a glance, and study sessions planned around it. Both read the other tools' results
-rather than the data files, so the rules (what counts as overdue, renewable, a hold) stay in one place.
+rather than the data files, so the rules (what counts as overdue, renewable, a hold) stay in one place. The
+other tools are reached through their modules, never imported by name: `orchestrate tools import` registers
+every tool it finds in this file's namespace, which would re-register them from here.
 """
 from datetime import date, timedelta
 from typing import Optional
@@ -7,13 +9,10 @@ from typing import Optional
 from ibm_watsonx_orchestrate.agent_builder.tools import tool, ToolPermission
 from ibm_watsonx_orchestrate.run.context import AgentRun
 
-from tools import scheduling as sch
-from tools import study_week
-from tools.calendar_tools import get_current_week, label, resolve_date
-from tools.canvas_tools import list_assignments, week_bounds
+from tools import calendar_tools, canvas_tools, library_tools, scheduling as sch, student_tools, study_week
+from tools.calendar_tools import label, resolve_date
+from tools.canvas_tools import week_bounds
 from tools.common import current_student, load, not_found, source, today
-from tools.library_tools import get_current_loans
-from tools.student_tools import get_fees, get_student_profile
 
 URGENCY = ["action", "overdue", "today", "soon", "upcoming", "suggestion"]
 KINDS = ["hold", "assignment", "loan", "key_date", "plan"]
@@ -40,7 +39,7 @@ def in_days(n: int) -> str:
 
 def open_assignments(context: AgentRun, on: date) -> list[dict]:
     """Unsubmitted assignments that are recently overdue or still to come."""
-    result = list_assignments.fn(context=context)
+    result = canvas_tools.list_assignments.fn(context=context)
     floor = (on - timedelta(days=RECENT_DAYS)).isoformat()
     return [a for a in result.get("assignments", []) if not a["submitted"] and a["due_date"] >= floor]
 
@@ -131,7 +130,7 @@ def get_my_week(context: AgentRun, on_date: Optional[str] = None) -> dict:
     on, _, error = resolve_date(on_date)
     if error:
         return error
-    profile = get_student_profile.fn(context=context)
+    profile = student_tools.get_student_profile.fn(context=context)
     sources = [profile["source"]]
     items = []
     hold = profile["student"]["account_hold"]
@@ -139,16 +138,16 @@ def get_my_week(context: AgentRun, on_date: Optional[str] = None) -> dict:
         items.append({"kind": "hold", "urgency": "action", "title": "Account hold", "detail": hold["message"],
                       "when": None, "prompt": "Do I owe anything, and does it stop me enrolling?"})
     else:
-        account = get_fees.fn(context=context)["account"]
+        account = student_tools.get_fees.fn(context=context)["account"]
         if account["balance_due"]:
             items.append({"kind": "hold", "urgency": "action", "title": f"Balance due: {account['balance_due']} AUD",
                           "detail": f"Due {day_text(account['due_date'])}" if account["due_date"] else "Payment due",
                           "when": account["due_date"], "prompt": "What do I owe and when is it due?"})
     assignments = open_assignments(context, on)
     items += assignment_items(assignments, on)
-    loans = get_current_loans.fn(context=context)
+    loans = library_tools.get_current_loans.fn(context=context)
     items += loan_items(loans.get("loans", []), on)
-    week = get_current_week.fn(on_date=on.isoformat())
+    week = calendar_tools.get_current_week.fn(on_date=on.isoformat())
     if week.get("found"):
         items += key_date_items(week)
         sources.append(week["source"])
@@ -189,7 +188,7 @@ def plan_study_week(context: AgentRun, availability: Optional[dict] = None, on_d
         stated = sch.parse_availability(availability)
     except sch.AvailabilityError as e:
         return not_found(str(e))
-    week = get_current_week.fn(on_date=on.isoformat())
+    week = calendar_tools.get_current_week.fn(on_date=on.isoformat())
     term = week["teaching_weeks"][0]["period"] if week.get("found") and week["teaching_weeks"] else None
     classes = study_week.class_blocks(student["current_enrolments"], term)
     busy = stated + [(c["day"], c["start"], c["end"]) for c in classes]

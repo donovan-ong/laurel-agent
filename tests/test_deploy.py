@@ -149,3 +149,14 @@ def test_the_service_options_go_together():
         deploy.main(["--api-url", "https://x.com", "--dry-run"])
     with pytest.raises(SystemExit):
         deploy.main(["--api-key", "k", "--dry-run"])
+
+
+@pytest.mark.parametrize("path", sorted((ROOT / "tools").glob("*_tools.py")), ids=lambda p: p.name)
+def test_each_tool_file_exposes_only_the_tools_it_defines(path):
+    # `orchestrate tools import` registers every tool in a file's namespace, so a tool imported by name from
+    # another file would be re-registered from this one.
+    from ibm_watsonx_orchestrate.agent_builder.tools.python_tool import PythonTool
+    module = importlib.import_module(f"tools.{path.stem}")
+    for name, value in vars(module).items():
+        if isinstance(value, PythonTool):
+            assert value.fn.__module__ == module.__name__, f"{name} is imported into {path.name}; import its module instead"
