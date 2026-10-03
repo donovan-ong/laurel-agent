@@ -644,6 +644,10 @@ def check_canvas(d):
                 errs.append(f"{who}: mark must be a whole number from 0 to max_mark")
         elif a["submitted_at"] is not None or a["mark"] is not None:
             errs.append(f"{who}: not submitted, so submitted_at and mark must both be null")
+        elif a["due_date"] <= a["snapshot_date"]:
+            errs.append(f"{who}: not submitted but due {a['due_date']}, on or before the snapshot date (nothing is left overdue)")
+        if not (isinstance(a.get("due_time"), str) and re.match(r"^\d{2}:\d{2}$", a["due_time"])):
+            errs.append(f"{who}: due_time must look like 23:59")
     return errs
 
 

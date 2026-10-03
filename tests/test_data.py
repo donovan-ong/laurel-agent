@@ -479,3 +479,14 @@ def test_every_canvas_course_has_named_assignments_with_one_sentence_summaries(d
 def test_a_course_without_named_assignments_falls_back_to_generic_ones():
     about = generate.canvas_assignment({}, {"course_id": "XXXX0000", "title": "Example Course"}, 2)
     assert about["name"] == "Applied Project" and "Example Course" in about["summary"]
+
+
+def test_no_canvas_assignment_is_overdue_on_the_demo_date(data):
+    overdue = [a["assignment_id"] for a in data["canvas"] if not a["submitted"] and a["due_date"] < generate.DEMO_DATE]
+    assert overdue == []
+
+
+def test_assignment_2_is_due_the_sunday_after_next_from_the_demo_date():
+    assert generate.next_sunday_night("2026-10-03").isoformat() == "2026-10-11"  # Saturday: not tomorrow
+    assert generate.next_sunday_night("2026-10-07").isoformat() == "2026-10-11"  # Wednesday: that Sunday
+    assert generate.next_sunday_night("2026-10-09").isoformat() == "2026-10-18"  # Friday: too close, next one

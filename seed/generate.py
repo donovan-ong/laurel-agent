@@ -9,6 +9,10 @@ from pathlib import Path
 
 SEED = 20260921
 SNAPSHOT_DATE = "2026-09-21"
+# The day the project is demonstrated. Canvas due dates are set around it so that nothing is overdue on the
+# day: see assignment_plan(). Regenerate with --demo-date if the demo moves.
+DEMO_DATE = "2026-10-03"
+CANVAS_DUE_TIME = "23:59"
 SEED_DIR = Path(__file__).resolve().parent
 DEFAULT_OUT = SEED_DIR.parent / "data"
 
@@ -495,20 +499,28 @@ def canvas_assignment(names: dict, course: dict, sequence: int) -> dict:
     return {"name": name, "summary": summary.format(title=course["title"])}
 
 
-def assignment_plan(term: str, snapshot_date: str) -> list[tuple[str, bool]]:
+def next_sunday_night(demo_date: str) -> date:
+    """The first Sunday at least three days after the demo date: soon enough to be the student's priority,
+    never so close it is due tomorrow, and never already past."""
+    day = date.fromisoformat(demo_date) + timedelta(days=3)
+    return day + timedelta(days=(6 - day.weekday()) % 7)
+
+
+def assignment_plan(term: str, snapshot_date: str, demo_date: str = DEMO_DATE) -> list[tuple[str, bool]]:
     """(due_date, submitted) for a term's three demo assignments.
 
-    The current term's dates are anchored to its own start date, not the snapshot date, and deliberately
-    spread so "what's due this week" and "did I submit assignment 2" stay meaningful for weeks around the
-    project's demo date, not only on the day this data happened to be generated: assignment 1 is already
-    graded, assignment 2 falls due in the week of 28 September to 4 October 2026 and is left unsubmitted
-    (an overdue, still-open item worth asking about), and assignment 3 is safely in the future.
+    Laurel's point is that students don't miss deadlines, so on the demo date nothing is overdue: in the
+    current term assignment 1 is already submitted and graded, assignment 2 is unsubmitted and due on the
+    Sunday night after next (the student's priority: see next_sunday_night), and assignment 3 is at least
+    three weeks after that. Every assignment in a completed term was submitted.
     """
     snap = date.fromisoformat(snapshot_date)
     if term == CURRENT_TERM:
         start = TERM_STARTS[CURRENT_TERM]
-        plan = [(31, True), (70, False), (112, False)]
-        return [((start + timedelta(days=o)).isoformat(), submitted) for o, submitted in plan]
+        second = next_sunday_night(demo_date)
+        third = max(start + timedelta(days=112), second + timedelta(days=21))
+        return [((start + timedelta(days=31)).isoformat(), True), (second.isoformat(), False),
+                (third.isoformat(), False)]
     # A completed term: every assignment was due, and submitted, well before the snapshot date. The exact
     # historical date does not matter for a finished course; a per-term hash just keeps different terms
     # from landing on identical dates.
@@ -516,7 +528,7 @@ def assignment_plan(term: str, snapshot_date: str) -> list[tuple[str, bool]]:
     return [((snap - timedelta(days=o + jitter)).isoformat(), True) for o in (400, 370, 340)]
 
 
-def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str) -> list[dict]:
+def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str, demo_date: str = DEMO_DATE) -> list[dict]:
     """One record per (student, course, term, assignment), for every course a student has a result or a
     current enrolment in. A student admitted but not yet enrolled in anything has none - correctly so."""
     known = {c["course_id"]: c for c in courses}
@@ -531,7 +543,7 @@ def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str) 
                 continue
             seen.add((course_id, term))
             rng = random.Random(f"canvas:{s['student_number']}:{course_id}:{term}")
-            for i, (due_date, submitted) in enumerate(assignment_plan(term, snapshot_date), 1):
+            for i, (due_date, submitted) in enumerate(assignment_plan(term, snapshot_date, demo_date), 1):
                 about = canvas_assignment(names, known[course_id], i)
                 if not submitted:
                     mark = None
@@ -549,6 +561,7 @@ def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str) 
                     "summary": about["summary"],
                     "sequence": i,
                     "due_date": due_date,
+                    "due_time": CANVAS_DUE_TIME,
                     "max_mark": 100,
                     "submitted": submitted,
                     "submitted_at": f"{due_date}T21:00:00+10:00" if submitted else None,
@@ -877,6 +890,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=int, default=SEED)
     parser.add_argument("--snapshot-date", default=SNAPSHOT_DATE)
+    parser.add_argument("--demo-date", default=DEMO_DATE, help="the day of the demo: Canvas due dates are set around it")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args()
 
@@ -894,7 +908,7 @@ def main() -> None:
     write_json(args.out / "contacts.json", build_contacts(args.snapshot_date))
     write_json(args.out / "students.json", students)
     write_json(args.out / "accounts.json", build_accounts(students, args.seed, args.snapshot_date))
-    canvas = build_canvas(students, courses, args.snapshot_date)
+    canvas = build_canvas(students, courses, args.snapshot_date, args.demo_date)
     write_json(args.out / "canvas.json", canvas)
     write_json(args.out / "study_spaces.json", build_study_spaces(args.snapshot_date))
     write_json(args.out / "print_accounts.json", build_print_accounts(students, args.snapshot_date))
