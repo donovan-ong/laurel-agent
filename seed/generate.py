@@ -477,6 +477,22 @@ def build_students(offerings: list[dict], snapshot_date: str) -> list[dict]:
 
 
 CANVAS_ASSIGNMENT_TITLES = ["Assignment 1", "Assignment 2", "Assignment 3"]
+CANVAS_ASSIGNMENTS_FILE = SEED_DIR / "canvas_assignments.json"
+# For a course with no entry in CANVAS_ASSIGNMENTS_FILE: a name per sequence, and a summary using the course title.
+CANVAS_FALLBACK = [
+    ("Concepts and Exercises", "Work through exercises on the core concepts of {title} and explain your reasoning."),
+    ("Applied Project", "Apply what you have learned in {title} to a small practical project and document your approach."),
+    ("Final Project and Reflection", "Bring the semester's work in {title} together in a final project and reflect on what you learned."),
+]
+
+
+def canvas_assignment(names: dict, course: dict, sequence: int) -> dict:
+    """The synthetic name and one-sentence summary of a course's assignment."""
+    listed = names.get(course["course_id"])
+    if listed:
+        return listed[sequence - 1]
+    name, summary = CANVAS_FALLBACK[sequence - 1]
+    return {"name": name, "summary": summary.format(title=course["title"])}
 
 
 def assignment_plan(term: str, snapshot_date: str) -> list[tuple[str, bool]]:
@@ -503,7 +519,8 @@ def assignment_plan(term: str, snapshot_date: str) -> list[tuple[str, bool]]:
 def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str) -> list[dict]:
     """One record per (student, course, term, assignment), for every course a student has a result or a
     current enrolment in. A student admitted but not yet enrolled in anything has none - correctly so."""
-    known = {c["course_id"] for c in courses}
+    known = {c["course_id"]: c for c in courses}
+    names = json.loads(CANVAS_ASSIGNMENTS_FILE.read_text(encoding="utf-8"))
     assignments = []
     for s in students:
         entries = [(r["course_id"], r["term"], r["mark"]) for r in s["results"]]
@@ -515,6 +532,7 @@ def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str) 
             seen.add((course_id, term))
             rng = random.Random(f"canvas:{s['student_number']}:{course_id}:{term}")
             for i, (due_date, submitted) in enumerate(assignment_plan(term, snapshot_date), 1):
+                about = canvas_assignment(names, known[course_id], i)
                 if not submitted:
                     mark = None
                 elif final_mark is not None:
@@ -527,6 +545,8 @@ def build_canvas(students: list[dict], courses: list[dict], snapshot_date: str) 
                     "term": term,
                     "assignment_id": f"{s['student_number']}-{course_id}-{term}-A{i}",
                     "title": CANVAS_ASSIGNMENT_TITLES[i - 1],
+                    "name": about["name"],
+                    "summary": about["summary"],
                     "sequence": i,
                     "due_date": due_date,
                     "max_mark": 100,

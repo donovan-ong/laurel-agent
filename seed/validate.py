@@ -632,6 +632,11 @@ def check_canvas(d):
             errs.append(f"{who}: due_date must be an ISO date")
         if a["title"] != f"Assignment {a['sequence']}":
             errs.append(f"{who}: title {a['title']!r} does not match sequence {a['sequence']}")
+        if not (isinstance(a.get("name"), str) and a["name"].strip()):
+            errs.append(f"{who}: name must be a non-empty string")
+        summary = a.get("summary")
+        if not (isinstance(summary, str) and summary.endswith(".") and len(summary) <= 160 and ". " not in summary):
+            errs.append(f"{who}: summary must be one sentence of at most 160 characters")
         if a["submitted"]:
             if a["submitted_at"] is None:
                 errs.append(f"{who}: submitted is true but submitted_at is null")

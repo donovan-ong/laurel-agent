@@ -467,3 +467,15 @@ def test_validator_cli_exit_codes(tmp_path):
     (tmp_path / "programs.json").write_text(json.dumps(programs), encoding="utf-8")
     bad = subprocess.run([sys.executable, script, "--data", str(tmp_path)], capture_output=True, text=True)
     assert bad.returncode == 1 and "Result: FAIL" in bad.stdout
+
+
+def test_every_canvas_course_has_named_assignments_with_one_sentence_summaries(data):
+    named = json.loads(generate.CANVAS_ASSIGNMENTS_FILE.read_text(encoding="utf-8"))
+    assert {a["course_id"] for a in data["canvas"]} <= set(named)
+    first = next(a for a in data["canvas"] if a["course_id"] == "COSC2110" and a["sequence"] == 1)
+    assert first["name"] == "Data Pre-processing" and first["summary"].endswith(".")
+
+
+def test_a_course_without_named_assignments_falls_back_to_generic_ones():
+    about = generate.canvas_assignment({}, {"course_id": "XXXX0000", "title": "Example Course"}, 2)
+    assert about["name"] == "Applied Project" and "Example Course" in about["summary"]

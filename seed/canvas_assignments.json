@@ -1,0 +1,193 @@
+{
+  "_note": "Synthetic Canvas assignment names and one-sentence summaries, three per course in sequence. Not from any real course page.",
+  "COSC1111": [
+    {"name": "Network Layers and Protocols", "summary": "Trace how data moves through the layers of the network stack by analysing packet captures of everyday web traffic."},
+    {"name": "Routing and Addressing", "summary": "Design an IP addressing plan for a small organisation and explain how routing tables forward its traffic."},
+    {"name": "Net-Centric Application Report", "summary": "Build a simple client-server application and report on its performance and reliability over a real network."}
+  ],
+  "COSC2110": [
+    {"name": "Data Pre-processing", "summary": "Clean, transform and explore a messy real-world dataset, documenting how you handled missing values, outliers and scaling."},
+    {"name": "Classification Models", "summary": "Train and compare decision tree, naive Bayes and k-nearest-neighbour classifiers, justifying your choice with evaluation metrics."},
+    {"name": "Clustering and Association Rules", "summary": "Find patterns in retail transaction data with clustering and association rule mining, and present the insights for a business audience."}
+  ],
+  "COSC2123": [
+    {"name": "Complexity Analysis", "summary": "Analyse the time and space complexity of a set of algorithms and confirm your predictions with timed experiments."},
+    {"name": "Graph Algorithms", "summary": "Implement shortest-path and spanning-tree algorithms and compare how they perform on graphs of different sizes and densities."},
+    {"name": "Algorithm Design Project", "summary": "Design a solution to an optimisation problem using greedy, divide-and-conquer or dynamic programming techniques, and justify your approach."}
+  ],
+  "COSC2148": [
+    {"name": "Research Question and Literature Review", "summary": "Define a computing research question and review the existing literature that frames it."},
+    {"name": "Research Methods Plan", "summary": "Choose and justify qualitative or quantitative methods for your research question, including how you will collect and analyse data."},
+    {"name": "Project Proposal", "summary": "Write a full research proposal with aims, methodology, timeline and risks, ready to carry into your thesis."}
+  ],
+  "COSC2276": [
+    {"name": "Responsive Front End", "summary": "Build an accessible, responsive multi-page website from a design brief using semantic HTML and modern CSS."},
+    {"name": "Server-side Application", "summary": "Add a server-side layer with routing, templating and a database so users can create and manage their own content."},
+    {"name": "Full-stack Web App", "summary": "Deliver a complete web application with authentication, an API and deployment, and reflect on the technology choices you made."}
+  ],
+  "COSC2299": [
+    {"name": "Version Control and Agile Planning", "summary": "Set up a team repository with a branching strategy and plan the first sprint with user stories and estimates."},
+    {"name": "Testing and Continuous Integration", "summary": "Write automated unit and integration tests and run them in a continuous integration pipeline on every commit."},
+    {"name": "Team Delivery and Retrospective", "summary": "Ship a working release as a team and write a retrospective on your process, tools and collaboration."}
+  ],
+  "COSC2408": [
+    {"name": "Project Pitch and Requirements", "summary": "Pitch a software project idea and capture its requirements as user stories with acceptance criteria."},
+    {"name": "Prototype and Milestone Demo", "summary": "Demonstrate a working prototype of your project's core features and gather feedback for the next iteration."},
+    {"name": "Final Product and Showcase", "summary": "Deliver the finished product with documentation and present it at the end-of-semester showcase."}
+  ],
+  "COSC2462": [
+    {"name": "Thesis Topic Proposal", "summary": "Propose a thesis topic with a supervisor, stating the research problem, its significance and the expected contribution."},
+    {"name": "Preliminary Experiments", "summary": "Run small pilot experiments that test whether your proposed approach is feasible and refine your method from what you learn."},
+    {"name": "Preliminary Thesis Report", "summary": "Write up your background, method and pilot results as the first chapters of your honours thesis."}
+  ],
+  "COSC2527": [
+    {"name": "Game Agent Behaviours", "summary": "Program non-player characters with finite state machines and steering behaviours in a simple game world."},
+    {"name": "Search and Pathfinding", "summary": "Implement A* and other search algorithms so game agents can navigate a map efficiently around obstacles."},
+    {"name": "Adversarial AI Project", "summary": "Build an AI opponent for a two-player game using minimax with alpha-beta pruning or Monte Carlo tree search."}
+  ],
+  "COSC2536": [
+    {"name": "Cryptography Fundamentals", "summary": "Implement and break classical ciphers, then explain how modern symmetric and public-key encryption protect data."},
+    {"name": "Network and Web Security", "summary": "Identify and fix common web vulnerabilities such as injection and cross-site scripting in a deliberately insecure application."},
+    {"name": "Security Risk Assessment", "summary": "Assess the security risks of a case-study organisation and recommend prioritised controls to reduce them."}
+  ],
+  "COSC2632": [
+    {"name": "Data Modelling at Scale", "summary": "Model a large dataset for both relational and NoSQL stores and compare how each handles the expected queries."},
+    {"name": "Distributed Storage", "summary": "Load and query data in a distributed database, measuring how partitioning and replication affect performance."},
+    {"name": "Big Data Management Report", "summary": "Recommend a data management architecture for a case-study organisation and justify it against cost, scale and governance."}
+  ],
+  "COSC2633": [
+    {"name": "MapReduce Fundamentals", "summary": "Write MapReduce jobs that count, join and aggregate a large text dataset, and explain how the work is distributed."},
+    {"name": "Spark Data Pipelines", "summary": "Build a Spark pipeline that cleans and transforms a large dataset, tuning it for speed and memory use."},
+    {"name": "Stream Processing Project", "summary": "Process a live data stream in near real time and report on the latency and accuracy of your results."}
+  ],
+  "COSC2673": [
+    {"name": "Regression and Model Evaluation", "summary": "Fit linear and regularised regression models and evaluate them properly with train, validation and test splits."},
+    {"name": "Classification with Neural Networks", "summary": "Train and tune a neural network classifier, diagnosing overfitting and comparing it against simpler baseline models."},
+    {"name": "Machine Learning Project", "summary": "Solve an end-to-end prediction problem on a real dataset and write a report justifying every modelling decision."}
+  ],
+  "COSC2757": [
+    {"name": "Cloud Service Models", "summary": "Compare infrastructure, platform and software as a service by deploying the same small app on each."},
+    {"name": "Deploying to the Cloud", "summary": "Deploy a web application with load balancing and auto-scaling, and monitor how it behaves under load."},
+    {"name": "Cloud Architecture Case Study", "summary": "Design a cost-aware, resilient cloud architecture for a case-study business and justify your design choices."}
+  ],
+  "COSC2801": [
+    {"name": "Java Basics", "summary": "Write small Java programs using variables, control flow and methods to solve a set of everyday problems."},
+    {"name": "Objects and Classes", "summary": "Model a simple domain with Java classes, encapsulation and constructors, and test your code as you go."},
+    {"name": "Bootcamp Mini Project", "summary": "Build a small command-line Java application that brings together collections, file input and object-oriented design."}
+  ],
+  "COSC2802": [
+    {"name": "C++ Basics", "summary": "Write small C++ programs using variables, control flow, functions and the standard library."},
+    {"name": "Memory and Pointers", "summary": "Use pointers, references and dynamic memory safely, finding and fixing leaks in the provided code."},
+    {"name": "Bootcamp Mini Project", "summary": "Build a small C++ console application with classes, the standard containers and careful memory management."}
+  ],
+  "COSC2803": [
+    {"name": "Requirements and Design", "summary": "Gather requirements for a Java studio project and design its classes and interactions with UML diagrams."},
+    {"name": "Iterative Development", "summary": "Implement your design in short iterations with unit tests, version control and regular code reviews."},
+    {"name": "Studio Project Delivery", "summary": "Deliver a polished Java application as a team and present how it evolved through each iteration."}
+  ],
+  "COSC2804": [
+    {"name": "Requirements and Design", "summary": "Plan a C++ studio project, splitting the design into modules with clear interfaces."},
+    {"name": "Data Structures in Practice", "summary": "Implement and test the core data structures your project needs, measuring their performance."},
+    {"name": "Studio Project Delivery", "summary": "Deliver a working C++ application as a team and reflect on your design, testing and teamwork."}
+  ],
+  "COSC2960": [
+    {"name": "Search and Problem Solving", "summary": "Formulate puzzles as search problems and solve them with uninformed and heuristic search algorithms."},
+    {"name": "Knowledge and Reasoning", "summary": "Represent a small domain in logic and use inference to answer questions about it."},
+    {"name": "Learning Agents Project", "summary": "Build an agent that improves with experience, using reinforcement learning or a simple learned model."}
+  ],
+  "COSC3045": [
+    {"name": "How Computers Work", "summary": "Explain how data is represented in binary and how a simple processor executes instructions."},
+    {"name": "Programming Fundamentals", "summary": "Write short programs using variables, decisions, loops and functions to automate everyday tasks."},
+    {"name": "Computing in Practice", "summary": "Investigate how a real organisation uses computing and present the opportunities and risks you find."}
+  ],
+  "COSC3046": [
+    {"name": "Web Page Foundations", "summary": "Build a set of linked, accessible web pages with semantic HTML and responsive CSS."},
+    {"name": "Interactive Front End", "summary": "Add interactivity with JavaScript, handling user input and fetching data from a web API."},
+    {"name": "Studio Web Project", "summary": "Deliver a complete website for a real or imagined client, working in a studio team from brief to launch."}
+  ],
+  "COSC3088": [
+    {"name": "IT Foundations", "summary": "Describe the hardware, software and networks behind a typical organisation's IT systems."},
+    {"name": "Ethics Case Analysis", "summary": "Analyse an ethical dilemma in technology using a recognised ethical framework and recommend a course of action."},
+    {"name": "Professional Practice Report", "summary": "Write a report on privacy, security and professional responsibility in a chosen area of IT practice."}
+  ],
+  "COSC3103": [
+    {"name": "Python Basics", "summary": "Write small Python programs using variables, control flow, functions and the built-in data types."},
+    {"name": "Working with Data", "summary": "Read, clean and summarise data from files using Python's standard library and simple scripts."},
+    {"name": "Bootcamp Mini Project", "summary": "Build a small Python application that brings together functions, files and data structures to solve a real task."}
+  ],
+  "COSC3106": [
+    {"name": "Requirements and Planning", "summary": "Gather requirements for a Python studio project and plan its features as a prioritised backlog."},
+    {"name": "Building and Testing", "summary": "Implement core features in Python with automated tests and regular commits to a shared repository."},
+    {"name": "Studio Project Delivery", "summary": "Deliver a working Python application as a team and present what you built and what you learned."}
+  ],
+  "COSC3109": [
+    {"name": "Object-Oriented Java", "summary": "Design a class hierarchy using inheritance, interfaces and polymorphism to model a small domain."},
+    {"name": "Collections and Exceptions", "summary": "Use Java collections and exception handling to build a robust data-processing program."},
+    {"name": "Java Application Project", "summary": "Build a complete Java application with a clean design, unit tests and a short report on your choices."}
+  ],
+  "COSC3154": [
+    {"name": "Thesis Progress Report", "summary": "Report the progress on your thesis research against your proposal and update the plan for the rest of the year."},
+    {"name": "Methodology Chapter", "summary": "Write the methodology chapter of your thesis, describing and justifying exactly how your research is carried out."},
+    {"name": "Interim Results Seminar", "summary": "Present your interim results in a short research seminar and respond to questions from staff and peers."}
+  ],
+  "COSC3155": [
+    {"name": "Results and Analysis Chapter", "summary": "Write up and analyse the main results of your thesis research, including their limitations."},
+    {"name": "Thesis Draft", "summary": "Submit a complete draft of your honours thesis for supervisor feedback before the final submission."},
+    {"name": "Final Thesis and Presentation", "summary": "Submit your final honours thesis and present its contribution in a public research presentation."}
+  ],
+  "INTE2402": [
+    {"name": "Cloud Threat Landscape", "summary": "Identify the main threats to cloud workloads and map them to the shared responsibility model."},
+    {"name": "Identity and Access Management", "summary": "Configure least-privilege identity and access policies for a cloud application and test that they hold."},
+    {"name": "Securing a Cloud Deployment", "summary": "Harden a cloud deployment with logging, encryption and network controls, and justify each control you chose."}
+  ],
+  "INTE2547": [
+    {"name": "Reconnaissance and Scanning", "summary": "Gather information about a test target and scan it for open services within a safe lab environment."},
+    {"name": "Exploitation in the Lab", "summary": "Exploit known vulnerabilities in a deliberately vulnerable lab system and document each step responsibly."},
+    {"name": "Penetration Test Report", "summary": "Write a professional penetration test report with findings, risk ratings and remediation advice."}
+  ],
+  "INTE2584": [
+    {"name": "Governance Frameworks", "summary": "Compare major cybersecurity governance frameworks and explain how an organisation would adopt one."},
+    {"name": "Policy Development", "summary": "Write an information security policy for a case-study organisation, aligned to a recognised framework."},
+    {"name": "Compliance and Risk Report", "summary": "Assess a case-study organisation's compliance gaps and recommend a prioritised plan to close them."}
+  ],
+  "INTE2625": [
+    {"name": "Security Fundamentals", "summary": "Explain confidentiality, integrity and availability, and apply them to everyday systems you use."},
+    {"name": "Threats and Defences", "summary": "Investigate common attacks such as phishing and malware and recommend practical defences for each."},
+    {"name": "Security Awareness Campaign", "summary": "Design a security awareness campaign for a chosen audience and explain why it would change behaviour."}
+  ],
+  "INTE2626": [
+    {"name": "Attack Analysis", "summary": "Analyse logs and network traffic from a simulated attack to reconstruct what the attacker did."},
+    {"name": "Incident Response Plan", "summary": "Write an incident response plan covering detection, containment, eradication and recovery for a case-study organisation."},
+    {"name": "Incident Simulation Report", "summary": "Respond to a simulated security incident as a team and report on your decisions and their outcomes."}
+  ],
+  "ISYS1079": [
+    {"name": "Semi-structured Data Formats", "summary": "Model and query data in JSON and XML, and compare them with a relational design for the same data."},
+    {"name": "Document and Search Stores", "summary": "Load unstructured documents into a document store and build full-text search queries over them."},
+    {"name": "Unstructured Data Project", "summary": "Extract useful information from a collection of text documents and present your findings."}
+  ],
+  "ISYS1118": [
+    {"name": "Requirements Engineering", "summary": "Elicit and document requirements for a software system as use cases and user stories."},
+    {"name": "Design and Modelling", "summary": "Model the system's structure and behaviour with UML class, sequence and state diagrams."},
+    {"name": "Software Process Report", "summary": "Compare software development processes and recommend one for a case-study project, with reasons."}
+  ],
+  "ISYS3413": [
+    {"name": "Requirements Engineering", "summary": "Elicit and document the requirements for an IT system from a client brief as user stories."},
+    {"name": "System Design", "summary": "Design the system's components and data with UML and explain how the design meets the requirements."},
+    {"name": "Project Management Report", "summary": "Plan the delivery of the system with a schedule, risk register and quality plan."}
+  ],
+  "MATH2411": [
+    {"name": "Logic and Proof", "summary": "Use propositional logic and simple proof techniques to reason about statements used in computing."},
+    {"name": "Sets, Relations and Functions", "summary": "Apply sets, relations and functions to model and solve problems that arise in computing."},
+    {"name": "Combinatorics and Probability", "summary": "Count arrangements and calculate probabilities for problems drawn from algorithms and data."}
+  ],
+  "MATH2466": [
+    {"name": "Number Systems", "summary": "Convert between number bases and perform arithmetic in binary and hexadecimal."},
+    {"name": "Algebra and Functions", "summary": "Solve equations and work with functions and graphs that come up often in computing."},
+    {"name": "Applied Mathematics Problem Set", "summary": "Apply the course's algebra, logic and counting techniques to a set of practical computing problems."}
+  ],
+  "OENG1235": [
+    {"name": "Mapping an Innovation Ecosystem", "summary": "Map the people, organisations and funding that make up an innovation ecosystem in your field."},
+    {"name": "Future of Work Analysis", "summary": "Analyse how automation and new technology are changing a chosen profession and what skills it will need."},
+    {"name": "Innovation Pitch", "summary": "Pitch an innovative product or service idea, showing the problem, the solution and how it would reach users."}
+  ]
+}
